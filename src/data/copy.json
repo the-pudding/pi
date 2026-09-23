@@ -1,23 +1,609 @@
 {
-	"meta": { "title": "Title TK", "description": "Description tk." },
-	"body": [
-		{
-			"section": "intro",
-			"content": [
-				{ "type": "h4", "value": "An h4 element with no attributes" },
-				{
-					"type": "text",
-					"value": "Some random text here, followed by an img tag."
-				},
-				{
-					"type": "img",
-					"value": { "src": "../assets/demo/test.jpg", "alt": "A cat" }
-				},
-				{
-					"type": "Test",
-					"value": { "label": "I’m a custom component!", "value": "50" }
-				}
-			]
-		}
-	]
+  "1": "The man who calculated pi for fun",
+  "2": "Can pi give us directions back home?",
+  "3": "Random walking with pi in the age of computers",
+  "meta": {
+    "title": "The Afterlife of Pi",
+    "description": "The unexpected paths of one calculation across a century.",
+    "keywords": "math, pi, random"
+  },
+  "body": [
+    {
+      "section": "hero",
+      "content": [
+        {
+          "type": "Hero",
+          "value": {
+            "title": "The Afterlife of Pi"
+          }
+        },
+        {
+          "type": "Warning",
+          "value": {
+            "text": "The following is a 3,000 word essay* on math and history. It contains material that may educate and entertain. Reader discretion advised.",
+            "note": "Don’t worry, there are pictures and graphics too."
+          }
+        }
+      ]
+    },
+    {
+      "section": "part1",
+      "content": [
+        {
+          "type": "text",
+          "value": "This is pi."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/pi-roll.gif",
+            "alt": "An animation of a circle unrolling and leaving behind its edge length.",
+            "figcaption": "<a href=https://en.wikipedia.org/wiki/Pi#/media/File:Pi-unrolled-720.gif target=_blank rel=noreferrer>Source: Wikipedia</a>"
+          }
+        },
+        {
+          "type": "text",
+          "value": "Pi represents the ratio of a circle’s circumference to its diameter. Or, a circle's edge is always about 3.14 times longer than its width."
+        },
+        {
+          "type": "text",
+          "value": "But none of that matters for this story."
+        },
+        {
+          "type": "text",
+          "value": "This story concerns itself with pi’s digits. They will take us on a wandering journey that explores the connections pi forged between people and mathematical discoveries."
+        },
+        {
+          "type": "text",
+          "value": "Starting with one man and his obsession with pi."
+        },
+        {
+          "type": "text",
+          "value": "<h2>1853</h2>"
+        },
+        {
+          "type": "text",
+          "value": "It was the spring of 1853. You might remember it as the time when <span class=relative>Gail Borden <img class=headshot src=assets/images/borden.jpg></span> patented his process for condensed milk in the US. The kids were cuckoo for condensed milk."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/condensed-kids.jpg",
+            "alt": "An advertisement from 1887 for Eagle Brand Condensed Milk showing an illustration of four babies wide-eyed looking at a can of condensed milk on the table"
+          }
+        },
+        {
+          "type": "text",
+          "value": "The same man who three years prior, introduced the world to the meat biscuit, an invention that proved to be ahead of its time. But I digress&mdash;Gail Borden has nothing to do with this story."
+        },
+        {
+          "type": "text",
+          "value": "Over the pond in England, in the small coal-mining town of Houghton-le-Spring, a schoolmaster sent a book to the printer. There weren’t any photos back then, but I found this huge ox that lived there."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/ox.jpg",
+            "alt": "A pen line drawing of a large ox."
+          }
+        },
+        {
+          "type": "text",
+          "value": "His name (the schoolmaster) was <span class=relative>William Shanks<img class=headshot src=assets/images/shanks.jpg></span><span>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math, if you will&mdash;pi, written out to 607 decimal places. Further than anyone had written it before."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/specimen-1853.jpg",
+            "alt": "A scan of the book page that contains pi to 607 decimal places.",
+            "figcaption": "From the snappy-titled book <em>Contributions to mathematics, comprising chiefly the rectification of the circle to 607 places of decimals.</em> by William Shanks, 1853."
+          }
+        },
+        {
+          "type": "text",
+          "value": "In the mornings he would compute, and in the afternoons he would check his morning’s work. Each day the same thing. He’d write out the meticulous calculations by hand."
+        },
+        {
+          "type": "text",
+          "value": "He spent nearly two and a half years producing a number that resulted in 607 characters, about five times longer than the letters in this sentence. Like me, you might be wondering what that felt like, to spend a day, or more, resulting in a measly single new digit."
+        },
+        {
+          "type": "text",
+          "value": "<span class=strike>So I sharpened my pencil.</span> I purchased a pencil and a pencil sharper. I sharpened my pencil. I opened up Machin’s formula, the gold standard to calculate pi accurately during Shanks’ day. It looked simple enough:"
+        },
+        {
+          "type": "text",
+          "value": "<strong>pi/4 = 4arctan1/5 - arctan1/239</strong>"
+        },
+        {
+          "type": "text",
+          "value": "I won’t attempt to explain the math, because I can’t. But thanks to YouTube and my decades-old training in long division, here is how you calculate pi’s first decimal point, by hand."
+        },
+        {
+          "type": "mark",
+          "value": "TK graphic"
+        },
+        {
+          "type": "text",
+          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it wasn’t too wild.  But each digit gets increasingly more computationally taxing to calculate. Here is a snapshot of the calculations to just the tenth decimal."
+        },
+        {
+          "type": "mark",
+          "value": "TK graphic"
+        },
+        {
+          "type": "text",
+          "value": "I could see how this could be quite the undertaking. Shanks knew his effort did nothing for his reputation as an (amateur) mathematician. Possibly something though for his reputation as a Computer. Back then that was a job for humans, a person who computes. He was damn good."
+        },
+        {
+          "type": "text",
+          "value": "Shanks said it would not <strong>“be productive of anything in the shape of pecuniary recompense at all adequate to the labour of such lengthy computations.”</strong> A fancy way of saying it wasn’t about the Benjamins. They didn’t exist yet, and this was England after all."
+        },
+        {
+          "type": "text",
+          "value": "If it wasn’t for the money or the fame, why do it at all? He had no need for that precise a value of pi. No one did. His motivation was simple and relatable; he wanted to make something original and fill his free time."
+        },
+        {
+          "type": "text",
+          "value": "That something <strong>“should not subject him either to great tension of thought, or to consult books.”</strong> For Shanks, computing digits of pi was his Tik Tok."
+        },
+        {
+          "type": "text",
+          "value": "After publication, Shanks set aside his daily ritual in favor of more thrilling computations like Euler’s constant and prime tables. For reasons unknown, he picked it back up to hammer out 100 more digits, bringing his full total to 707 in his 1873 publication."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/specimen-1873.jpg",
+            "alt": "A scan of the book page that contains pi to 707 decimal places.",
+            "figcaption": "From the 1873 book <em>\"On the extension of the numerical value of π\"</em> by William Shanks."
+          }
+        },
+        {
+          "type": "text",
+          "value": "How many pencils (or pens?) did Shanks wear through? What was the physical toll? Again, I had to find out for myself. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel=noreferrer>calculated pi to 100 decimal places</a>, and documented the process. Extrapolating from his estimates, the by-hand calculations would be in the ballpark of 5,000 pages. Or, more than the entire length of the Harry Potter series."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/harrypotter-stack.jpg",
+            "alt": "A stack of the series Harry Potter books"
+          }
+        },
+        {
+          "type": "text",
+          "value": "It hurts my hand just thinking about it. I needed to go further. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. This ends up being approximately a quadratic equation."
+        },
+        {
+          "type": "mark",
+          "value": "TK graphic"
+        },
+        {
+          "type": "text",
+          "value": "A very rough estimate* projects out to 707 digits. If I may, that is about X million Tik Tok swipes. A tremendous act of perseverance no matter how you frame it."
+        }
+      ]
+    },
+    {
+      "section": "part2",
+      "content": [
+        {
+          "type": "h2",
+          "value": "1860s"
+        },
+        {
+          "type": "text",
+          "value": "Practically speaking, the 707 decimal places are superfluous. The most sophisticated engineering challenges of modern day don’t need more than 15 digits. But the digits of pi started taking on a life of their own outside of their geometric confines."
+        },
+        {
+          "type": "text",
+          "value": "The first mathematician to closely interrogate pi’s digits was Augustus De Morgan. In a posthumous publication, he made a passing observation about the lack of 7s represented in Shanks’ original 607 computation."
+        },
+        {
+          "type": "text",
+          "value": "He wasn’t so much as troubled by it as he was curious. After all, random sequences have uneven counts too. But it raised a question: Was a low count of 7s a property of pi, or just ordinary fluctuation in a random pattern?"
+        }
+      ]
+    },
+    {
+      "section": "part3",
+      "content": [
+        {
+          "type": "h2",
+          "value": "1888"
+        },
+        {
+          "type": "text",
+          "value": "Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, John Venn. Yes, that Venn. I can hear your fawning from the future."
+        },
+        {
+          "type": "text",
+          "value": "After his 1880 smash hit the Venn Diagram, John was (possibly) searching to recreate his earlier success. He was trying to determine whether a sequence can be called random when you know exactly how it was made."
+        },
+        {
+          "type": "text",
+          "value": "Pi was the perfect specimen. It gave Venn what his argument needed:"
+        },
+        {
+          "type": "text",
+          "value": "* a sequence everyone knew was produced by a rule,"
+        },
+        {
+          "type": "text",
+          "value": "* long enough to inspect (high five Shanks),"
+        },
+        {
+          "type": "text",
+          "value": "* and whose digits looked like chance."
+        },
+        {
+          "type": "text",
+          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes."
+        },
+        {
+          "type": "text",
+          "value": "He walked through each digit (0-7) and assigned its number to an eight point compass. 8s and 9s had to sit this one out."
+        },
+        {
+          "type": "text",
+          "value": "Venn’s verdict: <strong>“The result seems to me to furnish a very fair graphical indication of randomness.”</strong>"
+        },
+        {
+          "type": "text",
+          "value": "This wandering pen thing had legs."
+        }
+      ]
+    },
+    {
+      "section": "part4",
+      "content": [
+        {
+          "type": "h2",
+          "value": "1905"
+        },
+        {
+          "type": "text",
+          "value": "Speaking of legs, a drunken man has two. And we will briefly wander away from pi and follow this thread, because in 1905, Karl Pearson threw down a challenge he dubbed “the problem of the random walk.”"
+        },
+        {
+          "type": "text",
+          "value": "He asked fellow readers in the journal Nature, if a man walks one yard at a time, turning in random directions, and repeats this n times, how far from his starting point is he likely to end up?"
+        },
+        {
+          "type": "text",
+          "value": "Sound familiar?"
+        },
+        {
+          "type": "text",
+          "value": "Lord Rayleigh responded with a “well actually.” He solved this problem 25 years ago with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away."
+        },
+        {
+          "type": "text",
+          "value": "Pearson responded by making an excuse that he was into other stuff and was unaware of Rayleigh’s prior work. Perhaps there were other excuses too, since he famously summed-up this correspondence with:"
+        },
+        {
+          "type": "text",
+          "value": "<strong>“The lesson of Lord Rayleigh's solution is that in open country the most probable place to find a drunken man who is at all capable of keeping on his feet is somewhere near his starting point!”</strong>"
+        },
+        {
+          "type": "text",
+          "value": "The name “random walk” stuck, and is still the term used in mathematics today."
+        }
+      ]
+    },
+    {
+      "section": "part5",
+      "content": [
+        {
+          "type": "h2",
+          "value": "1921"
+        },
+        {
+          "type": "text",
+          "value": "Years passed. Nothing much happened of note. But then in 1921, back in Europe, a mathematician was having his own problems with walking."
+        },
+        {
+          "type": "text",
+          "value": "George Pólya, a Hungarian mathematician, enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed."
+        },
+        {
+          "type": "text",
+          "value": "It was an accident, but how likely was this?"
+        },
+        {
+          "type": "text",
+          "value": "Instead of confronting the problem head on, Pólya retreated to an abstract and hypothetical world, as one does. He reduced the problem to a two dimensional lattice to find an answer to his definitely-not-snooping incident."
+        },
+        {
+          "type": "text",
+          "value": "He posed a similar question to Pearson (though he elegantly used the “promenaders” in place of “walkers”). Simply put, given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?"
+        },
+        {
+          "type": "text",
+          "value": "He found that this concept of two walkers meeting can actually be decomposed and reframed to ask the question, will a walker return to his origin?"
+        },
+        {
+          "type": "text",
+          "value": "It turned out, yes, a simple random walk on a two-dimensional grid returns to its starting point with probability one. Given unlimited time, it returns infinitely often."
+        },
+        {
+          "type": "text",
+          "value": "He published a proof in the German journal Mathematische Annalen, which I don’t understand but it looks thorough and compelling."
+        },
+        {
+          "type": "text",
+          "value": "He also found that in a three dimensional space, the probability of a return drops to 34%. This gave way to the saying by Shizuo Kakutani, <strong>“A drunk man will find his way home, but a drunk bird may get lost forever\".</strong>"
+        },
+        {
+          "type": "text",
+          "value": "You may now be wondering if our pi thread got lost. Me too, to be honest."
+        },
+        {
+          "type": "text",
+          "value": "If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll please…"
+        },
+        {
+          "type": "text",
+          "value": "Sadly no. But 707 digits are certainly meager relative to infinity. Maybe we just need more."
+        },
+        {
+          "type": "text",
+          "value": "Spoiler alert, we still don’t know."
+        },
+        {
+          "type": "text",
+          "value": "Another brief tangent, this time to back to 1909 and Émile Borel. He defined the concept of normality in numbers. Basically, a number is normal if <strong>“its infinite sequence of digits is distributed uniformly in the sense that each of the b digit values has the same natural density 1/b.”</strong>"
+        },
+        {
+          "type": "text",
+          "value": "Shades of De Morgan, right? I bring this up because nobody has proved that pi has it. But even that would not, by itself, settle whether our walker keeps coming home."
+        }
+      ]
+    },
+    {
+      "section": "part6",
+      "content": [
+        {
+          "type": "text",
+          "value": "Back to pi, for real (math pun). Shanks’ calculation had become authoritative through reuse and time. No one else dared put in his Herculean effort to go further."
+        },
+        {
+          "type": "text",
+          "value": "In 1937, the Palais de la Découverte, a science museum, opened in Paris. In it would be a room entirely dedicated to pi. Shanks’ laborious digits were celebrated as a giant ceiling installation around the room."
+        },
+        {
+          "type": "text",
+          "value": "Pi’s digits had gone from an idle-time filler, to a published reference, to a museum display. His work would be immortalized forever. That is, until 1944."
+        },
+        {
+          "type": "text",
+          "value": "British mathematician D.F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and rips through 620 digits of pi."
+        },
+        {
+          "type": "text",
+          "value": "He compared it to Shanks’. Everything was peachy until the 528th digit."
+        },
+        {
+          "type": "text",
+          "value": "Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything after that point, from 528 to 707, was entirely wrong."
+        },
+        {
+          "type": "text",
+          "value": "Oh, poor Shanks. When I first read that I felt for the guy. But who doesn’t make mistakes? The other day, I put the milk back in the cupboard instead of the fridge. Like Shanks, the last quarter was spoiled. But he never knew. Maybe that was better."
+        },
+        {
+          "type": "text",
+          "value": "As I dug into Shanks’ error, two sad facts emerged."
+        },
+        {
+          "type": "text",
+          "value": "First, when the error appeared. In the 1853 preface, dated Feb 28, Shanks wrote:"
+        },
+        {
+          "type": "text",
+          "value": "“In the following pages, the ratio of the circumference of a circle to its diameter, is determined to the great extent of 527 places of decimals.”"
+        },
+        {
+          "type": "text",
+          "value": "An April 30 addendum stated how he extended the values to 607 decimals. The slip-up came quite literally in the first digit in that two-month sprint to add 80 more decimals."
+        },
+        {
+          "type": "text",
+          "value": "Second, his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 441 decimal places. Shanks wrote, “so the accuracy is ensured at least to that extent; and it is confidently hoped no error has crept into the remaining 86 places.”"
+        },
+        {
+          "type": "text",
+          "value": "Indeed there were no errors in the next 86 places, but not the 87th."
+        }
+      ]
+    },
+    {
+      "section": "part7",
+      "content": [
+        {
+          "type": "text",
+          "value": "Many mathematical historians have been drawn to this notorious miscalculation. Why did it happen? A brief micro-mathametical forensic investigation was in order. In 2014, a science writer at American Scientist named Brian Hayes did exactly that."
+        },
+        {
+          "type": "text",
+          "value": "Instead of searching for the correct answer, Hayes searched back for the wrong one, reverse-engineering what happened."
+        },
+        {
+          "type": "text",
+          "value": "Remember Machin's formula? pi/4 = 4arctan1/5 - arctan1/239."
+        },
+        {
+          "type": "text",
+          "value": "Two arctan series, one built on 1/5, one on 1/239. Each series is a long list of fractions that get smaller and smaller, and you add them all up. Every fraction in the list is a term."
+        },
+        {
+          "type": "text",
+          "value": "The two sides are lopsided though. The 1/239 terms shrink and die out fast. The 1/5 terms shrink slowly, so that side alone took 506 of them, each written out to 709 decimal places."
+        },
+        {
+          "type": "text",
+          "value": "Hayes measured exactly how far Shanks’ final value shifted the truth. Then he walked back through all 506 terms to see what spot was the culprit."
+        },
+        {
+          "type": "text",
+          "value": "Suspect one: term 248. This term, which sat deep in the list, was a repeating decimal that cycles every 210 digits. So when Shanks extended that term from 530 digits out to 609, he didn't have to calculate anything. He just had to copy a chunk he had already done."
+        },
+        {
+          "type": "text",
+          "value": "In doing so, he skipped a zero. Every digit after it slid one column to the left. This was actually spotted by another Shanks fan, Erwin Engert."
+        },
+        {
+          "type": "text",
+          "value": "Worth noting: The slip-up happened at the 530th place of arctan 1/5, but because of how Machin’s formula multiplied that whole value by 16, its effect showed up two digits earlier at 528."
+        },
+        {
+          "type": "text",
+          "value": "Deliberately breaking the correct version reproduced Shanks’ digits until decimal place 569. But then there was another fracture."
+        },
+        {
+          "type": "text",
+          "value": "Suspect two: term 72. Ferguson flagged that same spot in 1946. Hayes found that dropping five digits at that point and sliding the rest left does the trick. Same type of error as before."
+        },
+        {
+          "type": "text",
+          "value": "With both of these errors accounted for, Shanks’ digits were reproduced until 601 digits."
+        },
+        {
+          "type": "text",
+          "value": "Suspect three: still at large. Nobody knows why it failed after that. Also, the last eight digits Shanks published in 1853 changed when he reprinted in 1873 without explanation."
+        },
+        {
+          "type": "text",
+          "value": "So there were a handful of errors, all coming in those months before publication in April 1853. None of them were computing mistakes, but rather clerical errors. It is more surprising to me that given the sheer amount of numbers he had to calculate and write, there weren’t more–a testament to both his endurance and focus."
+        },
+        {
+          "type": "text",
+          "value": "In 1949, the museum’s ceiling was corrected with the true value of pi."
+        }
+      ]
+    },
+    {
+      "section": "part8",
+      "content": [
+        {
+          "type": "text",
+          "value": "Before we speed into the future, let’s do some revisionist history."
+        },
+        {
+          "type": "text",
+          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in 607 decimal places. The true version has 50 sevens. Part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
+        },
+        {
+          "type": "text",
+          "value": "Remember Pearson (name giver of the random walk)? He and De Morgan coincidentally both went to University College of London–different generations. They both were looking to answer the same question of how do you test probability without a machine?"
+        },
+        {
+          "type": "text",
+          "value": "While De Morgan simply counted the distribution, Pearson made the now-famous chi-square test to statistically critique it."
+        },
+        {
+          "type": "text",
+          "value": "The result…"
+        },
+        {
+          "type": "text",
+          "value": "Next up, John Venn. Let’s fix his walk with the true value of pi through the same number of digits as his original. A walk made from Shanks’s digits and one made from the corrected digits would initially follow the same instructions and then diverge."
+        },
+        {
+          "type": "text",
+          "value": "While there is a clear difference between them, nothing jumps out to me as noteworthy. Both the old and new look random-ish."
+        },
+        {
+          "type": "text",
+          "value": "Finally, just for fun, we have George Pólya. We’ll do the same thing, and probably expect to see the same results, no return to origin."
+        }
+      ]
+    },
+    {
+      "section": "part9",
+      "content": [
+        {
+          "type": "text",
+          "value": "Let’s keep moving forward. Enter, lowercase computers. Non-human, electronic, digital, programmable. Dude, you're getting a Dell Electronic Numerical Integrator and Computer! (ENIAC for short)."
+        },
+        {
+          "type": "text",
+          "value": "In 1949, Professor John von Neumann, like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of <strong>“obtaining a statistical measure of the randomness of the distribution of the digits.”</strong>"
+        },
+        {
+          "type": "text",
+          "value": "ENIAC and its human operators were up for the challenge. They computed 2,037 decimal places of pi."
+        },
+        {
+          "type": "text",
+          "value": "There was mayhem in the streets. Babies named Pi surged. Okay, neither of those things happened, but the record was shattered and von Neumann got his sweet, sweet digits."
+        },
+        {
+          "type": "text",
+          "value": "The updated distribution of pi’s digits looked like this:"
+        },
+        {
+          "type": "text",
+          "value": "The pi arms races had begun. As computers got more and more powerful, calculating pi came along for the ride as a sort of benchmarking guide."
+        },
+        {
+          "type": "text",
+          "value": "In 1961, Shanks was back. Daniel Shanks that is. No known relationship to William, but you have to wonder if it was some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than nine hours."
+        },
+        {
+          "type": "text",
+          "value": "They tested the digit frequencies almost immediately. That continued to be part of why anyone wanted more digits. Now, the 7s came out fine."
+        },
+        {
+          "type": "text",
+          "value": "Today, the most accurate value of pi is 314,000,000,000,000 digits set in 2025, though the attempt took 110 days. Imagine for a moment, you are holding one of the Harry Potter books. It doesn’t matter which one. “Deletrius Aparecium!” you shout. Every single letter in that book vanishes and turns into a digit of pi. Now imagine that every single person in the US–babies included–is holding their own copy with their own digits. That is 314 trillion, give or take a few."
+        },
+        {
+          "type": "text",
+          "value": "A fun fact: <strong>“mathematicians discovered that every possible combination of 13 digits exists somewhere in the sequence.”</strong>"
+        }
+      ]
+    },
+    {
+      "section": "part10",
+      "content": [
+        {
+          "type": "text",
+          "value": "By 2013, researchers were exploring walks built from 100 billion digits of pi. So to end things, we return to pi’s digits via Pólya’s walker, now with an enormous yet still finite journey to examine."
+        },
+        {
+          "type": "text",
+          "value": "We measure how far the walker travels from the origin and see if it returns. We can count digits, pairs, and longer sequences. We can compare the results with what independent random choices would produce."
+        },
+        {
+          "type": "text",
+          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching billions of digits of pi guiding a walk. Their eyes unblinking, their minds whirling."
+        },
+        {
+          "type": "text",
+          "value": "But they’d be sure to remind us that increasing the scale does not remove the distinction between observation and proof. Any returns we observe are finite. Any digit counts cover only part of the number. For now."
+        },
+        {
+          "type": "text",
+          "value": "Shanks died in 1882, unaware of the error, before Venn’s path, the museum display, and the correction."
+        },
+        {
+          "type": "text",
+          "value": "But as our forensic investigator Hayes put it:"
+        },
+        {
+          "type": "text",
+          "value": "<strong>“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’s computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’s work, but he also spoke admiringly of ‘the power to calculate, and...the courage to face the labour.’”</strong>"
+        },
+        {
+          "type": "text",
+          "value": "Shanks directly and indirectly created paths for others to explore and build upon in spite of his errors, simply because he wanted something to do."
+        }
+      ]
+    }
+  ],
+  "https": "//commons.wikimedia.org/wiki/File:Harry_Potter_1st_USA_ed._complete_hardback_set_stacked_diagonal.JPG",
+  "Format": "A visual essay that blends narrative nonfiction, interactive documentary, and data viz.",
+  "Aside": "Guinness world record",
+  "FOOTAGE": "Russell calculating pi"
 }

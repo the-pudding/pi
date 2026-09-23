@@ -1,14 +1,14 @@
 @import "variables.css";
 @import "normalize.css";
 @import "font.css";
-@import "reset.css";
-@import "ui.css"; /* optional for bits UI components */
+/* @import "reset.css"; */
+/* @import "ui.css";  */
 
 /* colors defined in variables.css */
 :root {
 	/* font */
-	--font-sans: "Atlas Grotesk", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-	--font-serif: "Tiempos Text", Iowan Old Style, Times New Roman, Times, serif;
+	--font-sans: "Atkinson", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+	--font-serif: Iowan Old Style, Times New Roman, Times, serif;
 	--font-mono: Menlo, Consolas, Monaco, monospace;
 
 	/* z-index */
@@ -19,7 +19,7 @@
 	--z-modal: 1000;
 
 	/* presets (used in reset.css) */
-	--font-body: var(--font-serif);
+	--font-body: var(--font-sans);
 	--font-form: var(--font-sans);
 
 	--radius-xs: 0.125rem;
@@ -27,8 +27,8 @@
 	--radius-md: 0.5rem;
 	--radius-lg: 1rem;
 	
-	--color-bg: var(--color-white);
-	--color-fg: var(--color-gray-900);
+	--color-bg: var(--color-gray-200);
+	--color-fg: var(--color-gray-600);
 	--color-fg-light: var(--color-gray-500);
 	--color-primary: var(--color-black);
 	--color-link: var(--color-black);
@@ -63,11 +63,13 @@
 }
 
 h1 {
-	font-size: var(--48px, 48px);
+	font-size: clamp(var(--32px), 10vw, var(--144px));
+	font-weight: 700;
 }
 
 h2 {
-	font-size: var(--36px, 36px);
+	font-size: clamp(var(--28px), 5vw, var(--96px));
+	font-weight: 700;
 }
 
 h3 {
@@ -90,4 +92,21 @@ svg {
 	display: block;
 	width: 100%;
 	height: auto;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+span.relative {
+	position: relative;
+	display: inline-block;
+}
+
+img.headshot {
+	position: absolute;
+	top: -1rem;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	max-width: 6rem;
 }
