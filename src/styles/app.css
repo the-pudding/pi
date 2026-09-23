@@ -7,7 +7,7 @@
 /* colors defined in variables.css */
 :root {
 	/* font */
-	--font-sans: "Atkinson", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+	--font-sans: Helvetica, Arial, sans-serif;
 	--font-serif: Iowan Old Style, Times New Roman, Times, serif;
 	--font-mono: Menlo, Consolas, Monaco, monospace;
 
@@ -27,8 +27,8 @@
 	--radius-md: 0.5rem;
 	--radius-lg: 1rem;
 	
-	--color-bg: var(--color-gray-200);
-	--color-fg: var(--color-gray-600);
+	--color-bg: var(--color-white);
+	--color-fg: var(--color-black);
 	--color-fg-light: var(--color-gray-500);
 	--color-primary: var(--color-black);
 	--color-link: var(--color-black);
@@ -63,12 +63,13 @@
 }
 
 h1 {
-	font-size: clamp(var(--32px), 10vw, var(--144px));
+	font-size: clamp(var(--32px), 12vw, 512px);
 	font-weight: 700;
+	text-align: center;
 }
 
 h2 {
-	font-size: clamp(var(--28px), 5vw, var(--96px));
+	font-size: clamp(var(--32px), 5vw, var(--160px));
 	font-weight: 700;
 }
 

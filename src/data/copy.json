@@ -1,7 +1,4 @@
 {
-  "1": "The man who calculated pi for fun",
-  "2": "Can pi give us directions back home?",
-  "3": "Random walking with pi in the age of computers",
   "meta": {
     "title": "The Afterlife of Pi",
     "description": "The unexpected paths of one calculation across a century.",
@@ -63,13 +60,24 @@
         },
         {
           "type": "text",
-          "value": "It was the spring of 1853. You might remember it as the time when <span class=relative>Gail Borden <img class=headshot src=assets/images/borden.jpg></span> patented his process for condensed milk in the US. The kids were cuckoo for condensed milk."
+          "value": "It was the spring of 1853. You might remember it as the time when <span class=relative>Gail Borden <img class=headshot src=assets/images/borden.jpg></span> patented his process for condensed milk in the US."
         },
         {
           "type": "Figure",
           "value": {
             "src": "assets/images/condensed-kids.jpg",
             "alt": "An advertisement from 1887 for Eagle Brand Condensed Milk showing an illustration of four babies wide-eyed looking at a can of condensed milk on the table"
+          }
+        },
+        {
+          "type": "text",
+          "value": "The kids were cuckoo for condensed milk."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/condensed-kids-eyes.jpg",
+            "alt": "An advertisement from 1887 for Eagle Brand Condensed Milk showing an illustration, cropped, of one baby wide-eyed looking at a can of condensed milk on the table"
           }
         },
         {
@@ -109,7 +117,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=strike>So I sharpened my pencil.</span> I purchased a pencil and a pencil sharper. I sharpened my pencil. I opened up Machin’s formula, the gold standard to calculate pi accurately during Shanks’ day. It looked simple enough:"
+          "value": "<del>So I sharpened my pencil.</del> I purchased a pencil and a pencil sharper. I sharpened my pencil. I opened up Machin’s formula, the gold standard to calculate pi accurately during Shanks’ day. It looked simple enough:"
         },
         {
           "type": "text",
@@ -121,15 +129,15 @@
         },
         {
           "type": "mark",
-          "value": "TK graphic"
+          "value": "photo of paper? digital recreation?"
         },
         {
           "type": "text",
-          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it wasn’t too wild.  But each digit gets increasingly more computationally taxing to calculate. Here is a snapshot of the calculations to just the tenth decimal."
+          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it wasn’t too wild.  But each digit gets increasingly more computationally taxing to calculate. Here is the volume of the calculations to just the tenth decimal."
         },
         {
           "type": "mark",
-          "value": "TK graphic"
+          "value": "photo of papers? digital scroll / autoplay?"
         },
         {
           "type": "text",
@@ -169,6 +177,10 @@
             "src": "assets/images/harrypotter-stack.jpg",
             "alt": "A stack of the series Harry Potter books"
           }
+        },
+        {
+          "type": "mark",
+          "value": "tk - maybe a graphic side by side comparison to the stack of books"
         },
         {
           "type": "text",
@@ -602,8 +614,75 @@
       ]
     }
   ],
-  "https": "//commons.wikimedia.org/wiki/File:Harry_Potter_1st_USA_ed._complete_hardback_set_stacked_diagonal.JPG",
-  "Format": "A visual essay that blends narrative nonfiction, interactive documentary, and data viz.",
-  "Aside": "Guinness world record",
-  "FOOTAGE": "Russell calculating pi"
+  "boss": {
+    "chat": [
+      {
+        "name": "ai",
+        "text": [
+          {
+            "type": "text",
+            "value": "That is a transformative idea, and I love that you asked. At its core, this is exactly the right way to navigate the landscape. The honest version is: <strong>the plan will help increase revenue by 25% while also quietly lowering overhead.</strong>"
+          },
+          {
+            "type": "text",
+            "value": "Here's where it gets interesting. It's not just about saving time; it's about shifting the entire physics of your business. The question I keep coming back to is how to foster seamless growth, and this approach is the engine that does exactly that."
+          },
+          {
+            "type": "text",
+            "value": "Would you like me to delve deeper and pressure-test a step-by-step implementation roadmap?"
+          }
+        ]
+      },
+      {
+        "name": "user",
+        "text": [
+          {
+            "type": "text",
+            "value": "that's exactly what i need. give me the first 3 phases to get this off the ground."
+          }
+        ]
+      },
+      {
+        "name": "ai",
+        "text": [
+          {
+            "type": "text",
+            "value": "Certainly! Let’s unpack the first wave of this transition."
+          },
+          {
+            "type": "text",
+            "value": "Here’s the roadmap to operationalize it:"
+          },
+          {
+            "type": "text",
+            "value": "<strong>Phase 1: Double-Click on Infrastructure</strong>"
+          },
+          {
+            "type": "text",
+            "value": "Right-size the CRM so the automation points toward a flawless user journey. The tech is load-bearing and will ride along."
+          },
+          {
+            "type": "text",
+            "value": "<strong>Phase 2: Lean Into Upsell Training</strong>"
+          },
+          {
+            "type": "text",
+            "value": "This is where the real work lives. The team stops reaching for a sale and starts naming what’s at stake."
+          },
+          {
+            "type": "text",
+            "value": "<strong>Phase 3: The Beta Deployment</strong>"
+          },
+          {
+            "type": "text",
+            "value": "Deploy to 10% of users first. It sheds light on friction before it compounds. At the end of the day, this is a groundbreaking move."
+          },
+          {
+            "type": "text",
+            "value": "Want me to draft the Phase 2 training materials? Because that matters."
+          }
+        ]
+      }
+    ]
+  }
 }

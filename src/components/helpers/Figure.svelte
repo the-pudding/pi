@@ -14,7 +14,10 @@
 
 <style>
 	figure {
-		position: relative;
+		/* position: sticky;
+		top: 0;
+		z-index: -1; */
+		background: var(--color-bg);
 	}
 
 	figcaption {
