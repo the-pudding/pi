@@ -11,18 +11,18 @@
 
 <style>
 	.warning {
-		/* font-size: var(--20px); */
-		/* max-width: 35em; */
 		margin-bottom: 8rem;
 	}
 
 	mark {
 		display: block;
 		padding: 1rem;
+		margin: 0 auto;
+		font-size: 0.75em;
+		max-width: 20em;
 	}
 
 	span {
 		display: block;
-		/* font-size: var(--20px); */
 	}
 </style>

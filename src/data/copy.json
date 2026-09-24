@@ -678,7 +678,7 @@
         "text": [
           {
             "type": "text",
-            "value": "that's exactly what i need. give me the first 3 phases to get this off the ground."
+            "value": "that's exactly what i need. give me a couple ideas to get this off the ground."
           }
         ]
       },
@@ -687,39 +687,27 @@
         "text": [
           {
             "type": "text",
-            "value": "Certainly! Let’s unpack the first wave of this transition."
+            "value": "Certainly! You’re not just starting something, you're building momentum. Here are two ideas to get it off the ground:"
           },
           {
             "type": "text",
-            "value": "Here’s the roadmap to operationalize it:"
+            "value": "<strong>1. Start with a quick win</strong>"
           },
           {
             "type": "text",
-            "value": "<strong>Phase 1: Double-Click on Infrastructure</strong>"
+            "value": "Pick one small, high-visibility change and ship it this week. It's not about the change itself; it's about proving the model works and getting buy-in early."
           },
           {
             "type": "text",
-            "value": "Right-size the CRM so the automation points toward a flawless user journey. The tech is load-bearing and will ride along."
+            "value": "<strong>2. Align the team around a North Star</strong>"
           },
           {
             "type": "text",
-            "value": "<strong>Phase 2: Lean Into Upsell Training</strong>"
+            "value": "Get everyone rowing in the same direction with a single, clear metric. When people understand the “why,” the “how” takes care of itself."
           },
           {
             "type": "text",
-            "value": "This is where the real work lives. The team stops reaching for a sale and starts naming what’s at stake."
-          },
-          {
-            "type": "text",
-            "value": "<strong>Phase 3: The Beta Deployment</strong>"
-          },
-          {
-            "type": "text",
-            "value": "Deploy to 10% of users first. It sheds light on friction before it compounds. At the end of the day, this is a groundbreaking move."
-          },
-          {
-            "type": "text",
-            "value": "Want me to draft the Phase 2 training materials? Because that matters."
+            "value": "The honest truth? The hardest part is simply starting, and you've already done that."
           }
         ]
       }

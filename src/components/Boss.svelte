@@ -5,16 +5,16 @@
 	const history = {
 		Today: [
 			"Q3 revenue projections",
-			"Making my boss happy",
-			"Draft: I'm sorry"
+			"Resignation letter draft",
+			"Understanding vibe coding"
 		],
 		"Previous 7 days": [
 			"Competitor teardown",
 			"Follow-up on rash spreading",
 			"Pricing strategy options",
-			"Make email sound like you care"
+			"Handling coworker bad breath"
 		],
-		"Previous 30 days": ["What is the strange rash?", "Report summary"]
+		"Previous 30 days": ["What is this strange rash?", "Report summary filler"]
 	};
 </script>
 
@@ -43,8 +43,10 @@
 	<div class="main">
 		<header>
 			PiGPT <span>3.14 &#9662;</span>
-			<button class="close" onclick={() => (modes.boss = false)} aria-label="Close"
-				>&times;</button
+			<button
+				class="close"
+				onclick={() => (modes.boss = false)}
+				aria-label="Close">&times;</button
 			>
 		</header>
 
