@@ -49,7 +49,7 @@
         },
         {
           "type": "text",
-          "value": "This story concerns itself with pi’s digits. They will take us on a wandering journey that explores the connections pi forged between people and mathematical discoveries."
+          "value": "This story concerns itself with pi’s digits. They will take us on a wandering journey, connecting people and mathematical discoveries."
         },
         {
           "type": "text",
@@ -260,16 +260,14 @@
           "value": "Pi was the perfect specimen. It gave Venn what his argument needed:"
         },
         {
-          "type": "text",
-          "value": "* a sequence everyone knew was produced by a rule,"
-        },
-        {
-          "type": "text",
-          "value": "* long enough to inspect (high five Shanks),"
-        },
-        {
-          "type": "text",
-          "value": "* and whose digits looked like chance."
+          "type": "ul",
+          "value": {
+            "li": [
+              "a sequence everyone knew was produced by a rule,",
+              "long enough to inspect (high five Shanks),",
+              "and whose digits looked like chance."
+            ]
+          }
         },
         {
           "type": "text",
@@ -307,11 +305,11 @@
         },
         {
           "type": "text",
-          "value": "Speaking of legs, a drunken man has two. And we will briefly wander away from pi and follow this thread, because in 1905, Karl Pearson threw down a challenge he dubbed “the problem of the random walk.”"
+          "value": "<span class=relative>Speaking of legs, a drunken man has two. And we will briefly wander away from pi and follow this thread, because in 1905, <span class=dotted>Karl Pearson</span> <img class=headshot src=assets/images/pearson.jpg> threw down a challenge he dubbed “the problem of the random walk.”</span>"
         },
         {
           "type": "text",
-          "value": "He asked fellow readers in the journal Nature, if a man walks one yard at a time, turning in random directions, and repeats this n times, how far from his starting point is he likely to end up?"
+          "value": "He asked fellow readers in the journal <cite>Nature</cite>, <strong>if a man walks one yard at a time, turning in random directions, and repeats this n times, how far from his starting point is he likely to end up?</strong>"
         },
         {
           "type": "text",
@@ -319,11 +317,11 @@
         },
         {
           "type": "text",
-          "value": "Lord Rayleigh responded with a “well actually.” He solved this problem 25 years ago with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away."
+          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg> responded with a “well actually.” He solved this problem 25 years ago with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
         },
         {
           "type": "text",
-          "value": "Pearson responded by making an excuse that he was into other stuff and was unaware of Rayleigh’s prior work. Perhaps there were other excuses too, since he famously summed-up this correspondence with:"
+          "value": "Pearson replied with an excuse that he was into other stuff and was unaware of Rayleigh’s prior work. Perhaps there were other excuses too, since he famously summed-up this correspondence with:"
         },
         {
           "type": "blockquote",
@@ -331,7 +329,7 @@
         },
         {
           "type": "text",
-          "value": "The name “random walk” stuck, and is still the term used in mathematics today."
+          "value": "The name “random walk” stuck, and is still <a href=https://en.wikipedia.org/wiki/Random_walk target=_blank rel=noreferrer>the term</a> used in mathematics today."
         }
       ]
     },
@@ -348,7 +346,7 @@
         },
         {
           "type": "text",
-          "value": "George Pólya, a Hungarian mathematician, enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed."
+          "value": "<span class=relative><span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg>, a Hungarian mathematician, enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
         },
         {
           "type": "text",
@@ -360,7 +358,7 @@
         },
         {
           "type": "text",
-          "value": "He posed a similar question to Pearson (though he elegantly used the “promenaders” in place of “walkers”). Simply put, given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?"
+          "value": "He posed a similar question to Pearson (though he elegantly used “promenaders” in place of “walkers”). Simply put, <strong>given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?</strong>"
         },
         {
           "type": "text",
@@ -380,7 +378,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“A drunk man will find his way home, but a drunk bird may get lost forever\".</strong></mark>"
+          "value": "<mark><strong>“A drunk man will find his way home, but a drunk bird may get lost forever”.</strong></mark>"
         },
         {
           "type": "text",
@@ -396,7 +394,7 @@
         },
         {
           "type": "text",
-          "value": "Spoiler alert, we still don’t know."
+          "value": "Spoiler alert: we still don’t know."
         },
         {
           "type": "text",
@@ -425,7 +423,7 @@
         },
         {
           "type": "text",
-          "value": "British mathematician D.F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
+          "value": "<span class=relative>British mathematician D.F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi.</span>"
         },
         {
           "type": "text",
@@ -437,7 +435,11 @@
         },
         {
           "type": "text",
-          "value": "Oh, poor Shanks. When I first read that I felt for the guy. But who doesn’t make mistakes? The other day, I put the milk back in the cupboard instead of the fridge. Like Shanks, the last quarter was spoiled. But he never knew. Maybe that was better."
+          "value": "Oh, poor Shanks."
+        },
+        {
+          "type": "text",
+          "value": "When I first read that I felt for the guy. But who doesn’t make mistakes? The other day, I put the milk back in the cupboard instead of the fridge. Like Shanks, the last quarter was spoiled. But he never knew. Maybe that was better."
         },
         {
           "type": "text",

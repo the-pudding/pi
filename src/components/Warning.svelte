@@ -18,8 +18,8 @@
 		display: block;
 		padding: 1rem;
 		margin: 0 auto;
-		font-size: 0.75em;
-		max-width: 20em;
+		font-size: var(--fs-small);
+		max-width: 34em;
 	}
 
 	span {

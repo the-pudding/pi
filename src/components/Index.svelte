@@ -34,7 +34,7 @@
 	article :global(section .chunk) {
 		font-size: clamp(var(--20px), 3vw, var(--36px));
 		max-width: 25em;
-		margin: 1rem auto;
+		margin: 2rem auto;
 	}
 
 	article :global(section .chunk--figure) {

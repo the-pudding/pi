@@ -1,14 +1,14 @@
 @import "variables.css";
-/* @import "normalize.css"; */
+@import "normalize.css";
+@import "reset.css";
 /* @import "font.css"; */
-/* @import "reset.css"; */
 /* @import "ui.css";  */
 
 /* colors defined in variables.css */
 :root {
 	/* font */
 	--font-sans: Helvetica, Arial, sans-serif;
-	--font-serif: Iowan Old Style, Times New Roman, Times, serif;
+	--font-serif: Times New Roman, Times, serif;
 	--font-mono: Menlo, Consolas, Monaco, monospace;
 
 	/* z-index */
@@ -44,6 +44,8 @@
 	--color-input-bg: var(--color-gray-50);
 	--color-input-fg: var(--color-gray-900);
 	--color-placeholder: var(--color-gray-500);
+
+	--fs-small: var(--18px);
 
 	/* "1" second duration */
 	--1s: 1ms;
