@@ -31,34 +31,22 @@
 		padding: 0 1rem;
 	}
 
-	article,
-	:global(p),
-	:global(figure) {
-		/* max-width: 45rem; */
+	article :global(section .chunk) {
+		font-size: clamp(var(--20px), 3vw, var(--40px));
+		max-width: 25em;
 		margin: 1rem auto;
 	}
 
-	article :global(figure) {
-		margin: 4 rem auto;
+	article :global(section .chunk--figure) {
+		max-width: 1920px;
 	}
 
-	article :global(p) {
-		font-size: clamp(var(--20px), 3vw, var(--40px));
-		line-height: 1.5;
-		max-width: 25em;
+	article :global(section .chunk--hero) {
+		max-width: none;
 	}
 
-	@media only screen and (min-width: 720px) {
-		article :global(p) {
-			line-height: 1.4;
-			margin: 1.5rem auto;
-		}
-	}
-
-	@media only screen and (min-width: 1280px) {
-		article :global(p) {
-			line-height: 1.325;
-			margin: 2rem auto;
-		}
+	article :global(h2) {
+		font-size: clamp(var(--32px), 5vw, var(--160px));
+		margin: 8rem auto 0 auto;
 	}
 </style>

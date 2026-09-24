@@ -1,6 +1,6 @@
 @import "variables.css";
-@import "normalize.css";
-@import "font.css";
+/* @import "normalize.css"; */
+/* @import "font.css"; */
 /* @import "reset.css"; */
 /* @import "ui.css";  */
 
@@ -63,13 +63,10 @@
 }
 
 h1 {
-	font-size: clamp(var(--32px), 12vw, 512px);
 	font-weight: 700;
-	text-align: center;
 }
 
 h2 {
-	font-size: clamp(var(--32px), 5vw, var(--160px));
 	font-weight: 700;
 }
 
@@ -95,19 +92,22 @@ svg {
 	height: auto;
 }
 
-.strike {
-	text-decoration: line-through;
-}
-
 span.relative {
 	position: relative;
 	display: inline-block;
 }
 
+span.dotted {
+	text-decoration: underline dotted;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.15em;
+}
+
 img.headshot {
 	position: absolute;
-	top: -1rem;
-	left: 50%;
-	transform: translate(-50%, -100%);
-	max-width: 6rem;
+	top: 0.85rem;
+	left: -2rem;	
+	transform: translate(-100%, 0);
+	max-width: 8rem;
+	border: 2px dotted currentColor;
 }

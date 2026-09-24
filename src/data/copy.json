@@ -35,12 +35,13 @@
           "value": {
             "src": "assets/images/pi-roll.gif",
             "alt": "An animation of a circle unrolling and leaving behind its edge length.",
-            "figcaption": "<a href=https://en.wikipedia.org/wiki/Pi#/media/File:Pi-unrolled-720.gif target=_blank rel=noreferrer>Source: Wikipedia</a>"
+            "figcaption": "<a href=https://en.wikipedia.org/wiki/Pi#/media/File:Pi-unrolled-720.gif target=_blank rel=noreferrer>Source: Wikipedia</a>",
+            "className": "small"
           }
         },
         {
           "type": "text",
-          "value": "Pi represents the ratio of a circle’s circumference to its diameter. Or, a circle's edge is always about 3.14 times longer than its width."
+          "value": "Pi represents the ratio of a circle’s circumference to its diameter. Or, a circle’s edge is always about 3.14 times longer than its width."
         },
         {
           "type": "text",
@@ -55,12 +56,12 @@
           "value": "Starting with one man and his obsession with pi."
         },
         {
-          "type": "text",
-          "value": "<h2>1853</h2>"
+          "type": "h2",
+          "value": "1853"
         },
         {
           "type": "text",
-          "value": "It was the spring of 1853. You might remember it as the time when <span class=relative>Gail Borden <img class=headshot src=assets/images/borden.jpg></span> patented his process for condensed milk in the US."
+          "value": "<span class=relative>It was the spring of 1853. You might remember it as the time when <span class=dotted>Gail Borden</span> <img class=headshot src=assets/images/borden.jpg> patented his process for condensed milk in the US (his name is on the tin).</span>"
         },
         {
           "type": "Figure",
@@ -97,14 +98,14 @@
         },
         {
           "type": "text",
-          "value": "His name (the schoolmaster) was <span class=relative>William Shanks<img class=headshot src=assets/images/shanks.jpg></span><span>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math, if you will&mdash;pi, written out to 607 decimal places. Further than anyone had written it before."
+          "value": "<span class=relative>His name (the schoolmaster) was <span class=dotted>William Shanks</span><img class=headshot src=assets/images/shanks.jpg>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math, if you will&mdash;pi, written out to 607 decimal places. Further than anyone had written it before.</span>"
         },
         {
           "type": "Figure",
           "value": {
             "src": "assets/images/specimen-1853.jpg",
             "alt": "A scan of the book page that contains pi to 607 decimal places.",
-            "figcaption": "From the snappy-titled book <em>Contributions to mathematics, comprising chiefly the rectification of the circle to 607 places of decimals.</em> by William Shanks, 1853."
+            "figcaption": "From the snappy-titled book <cite>Contributions to mathematics, comprising chiefly the rectification of the circle to 607 places of decimals.</cite> by William Shanks, 1853."
           }
         },
         {
@@ -129,7 +130,7 @@
         },
         {
           "type": "mark",
-          "value": "photo of paper? digital recreation?"
+          "value": "photo of paper? digital recreation? overhead video timelapse?"
         },
         {
           "type": "text",
@@ -141,11 +142,19 @@
         },
         {
           "type": "text",
-          "value": "I could see how this could be quite the undertaking. Shanks knew his effort did nothing for his reputation as an (amateur) mathematician. Possibly something though for his reputation as a Computer. Back then that was a job for humans, a person who computes. He was damn good."
+          "value": "I could see how this could be quite the undertaking. Shanks knew his effort did nothing for his reputation as an (amateur) mathematician. Possibly something though for his reputation as a Computer. Back then that was a job for humans, a person who computes. He was darn good."
         },
         {
           "type": "text",
-          "value": "Shanks said it would not <strong>“be productive of anything in the shape of pecuniary recompense at all adequate to the labour of such lengthy computations.”</strong> A fancy way of saying it wasn’t about the Benjamins. They didn’t exist yet, and this was England after all."
+          "value": "Shanks said it would not:"
+        },
+        {
+          "type": "blockquote",
+          "value": "<mark><strong>“be productive of anything in the shape of pecuniary recompense at all adequate to the labour of such lengthy computations.”</strong></mark>"
+        },
+        {
+          "type": "text",
+          "value": "A fancy way of saying it wasn’t about the Benjamins. They didn’t exist yet, and this was England after all."
         },
         {
           "type": "text",
@@ -153,7 +162,15 @@
         },
         {
           "type": "text",
-          "value": "That something <strong>“should not subject him either to great tension of thought, or to consult books.”</strong> For Shanks, computing digits of pi was his Tik Tok."
+          "value": "That something:"
+        },
+        {
+          "type": "blockquote",
+          "value": "<mark><strong> “should not subject him either to great tension of thought, or to consult books.”</mark></strong>"
+        },
+        {
+          "type": "text",
+          "value": "For Shanks, computing digits of pi was his Tik Tok."
         },
         {
           "type": "text",
@@ -164,27 +181,25 @@
           "value": {
             "src": "assets/images/specimen-1873.jpg",
             "alt": "A scan of the book page that contains pi to 707 decimal places.",
-            "figcaption": "From the 1873 book <em>\"On the extension of the numerical value of π\"</em> by William Shanks."
+            "figcaption": "From the 1873 book <cite>\"On the extension of the numerical value of π\"</cite> by William Shanks."
           }
         },
         {
           "type": "text",
-          "value": "How many pencils (or pens?) did Shanks wear through? What was the physical toll? Again, I had to find out for myself. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel=noreferrer>calculated pi to 100 decimal places</a>, and documented the process. Extrapolating from his estimates, the by-hand calculations would be in the ballpark of 5,000 pages. Or, more than the entire length of the Harry Potter series."
+          "value": "How many pencils (or pens?) did Shanks wear through? What was the physical toll? Again, I had to find out for myself. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel=noreferrer>calculated pi to 100 decimal places</a>, and documented the process. Extrapolating from his estimates, the by-hand calculations would be in the ballpark of 5,000 pages. Or, more pages than the entire stack of the Harry Potter series."
         },
         {
           "type": "Figure",
           "value": {
             "src": "assets/images/harrypotter-stack.jpg",
-            "alt": "A stack of the series Harry Potter books"
+            "alt": "A stack of the series Harry Potter books",
+            "className": "small",
+            "figcaption": "All seven books of the <cite>Harry Potter</cite> series."
           }
         },
         {
-          "type": "mark",
-          "value": "tk - maybe a graphic side by side comparison to the stack of books"
-        },
-        {
           "type": "text",
-          "value": "It hurts my hand just thinking about it. I needed to go further. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. This ends up being approximately a quadratic equation."
+          "value": "It hurt my hand just thinking about it. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. I needed to go further. Sampling Engert’s actual pages and a bit of math extrapolation, I calculated a rough estimate* that projects out to 707 digits."
         },
         {
           "type": "mark",
@@ -192,7 +207,7 @@
         },
         {
           "type": "text",
-          "value": "A very rough estimate* projects out to 707 digits. If I may, that is about X million Tik Tok swipes. A tremendous act of perseverance no matter how you frame it."
+          "value": "If I may, that is about X million Tik Tok swipes. A tremendous act of perseverance no matter how you frame it."
         }
       ]
     },
@@ -209,7 +224,11 @@
         },
         {
           "type": "text",
-          "value": "The first mathematician to closely interrogate pi’s digits was Augustus De Morgan. In a posthumous publication, he made a passing observation about the lack of 7s represented in Shanks’ original 607 computation."
+          "value": "<span class=relative>The first mathematician to closely interrogate pi’s digits was <span class=dotted>Augustus De Morgan</span>. <img class=headshot src=assets/images/demorgan.jpg> In a posthumous publication, he made a passing observation about the lack of 7s represented in Shanks’ original 607 computation.</span>"
+        },
+        {
+          "type": "mark",
+          "value": "TK graphic - 7s distribution"
         },
         {
           "type": "text",
@@ -226,7 +245,11 @@
         },
         {
           "type": "text",
-          "value": "Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, John Venn. Yes, that Venn. I can hear your fawning from the future."
+          "value": "<span class=relative>Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, <span class=dotted>John Venn</span>. <img class=headshot src=assets/images/venn.jpg> Yes, that Venn. I can hear your fawning from the future.</span>"
+        },
+        {
+          "type": "mark",
+          "value": "TK graphic - venn diagram"
         },
         {
           "type": "text",
@@ -250,15 +273,24 @@
         },
         {
           "type": "text",
-          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes."
+          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes. He walked through each digit (0-7) and assigned its number to an eight point compass. 8s and 9s had to sit this one out."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/vennpen.jpg",
+            "alt": "Tk",
+            "className": "small",
+            "figcaption": "Tk"
+          }
         },
         {
           "type": "text",
-          "value": "He walked through each digit (0-7) and assigned its number to an eight point compass. 8s and 9s had to sit this one out."
+          "value": "Venn’s verdict:"
         },
         {
-          "type": "text",
-          "value": "Venn’s verdict: <strong>“The result seems to me to furnish a very fair graphical indication of randomness.”</strong>"
+          "type": "blockquote",
+          "value": "<mark><strong>“The result seems to me to furnish a very fair graphical indication of randomness.”</strong></mark>"
         },
         {
           "type": "text",
@@ -294,8 +326,8 @@
           "value": "Pearson responded by making an excuse that he was into other stuff and was unaware of Rayleigh’s prior work. Perhaps there were other excuses too, since he famously summed-up this correspondence with:"
         },
         {
-          "type": "text",
-          "value": "<strong>“The lesson of Lord Rayleigh's solution is that in open country the most probable place to find a drunken man who is at all capable of keeping on his feet is somewhere near his starting point!”</strong>"
+          "type": "blockquote",
+          "value": "<mark><strong>“The lesson of Lord Rayleigh's solution is that in open country the most probable place to find a drunken man who is at all capable of keeping on his feet is somewhere near his starting point!”</strong></mark>"
         },
         {
           "type": "text",
@@ -344,7 +376,11 @@
         },
         {
           "type": "text",
-          "value": "He also found that in a three dimensional space, the probability of a return drops to 34%. This gave way to the saying by Shizuo Kakutani, <strong>“A drunk man will find his way home, but a drunk bird may get lost forever\".</strong>"
+          "value": "He also found that in a three dimensional space, the probability of a return drops to 34%. This gave way to the saying by Shizuo Kakutani:"
+        },
+        {
+          "type": "blockquote",
+          "value": "<mark><strong>“A drunk man will find his way home, but a drunk bird may get lost forever\".</strong></mark>"
         },
         {
           "type": "text",
@@ -389,7 +425,7 @@
         },
         {
           "type": "text",
-          "value": "British mathematician D.F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and rips through 620 digits of pi."
+          "value": "British mathematician D.F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
         },
         {
           "type": "text",
@@ -412,8 +448,8 @@
           "value": "First, when the error appeared. In the 1853 preface, dated Feb 28, Shanks wrote:"
         },
         {
-          "type": "text",
-          "value": "“In the following pages, the ratio of the circumference of a circle to its diameter, is determined to the great extent of 527 places of decimals.”"
+          "type": "blockquote",
+          "value": "<mark><strong>“In the following pages, the ratio of the circumference of a circle to its diameter, is determined to the great extent of 527 places of decimals.”</mark></strong>"
         },
         {
           "type": "text",
@@ -421,7 +457,11 @@
         },
         {
           "type": "text",
-          "value": "Second, his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 441 decimal places. Shanks wrote, “so the accuracy is ensured at least to that extent; and it is confidently hoped no error has crept into the remaining 86 places.”"
+          "value": "Second, his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 441 decimal places. Shanks wrote:"
+        },
+        {
+          "type": "blockquote",
+          "value": "<mark><strong>“so the accuracy is ensured at least to that extent; and it is confidently hoped no error has crept into the remaining 86 places.”</mark></strong>"
         },
         {
           "type": "text",
@@ -540,7 +580,11 @@
         },
         {
           "type": "text",
-          "value": "In 1949, Professor John von Neumann, like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of <strong>“obtaining a statistical measure of the randomness of the distribution of the digits.”</strong>"
+          "value": "In 1949, Professor John von Neumann, like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:"
+        },
+        {
+          "type": "blockquote",
+          "value": "<mark><strong>“obtaining a statistical measure of the randomness of the distribution of the digits.”</strong></mark>"
         },
         {
           "type": "text",
@@ -569,10 +613,6 @@
         {
           "type": "text",
           "value": "Today, the most accurate value of pi is 314,000,000,000,000 digits set in 2025, though the attempt took 110 days. Imagine for a moment, you are holding one of the Harry Potter books. It doesn’t matter which one. “Deletrius Aparecium!” you shout. Every single letter in that book vanishes and turns into a digit of pi. Now imagine that every single person in the US–babies included–is holding their own copy with their own digits. That is 314 trillion, give or take a few."
-        },
-        {
-          "type": "text",
-          "value": "A fun fact: <strong>“mathematicians discovered that every possible combination of 13 digits exists somewhere in the sequence.”</strong>"
         }
       ]
     },
@@ -604,8 +644,8 @@
           "value": "But as our forensic investigator Hayes put it:"
         },
         {
-          "type": "text",
-          "value": "<strong>“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’s computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’s work, but he also spoke admiringly of ‘the power to calculate, and...the courage to face the labour.’”</strong>"
+          "type": "blockquote",
+          "value": "<mark><strong>“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’s computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’s work, but he also spoke admiringly of ‘the power to calculate, and...the courage to face the labour.’”</strong></mark>"
         },
         {
           "type": "text",

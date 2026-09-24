@@ -3,16 +3,22 @@
 </script>
 
 <div class="warning">
-	<span><strong>Warning:</strong> {@html text}</span>
-	<span class="note"><small>*<em>{@html note}</em></small></span>
+	<mark>
+		<span><strong>Warning:</strong> {@html text}</span>
+		<span class="note"><small>*<em>{@html note}</em></small></span>
+	</mark>
 </div>
 
 <style>
 	.warning {
-		/* background-color: var(--color-fg);
-		color: var(--color-bg);
+		/* font-size: var(--20px); */
+		/* max-width: 35em; */
+		margin-bottom: 8rem;
+	}
+
+	mark {
+		display: block;
 		padding: 1rem;
-		margin: 1rem 0; */
 	}
 
 	span {

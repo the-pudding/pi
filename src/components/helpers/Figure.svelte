@@ -1,8 +1,8 @@
 <script>
-	let { src, alt, figcaption } = $props();
+	let { src, alt, figcaption, className } = $props();
 </script>
 
-<figure class="figure-media">
+<figure class="figure-media {className}">
 	<img {src} {alt} />
 
 	{#if figcaption}
@@ -14,16 +14,17 @@
 
 <style>
 	figure {
-		/* position: sticky;
-		top: 0;
-		z-index: -1; */
-		background: var(--color-bg);
+		margin: 8rem auto;
+	}
+
+	figure.small {
+		max-width: 25em;
+		margin: 2rem auto;
 	}
 
 	figcaption {
 		font-size: var(--14px);
 		padding: 8px 0;
-		/* text-align: center; */
 	}
 
 	img {

@@ -19,17 +19,19 @@
 			{#each content as { type, value }}
 				{@const C = components[type] || defaultComponents[type]}
 				{@const isString = typeof value === "string"}
-				{#if C}
-					<C {...value} />
-				{:else if type === "text"}
-					<p>{@html value}</p>
-				{:else if isString}
-					<svelte:element this={type}>
-						{@html value}
-					</svelte:element>
-				{:else}
-					<svelte:element this={type} {...value}></svelte:element>
-				{/if}
+				<div class="chunk chunk--{type.toLowerCase()}">
+					{#if C}
+						<C {...value} />
+					{:else if type === "text"}
+						<p>{@html value}</p>
+					{:else if isString}
+						<svelte:element this={type}>
+							{@html value}
+						</svelte:element>
+					{:else}
+						<svelte:element this={type} {...value}></svelte:element>
+					{/if}
+				</div>
 			{/each}
 		{/if}
 	</section>
