@@ -46,7 +46,7 @@
 	}
 
 	article :global(h2) {
-		font-size: clamp(var(--32px), 5vw, var(--160px));
+		font-size: clamp(var(--32px), 8vw, var(--160px));
 		margin: 8rem auto 0 auto;
 	}
 </style>

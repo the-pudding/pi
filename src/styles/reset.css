@@ -6,10 +6,6 @@ body {
 	-webkit-tap-highlight-color: transparent;
 }
 
-mark {
-	padding: 0 4px;
-}
-
 img,
 video {
 	display: block;

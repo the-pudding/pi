@@ -48,7 +48,7 @@
 	<div class="feed">
 		{#each videos as { id, user, caption, sound, likes, comments, saves }}
 			<div class="video">
-				<img src="{base}/assets/friend/{id}.webp" alt="" />
+				<video src="{base}/assets/friend/{id}.mp4" alt="" autoplay muted loop />
 
 				<div class="rail">
 					<div class="avatar">{user.charAt(0).toUpperCase()}</div>
@@ -166,7 +166,7 @@
 		align-items: center;
 	}
 
-	.video img {
+	.video video {
 		width: auto;
 		height: 100%;
 		object-fit: cover;
