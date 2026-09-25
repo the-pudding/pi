@@ -14,13 +14,14 @@
 
 <style>
 	figure {
-		margin: 8rem auto;
+		margin: 4rem auto;
+		max-width: 25em;
 	}
 
-	figure.small {
+	/* figure.small {
 		max-width: 25em;
-		margin: 2rem auto;
-	}
+		margin: 4rem auto;
+	} */
 
 	figcaption {
 		font-size: var(--14px);

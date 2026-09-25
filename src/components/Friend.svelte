@@ -48,7 +48,8 @@
 	<div class="feed">
 		{#each videos as { id, user, caption, sound, likes, comments, saves }}
 			<div class="video">
-				<video src="{base}/assets/friend/{id}.mp4" alt="" autoplay muted loop />
+				<video src="{base}/assets/friend/{id}.mp4" alt="" autoplay muted loop
+				></video>
 
 				<div class="rail">
 					<div class="avatar">{user.charAt(0).toUpperCase()}</div>

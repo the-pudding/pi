@@ -198,7 +198,7 @@
         },
         {
           "type": "mark",
-          "value": "TK graphic"
+          "value": "TK graphic - table/chart of calculations per digit"
         },
         {
           "type": "text",
@@ -397,7 +397,7 @@
         },
         {
           "type": "text",
-          "value": "You may now be wondering if our pi thread got lost. Me too, to be honest. Let’s bring it full circle. If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll please…"
+          "value": "You may now be wondering if our pi thread got lost. Me too, to be honest. Let’s bring back our main character. If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll please…"
         },
         {
           "type": "mark",
@@ -450,15 +450,19 @@
         },
         {
           "type": "mark",
-          "value": "TK dramatic pause visual"
+          "value": "TK dramatic pause visual?"
         },
         {
           "type": "text",
-          "value": "<span class=relative>British mathematician D.F. Ferguson (sadly no photo available) took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi.</span>"
+          "value": "British mathematician D.F. Ferguson (sadly no photo available) took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
         },
         {
           "type": "text",
           "value": "He compared it to Shanks’. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything after that point, from 528 to 707, was entirely wrong."
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic - diff/highlight (or animated they fall off)"
         },
         {
           "type": "text",
@@ -519,7 +523,7 @@
         },
         {
           "type": "text",
-          "value": "Two arctan series, one built on 1/5, one on 1/239. Each series is a long list of fractions that get smaller and smaller, and you add them all up. Every fraction in the list is a term."
+          "value": "Two arctan series. Each is a long list of fractions that get smaller and smaller, and you add them all up. Every fraction in the list is a term."
         },
         {
           "type": "text",
@@ -532,6 +536,10 @@
         {
           "type": "text",
           "value": "Suspect one: term 248. This term, which sat deep in the list, was a repeating decimal that cycles every 210 digits. So when Shanks extended that term from 530 digits out to 609, he didn't have to calculate anything. He just had to copy a chunk he had already done."
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic"
         },
         {
           "type": "text",
@@ -550,6 +558,10 @@
           "value": "Suspect two: term 72. Ferguson flagged that same spot in 1946. Hayes found that dropping five digits at that point and sliding the rest left does the trick. Same type of error as before."
         },
         {
+          "type": "mark",
+          "value": "Tk graphic"
+        },
+        {
           "type": "text",
           "value": "With both of these errors accounted for, Shanks’ digits were reproduced until 601 digits."
         },
@@ -559,7 +571,7 @@
         },
         {
           "type": "text",
-          "value": "So there were a handful of errors, all coming in those months before publication in April 1853. None of them were computing mistakes, but rather clerical errors. It is more surprising to me that given the sheer amount of numbers he had to calculate and write, there weren’t more–a testament to both his endurance and focus."
+          "value": "So there were a handful of errors, all coming in those months before publication in April 1853. None of them were computing mistakes, but rather clerical errors. It is more surprising to me that given the sheer amount of numbers he had to calculate and write, there weren’t more&mdash;a testament to both his endurance and focus."
         }
       ]
     },
@@ -576,7 +588,11 @@
         },
         {
           "type": "text",
-          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in 607 decimal places. The true version has 50 sevens. Part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
+          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the  original 607 decimal places. The true version has 50 sevens. Part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic"
         },
         {
           "type": "text",
@@ -588,11 +604,19 @@
         },
         {
           "type": "text",
-          "value": "The result…"
+          "value": "The result…TK"
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic"
         },
         {
           "type": "text",
           "value": "Next up, John Venn. Let’s fix his walk with the true value of pi through the same number of digits as his original. A walk made from Shanks’s digits and one made from the corrected digits would initially follow the same instructions and then diverge."
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic"
         },
         {
           "type": "text",
@@ -600,7 +624,11 @@
         },
         {
           "type": "text",
-          "value": "Finally, just for fun, we have George Pólya. We’ll do the same thing, and probably expect to see the same results, no return to origin."
+          "value": "Finally, just for fun, we return to George Pólya. We’ll do the same thing, and probably expect to see the same result of no return to origin because of the small sample size."
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic"
         }
       ]
     },
@@ -620,8 +648,12 @@
           "value": "Dude, you're getting a Dell Electronic Numerical Integrator and Computer! (ENIAC for short)."
         },
         {
+          "type": "mark",
+          "value": "Tk image"
+        },
+        {
           "type": "text",
-          "value": "That same year, Professor John von Neumann, like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:"
+          "value": "<span class=relative>That same year, Professor <span class=dotted>John von Neumann</span>, like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
         },
         {
           "type": "blockquote",
@@ -633,27 +665,43 @@
         },
         {
           "type": "text",
-          "value": "There was mayhem in the streets. Babies named Pi surged. Okay, neither of those things happened, but the record was shattered and von Neumann got his sweet, sweet digits."
+          "value": "There was mayhem in the streets. A surge of babies were named Pi. Okay, neither of those things happened, but the record was shattered and von Neumann got his sweet, sweet digits."
         },
         {
           "type": "text",
           "value": "The updated distribution of pi’s digits looked like this:"
         },
         {
-          "type": "text",
-          "value": "The pi arms races had begun. As computers got more and more powerful, calculating pi came along for the ride as a sort of benchmarking guide."
+          "type": "mark",
+          "value": "Tk graphic - distribution"
         },
         {
           "type": "text",
-          "value": "In 1961, Shanks was back. Daniel Shanks that is. No known relationship to William, but you have to wonder if it was some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than nine hours."
+          "value": "The pi arms races had begun. As computers got more and more powerful, calculating pi came along for the ride as a sort of benchmark."
+        },
+        {
+          "type": "text",
+          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>."
         },
         {
           "type": "text",
           "value": "They tested the digit frequencies almost immediately. That continued to be part of why anyone wanted more digits. Now, the 7s came out fine."
         },
         {
+          "type": "mark",
+          "value": "Tk graphic - distribution"
+        },
+        {
           "type": "text",
-          "value": "Today, the most accurate value of pi is 314,000,000,000,000 digits set in 2025, though the attempt took 110 days. Imagine for a moment, you are holding one of the Harry Potter books. It doesn’t matter which one. “Deletrius Aparecium!” you shout. Every single letter in that book vanishes and turns into a digit of pi. Now imagine that every single person in the US–babies included–is holding their own copy with their own digits. That is 314 trillion, give or take a few."
+          "value": "Today, the most accurate value of pi is 314,000,000,000,000 digits, set in 2025, though the attempt took Shanksian 110 days. Imagine for a moment, you are holding one of the Harry Potter books. It doesn’t matter which one. <em>“Deletrius Aparecium!”</em> you shout with enthusiasm. Every single letter in that book vanishes and turns into a digit of pi. (Go ahead, fact check this spell). Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy with their own digits. That is 314 trillion, give or take a few."
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic - pi calculations over time"
+        },
+        {
+          "type": "text",
+          "value": "The amount of compute has exploded so much that we have to put the y-axis on a log scale just to see a curve."
         }
       ]
     },
@@ -661,28 +709,36 @@
       "section": "part10",
       "content": [
         {
+          "type": "h2",
+          "value": "Full Circle"
+        },
+        {
           "type": "text",
-          "value": "By 2013, researchers were exploring walks built from 100 billion digits of pi. So to end things, we return to pi’s digits via Pólya’s walker, now with an enormous yet still finite journey to examine."
+          "value": "By 2013, researchers were exploring walks built from 100 billion digits of pi. So to end things, we return to pi’s digits via Pólya’s walker, now with an enormous&mdash;yet still finite&mdash;journey to examine."
         },
         {
           "type": "text",
           "value": "We measure how far the walker travels from the origin and see if it returns. We can count digits, pairs, and longer sequences. We can compare the results with what independent random choices would produce."
         },
         {
-          "type": "text",
-          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching billions of digits of pi guiding a walk. Their eyes unblinking, their minds whirling."
+          "type": "mark",
+          "value": "Tk graphic - animations/pictures/charts of results"
         },
         {
           "type": "text",
-          "value": "But they’d be sure to remind us that increasing the scale does not remove the distinction between observation and proof. Any returns we observe are finite. Any digit counts cover only part of the number. For now."
+          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching billions of digits of pi guiding a walk. Their eyes unblinking, their minds whirling. What would it have inspired in them?"
         },
         {
           "type": "text",
-          "value": "Shanks died in 1882, unaware of the error, before Venn’s path, the museum display, and the correction."
+          "value": "Regardless, they’d be sure to remind us that increasing the number of digits does not remove the distinction between observation and proof. Any returns we observe are finite. Any digit counts cover only part of the number. For now."
         },
         {
           "type": "text",
-          "value": "But as our forensic investigator Hayes put it:"
+          "value": "Shanks died in 1882, unaware of De Morgan’s doubts, Venn’s path, the museum’s celebration, and the error and its correction."
+        },
+        {
+          "type": "text",
+          "value": "But as our forensic investigator Hayes aptly put it:"
         },
         {
           "type": "blockquote",
@@ -691,6 +747,10 @@
         {
           "type": "text",
           "value": "Shanks directly and indirectly created paths for others to explore and build upon in spite of his errors, simply because he wanted something to do."
+        },
+        {
+          "type": "text",
+          "value": "Thanks to Shanks. To power and courage."
         }
       ]
     }
