@@ -60,7 +60,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>It was the spring of 1853. You might remember it as the time when <span class=dotted>Gail Borden</span> <img class=headshot src=assets/images/borden.jpg> patented his process for condensed milk in the US (his name is on the tin).</span>"
+          "value": "<span class=relative>It was the spring of 1853. You might remember it as the time when <span class=dotted>Gail Borden</span> <img class=headshot src=assets/images/borden.jpg alt='Gail Borden portrait'> patented his process for condensed milk in the US (his name is on the tin).</span>"
         },
         {
           "type": "Figure",
@@ -82,11 +82,11 @@
         },
         {
           "type": "text",
-          "value": "The same man who three years prior, introduced the world to the meat biscuit, an invention that proved to be ahead of its time. But I digress&mdash;Gail Borden has nothing to do with this story."
+          "value": "The same man who three years prior, introduced the world to the meat biscuit, an invention that proved to be ahead of its time. I digress&mdash;Gail Borden has nothing to do with this story."
         },
         {
           "type": "text",
-          "value": "At the exact same time over in England, in the small coal-mining town of Houghton-le-Spring, a schoolmaster sent a book to the printer. Back then there weren’t any photos, but I found this impressive ox that lived there."
+          "value": "But at the exact same time over in England, in the small coal-mining town of Houghton-le-Spring, a schoolmaster sent a book to the printer. Back then photos were rare, but I found this impressive ox from the town."
         },
         {
           "type": "Figure",
@@ -97,7 +97,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>His name (the schoolmaster) was <span class=dotted>William Shanks</span><img class=headshot src=assets/images/shanks.jpg>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
+          "value": "<span class=relative>His name (the schoolmaster) was <span class=dotted>William Shanks</span><img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
         },
         {
           "type": "Figure",
@@ -113,7 +113,13 @@
         },
         {
           "type": "text",
-          "value": "He spent nearly <em>two and a half years</em> producing a number that resulted in 607 characters, about five times longer than the letters in this sentence."
+          "value": "He spent nearly <em>two and a half years</em> producing a number that resulted in 607 characters, just five times longer than the letters in this sentence."
+        },
+        {
+          "type": "Specimen",
+          "value": {
+            "version": "shanks607"
+          }
         },
         {
           "type": "text",
@@ -125,23 +131,30 @@
         },
         {
           "type": "text",
-          "value": "I won’t attempt to explain the math, because I can’t. But thanks to YouTube and my decades-old training in long division, here is how you calculate pi’s first decimal point, by hand."
+          "value": "I won’t attempt to explain the math, because I can’t. But thanks to YouTube and my decades-old training in long division, here is what it looks like to accurately calculate pi’s first decimal point by hand."
         },
         {
-          "type": "mark",
-          "value": "photo of paper? digital recreation? overhead video timelapse?"
-        },
-        {
-          "type": "text",
-          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it wasn’t too crazy. But each digit gets increasingly more computationally taxing to calculate. For perspective, here is the volume of the calculations to just the tenth decimal."
-        },
-        {
-          "type": "mark",
-          "value": "photo of papers? digital scroll / autoplay?"
+          "type": "Figure",
+          "value": {
+            "src": "assets/videos/byhand720.mp4",
+            "alt": "A timelapse of calculating pi to the first decimal place by hand"
+          }
         },
         {
           "type": "text",
-          "value": "Now I could see how this could be quite the undertaking. Shanks knew his effort did nothing for his reputation as an (amateur) mathematician. Possibly something, though, for his reputation as a Computer. Back then that was a job for humans, a person who computes. He was darn good."
+          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it was pretty straightforward. But each digit gets increasingly more computationally taxing to calculate. For perspective, here is the volume of the calculations to just the tenth decimal."
+        },
+        {
+          "type": "mark",
+          "value": "TK graphic - grid of papers"
+        },
+        {
+          "type": "text",
+          "value": "I was starting to appreciate the scale of the challenge Shanks faced."
+        },
+        {
+          "type": "text",
+          "value": "But Shanks knew his effort did nothing for his reputation as an (amateur) mathematician. Possibly something, though, for his reputation as a Computer. Back then that was a job for humans, a person who computes. He was darn good."
         },
         {
           "type": "text",
@@ -165,7 +178,7 @@
         },
         {
           "type": "text",
-          "value": "For this, we have TIk Tok. For Shanks, he had the manual computation of the digits of pi."
+          "value": "For this, we have Tik Tok. For Shanks, he had the manual computation of the digits of pi."
         },
         {
           "type": "text",
@@ -181,7 +194,7 @@
         },
         {
           "type": "text",
-          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel=noreferrer>calculated pi to 100 decimal places</a>, and documented the process. Extrapolating from his estimates, the by-hand calculations would fill roughly 5,000 pages. More pages than the entire stack of the Harry Potter series."
+          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel=noreferrer>calculated pi to 100 decimal places</a>, and documented the process. He estimated that Shanks’ calculations to arrive at 707 decimal places would fill over 5,000 pages. More pages than the entire stack of the Harry Potter series."
         },
         {
           "type": "Figure",
@@ -194,15 +207,15 @@
         },
         {
           "type": "text",
-          "value": "It hurt my hand just thinking about it. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. I needed to go further. Sampling Engert’s actual pages and a bit of math extrapolation, I calculated an estimate* that projects out to 707 digits."
+          "value": "It hurt my hand just thinking about it. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. I needed to go further. I counted the individual marks on a sample of Engert’s pages (and my own) for a ballpark approximation."
         },
         {
           "type": "mark",
-          "value": "TK graphic - table/chart of calculations per digit"
+          "value": "TK graphic - chart/table"
         },
         {
           "type": "text",
-          "value": "If I may, that is the equivalent of swiping on Tik Tok once per second, for 57 days straight. A tremendous act of perseverance no matter how you frame it."
+          "value": "It took about X written numbers to compute 707 decimal places. If I may, that is the equivalent of swiping on Tik Tok once per second, for <em>57 days straight</em>. A tremendous act of perseverance no matter how you frame it."
         }
       ]
     },
@@ -219,11 +232,14 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>The first mathematician to closely interrogate pi’s digits was <span class=dotted>Augustus De Morgan</span>. <img class=headshot src=assets/images/demorgan.jpg> In a posthumous publication, he made a passing observation about the lack of 7s represented in Shanks’ original 607 computation.</span>"
+          "value": "<span class=relative>The first mathematician to closely interrogate pi’s digits was <span class=dotted>Augustus De Morgan</span>. <img class=headshot src=assets/images/demorgan.jpg alt='Augustus De Morgan portrait'> In a posthumous publication, he made a passing observation about the lack of 7s represented in Shanks’ original 607 computation.</span>"
         },
         {
-          "type": "mark",
-          "value": "TK graphic - 7s distribution"
+          "type": "Distribution",
+          "value": {
+            "version": "shanks607",
+            "caption": "How often each digit 0-9 appears in Shanks’ original 607 pi decimal places."
+          }
         },
         {
           "type": "text",
@@ -240,7 +256,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, <span class=dotted>John Venn</span>. <img class=headshot src=assets/images/venn.jpg> Yes, that Venn. I can hear your fawning from the future.</span>"
+          "value": "<span class=relative>Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, <span class=dotted>John Venn</span>. <img class=headshot src=assets/images/venn.jpg alt='John Venn portrait'> Yes, that Venn. I can hear your fawning from the future.</span>"
         },
         {
           "type": "mark",
@@ -287,6 +303,18 @@
         },
         {
           "type": "text",
+          "value": "I recreated Venn’s path with code so you can see it animated:"
+        },
+        {
+          "type": "Walk",
+          "value": {
+            "version": "venn",
+            "source": "shanks707",
+            "fps": "1"
+          }
+        },
+        {
+          "type": "text",
           "value": "This wandering pen thing had legs."
         }
       ]
@@ -300,13 +328,13 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Speaking of legs, a drunken man has two (this will make sense soon). We will briefly wander away from pi and continue Venn’s thread. In 1905, <span class=dotted>Karl Pearson</span> <img class=headshot src=assets/images/pearson.jpg> threw down a challenge he dubbed “the problem of the random walk.”</span>"
+          "value": "<span class=relative>Speaking of legs, a drunken man has two (this will make sense soon). We will briefly wander away from pi and continue Venn’s thread. In 1905, <span class=dotted>Karl Pearson</span> <img class=headshot src=assets/images/pearson.jpg alt='Karl Pearson portrait'> threw down a challenge he dubbed “the problem of the random walk.”</span>"
         },
         {
           "type": "Figure",
           "value": {
             "src": "assets/images/nature.jpg",
-            "alt": "Tk",
+            "alt": "Scan of the Nature article with the question “The Problem of The Random Walk”.",
             "className": "small"
           }
         },
@@ -320,7 +348,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg> responded with a “well actually.” He solved this problem 25 years ago with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
+          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually.” He solved this problem 25 years ago with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
         },
         {
           "type": "text",
@@ -349,7 +377,7 @@
         },
         {
           "type": "text",
-          "value": "Hungarian mathematician <span class=relative><span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
+          "value": "Hungarian mathematician <span class=relative><span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg alt='George Pólya portrait'> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
         },
         {
           "type": "text",
@@ -389,7 +417,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>He also found that in a three dimensional space, the probability of a return drops to 34%. This gave way to the saying by <span class=dotted>Shizuo Kakutani</span><img class=headshot src=assets/images/kakutani.jpg>:</span>"
+          "value": "<span class=relative>He also found that in a three dimensional space, the probability of a return drops to 34%. This gave way to the saying by <span class=dotted>Shizuo Kakutani</span><img class=headshot src=assets/images/kakutani.jpg alt='Shizuo Kakutani portrait'>:</span>"
         },
         {
           "type": "blockquote",
@@ -458,7 +486,7 @@
         },
         {
           "type": "text",
-          "value": "He compared it to Shanks’. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything after that point, from 528 to 707, was entirely wrong."
+          "value": "Ferugson compared his result to Shanks’ digits. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything after that point, from 528 to 707, was entirely wrong."
         },
         {
           "type": "mark",
@@ -641,11 +669,11 @@
         },
         {
           "type": "text",
-          "value": "Let’s keep moving forward. In 1949, the museum’s ceiling was corrected with the true value of pi. Also around that time enter lowercase computers. Non-human, electronic, digital, programmable."
+          "value": "Let’s keep moving forward. In 1949, the museum’s ceiling was corrected with the true value of pi. Also around that time, lowercase computers entered the scene. Non-human, electronic, digital, and programmable."
         },
         {
           "type": "text",
-          "value": "Dude, you're getting a Dell Electronic Numerical Integrator and Computer! (ENIAC for short)."
+          "value": "Dude, you’re getting a <del>Dell</del> Electronic Numerical Integrator and Computer! (ENIAC for short)."
         },
         {
           "type": "mark",
@@ -653,7 +681,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>That same year, Professor <span class=dotted>John von Neumann</span>, like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
+          "value": "<span class=relative>That same year, Professor <span class=dotted>John von Neumann</span>, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
         },
         {
           "type": "blockquote",
@@ -681,7 +709,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>."
+          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> <img class=headshot src=assets/images/dshanks.jpg alt='Daniel Shanks portrait'> that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>."
         },
         {
           "type": "text",
@@ -813,5 +841,10 @@
         ]
       }
     ]
+  },
+  "pi": {
+    "shanks607": "1415926535897932384626433832795028841971693993751058209749445923078164062826089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917154643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623798347495673518857527248912279381830119491298336733624419366430860213950160924480773209436285530966202755693979869502224749962060749703041236692913332",
+    "shanks707": "14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237983474956735188575272489122793818301194912983367336244193664308602139501609244807723094362855309662027556939798695022247499620607497030412366886199511008920238377021314169411902988582544681639799904659700081700296312377381342084160791451183980570985",
+    "real707": "14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912983367336244065664308602139494639522473719070217986094370277053921717629317675238467481846766940513200056812714526356082778577134275778960917363717872146844090122495343014654958537105079227968925892354201995"
   }
 }

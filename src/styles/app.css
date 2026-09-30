@@ -117,3 +117,7 @@ img.headshot {
 	max-width: 8rem;
 	border: 2px dotted currentColor;
 }
+
+button {
+	text-transform: uppercase;
+}

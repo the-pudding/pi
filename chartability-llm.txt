@@ -1,0 +1,69 @@
+# Chartability Accessibility Heuristics for Data Visualizations (AI Reference)
+
+This document contains actionable development rules for rendering accessible data visualizations, UI, and data experiences (DX). When generating, reviewing, or suggesting code for charts, graphs, and data UI, ensure adherence to these rules.
+
+Categorized by POUR-CAF principles (Perceivable, Operable, Understandable, Robust, Compromising, Assistive, Flexible). Rules marked [CRITICAL] should be prioritized.
+
+## 1. PERCEIVABLE
+* [CRITICAL] Low Contrast: Geometries, marks, and large text require >3:1 contrast against backgrounds. Regular text requires >4.5:1.
+* [CRITICAL] Content is Only Visual: Do not rely solely on visuals. Ensure screen reader/braille support via ARIA, visually-hidden text, or alternative text. Expose annotations, trends, and features programmatically. Sync audio for animations/video.
+* [CRITICAL] Small Text Size: Text must never be smaller than 12px (9pt).
+* [CRITICAL] Seizure Risk: Avoid red flashes, flashing animations, and large oscillating red areas.
+* Color Used Alone: Never use color as the sole indicator of meaning. Use redundant encoding: textures, shapes, mark sizes, or dash patterns.
+* Distinguishability: Do not obscure primary elements unless separability isn't required. Ensure at least 1px whitespace between touching adjacent elements (e.g., stacked bars, pie slices). Prevent text overlap.
+* CVD-Friendly: Use colorblind-safe palettes (e.g., check for deuteranomaly, protanomaly, tritanomaly).
+* Spacing: Use structured padding/whitespace. Avoid excessively thin bars with massive gaps, or overcrowded elements.
+
+## 2. OPERABLE
+* [CRITICAL] Modality & Input: If interactive via mouse/touch, it MUST be fully interactive via keyboard (Tab, Enter, Space, Arrows) and screen readers.
+* [CRITICAL] Interaction Cues: Provide visible instructions/cues explaining how to interact with the chart, including keyboard controls.
+* [CRITICAL] Override AT Controls: Custom keyboard bindings must NOT override native screen reader shortcuts or native page navigation (Tab) unless the user has explicitly focused the chart component.
+* Interactive Contrast: Hover/Focus/Select states must have at least 3:1 contrast against their previous state, OR use a non-color indicator (e.g., 2px stroke thickness change, add dash pattern, add marker).
+* Keyboard Focus Indicator: Must be visible, unobscured, have >= 4.5:1 contrast, and at least a 2px border. Do not rely solely on browser defaults.
+* Inappropriate Tab Stops: Only interactive elements should have a `tabindex`. Do NOT put a tab stop on every single SVG node. Use progressive disclosure (one tab stop for the chart container, then arrow-key/inner navigation for children). Data tables only get a tab stop if they are interactive.
+* Complex Action Alternatives: Provide standard UI alternatives (buttons, dropdowns, search) for complex gestures like brushing, panning, zooming, or lasso-filtering.
+* Pointer Target Size: Minimum hit area for mouse/touch is 24x24px. If data points are smaller (e.g., scatterplots), provide alternative selection UI (data table, search, zoom).
+
+## 3. UNDERSTANDABLE
+* [CRITICAL] Purpose/Readability Unexplained: The UI must explicitly explain the chart's purpose and instructions on how to read it.
+* [CRITICAL] Missing Title/Summary: Visually provide a descriptive title, summary, caption, or key takeaway.
+* [CRITICAL] Reading Level: Keep text, labels, and alt-text at or below a 9th-grade reading level. Explain complex metrics.
+* Unclear Interactive Context: If interacting with a chart filters/updates other parts of the page, announce this using ARIA live regions (`aria-live="polite"`) so screen reader users are notified without losing focus.
+* Information Complexity: Max one Y or X axis (no dual-axis charts). Do not encode a Z-axis (3D) unless the data is literally 3D spatial data. Limit categorical colors/groups to a maximum of 5.
+* Untraceable Changes: If data changes meaningfully, use transition animations for object constancy (duration between 250ms and 2000ms).
+* Undefined Metrics: Define the data source, metrics, metadata, and variables near the chart.
+* Statistical Uncertainty: Clearly and unambiguously define confidence intervals/uncertainty visually and textually.
+* Axis Labels: Axes must be present and labeled. Do not truncate an axis (e.g., starting Y at a non-zero number) without a clear label/warning.
+* Inappropriate Controls: Remove useless or irrelevant interactive controls to reduce cognitive load.
+
+## 4. ROBUST
+* Conformance: Code must output valid HTML/SVG and adhere to WCAG 2.1 / WAI-ARIA authoring practices.
+* Semantically Invalid: If an SVG element functions as a button, it must have `role="button"`. Ensure valid DOM structure.
+* Technology Support: Do not build features that only work in a single browser or require a specific peripheral device.
+
+## 5. COMPROMISING
+* [CRITICAL] No Table: Always provide a human-readable data table alternative to the chart (unless the title/annotations fully summarize the data).
+* Single Process: Provide multiple ways to reach a state (e.g., filters in the chart AND parallel UI dropdowns/search).
+* Location/History: Provide breadcrumbs, URL-based history, or Save/Load features for complex dashboard states.
+* Unforgivable Interactions: Provide Undo/Redo mechanisms for interactive chart operations.
+* Un-navigable Structure: Keyboard/Screen-Reader navigation must match the data hierarchy (e.g., navigating groups in a stacked bar chart laterally and vertically). Navigation order: Title -> Description -> Annotations -> Data Points.
+* Static Tables: The alternative data table should be sortable, filterable, or at least downloadable (CSV).
+* Unshareable State: Deeply filtered or interacted states should reflect in the URL parameters so the exact view can be shared via link.
+
+## 6. ASSISTIVE
+* [CRITICAL] Inappropriate Density: If data is overlapping or overcrowded, aggregate the data, explain the clusters, or split it into smaller charts. Keep the signal clear.
+* [CRITICAL] Tedious Navigation: Provide "Skip to Data" or "Skip Chart" links. Do not force users to tab through 500 individual data points; provide grouped navigation.
+* Undescribed Visual Features: Visually apparent trends, outliers, or clusters must be described in text explicitly.
+* Unreadable Data Text: Format numbers for human consumption visually and for AT (e.g., render "6500000000" as "6.5B" visually, and `aria-label="six point five billion"`).
+* Extremes Unhandled: Handle overlapping points, squished margins, and massive outliers programmatically so the chart remains readable.
+* No Default View: For complex analytical tools, provide an opinionated default visualization rather than forcing a "build-your-own" blank slate.
+
+## 7. FLEXIBLE
+* [CRITICAL] User Style Overrides: Ensure the chart does not break if a user applies a custom CSS stylesheet or high-contrast mode (e.g., Windows High Contrast Mode). Avoid hardcoded inline colors where CSS variables or classes can be used.
+* Uncontrollable Animations: Provide Pause/Stop/Restart controls for any animation or data transition lasting longer than 2 seconds or that loops infinitely.
+* Forced Scrolling: "Scrollytelling", parallax, or infinite scrolling must have an opt-out toggle or standard "Next/Previous" button alternatives.
+* Zoom/Reflow unsupported: Charts must scale and reflow on browser zoom without cutting off meaningful information. Use responsive SVG/CSS setups (`viewBox`, `%` widths).
+* Text Adjustments ignored: Text sizes must use relative units (`rem`, `em`) so they scale if the user increases browser base font size.
+* Inconsistent Design: Standardize color palettes, keybindings, and interaction models across all charts in an application.
+* Forced Contrast/Textures: Allow users to toggle patterns/textures on or off according to preference.
+* Difficult Charts: Provide alternative layouts for cognitively difficult chart types (e.g., allow user to toggle a pie chart into a stacked bar chart or treemap).

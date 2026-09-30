@@ -1,5 +1,5 @@
 <script>
-	import { getContext } from "svelte";
+	import { setContext, getContext } from "svelte";
 	import Footer from "$components/Footer.svelte";
 	import CMS from "$components/helpers/CMS.svelte";
 	import Hero from "$components/Hero.svelte";
@@ -8,10 +8,14 @@
 	import Figure from "$components/helpers/Figure.svelte";
 	import Boss from "$components/Boss.svelte";
 	import Friend from "$components/Friend.svelte";
+	import Specimen from "$components/Specimen.svelte";
+	import Distribution from "$components/Distribution.svelte";
+	import Walk from "$components/Walk.svelte";
 
 	const copy = getContext("copy");
 	const { body } = copy;
-	const components = { Figure, Hero, Warning };
+	setContext("pi", copy.pi);
+	const components = { Figure, Hero, Warning, Specimen, Distribution, Walk };
 </script>
 
 <Menu />
@@ -32,7 +36,7 @@
 	}
 
 	article :global(section .chunk) {
-		font-size: clamp(var(--20px), 3vw, var(--36px));
+		font-size: clamp(var(--20px), 3vw, var(--32px));
 		max-width: 25em;
 		margin: 2rem auto;
 	}
@@ -46,7 +50,7 @@
 	}
 
 	article :global(h2) {
-		font-size: clamp(var(--32px), 8vw, var(--160px));
+		font-size: clamp(var(--32px), 8vw, var(--128px));
 		margin: 8rem auto 0 auto;
 	}
 </style>

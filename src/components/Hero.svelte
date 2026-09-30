@@ -46,7 +46,10 @@
 	}
 
 	img {
-		height: max(320px, 60svh);
+		height: auto;
+		max-height: max(320px, 60svh);
+		width: auto;
+		max-width: 100%;
 	}
 
 	h1 {
