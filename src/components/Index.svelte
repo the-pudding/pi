@@ -12,6 +12,7 @@
 	import Distribution from "$components/Distribution.svelte";
 	import Walk from "$components/Walk.svelte";
 	import VennDiagram from "$components/VennDiagram.svelte";
+	import Unroll from "$components/Unroll.svelte";
 
 	const copy = getContext("copy");
 	const { body } = copy;
@@ -23,7 +24,8 @@
 		Specimen,
 		Distribution,
 		Walk,
-		VennDiagram
+		VennDiagram,
+		Unroll
 	};
 </script>
 

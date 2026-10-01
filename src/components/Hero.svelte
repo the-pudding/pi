@@ -10,7 +10,10 @@
 			target="_blank"
 			rel="noreferrer">The</a
 		>
-		<img src="assets/images/hero.jpg" alt="Tk" />
+		<img
+			src="assets/images/hero.jpg"
+			alt="A vintage illustration of a cartoon boy sitting and eating pie. The word 'Pudding' appears above him."
+		/>
 	</div>
 	<h1>
 		<span>The</span> <span>Afterlife</span> <span class="of">of</span>
@@ -20,7 +23,8 @@
 		>By <a
 			href="https://pudding.cool/author/russell-samora"
 			target="_blank"
-			rel="noreferrer">Russell Samora</a
+			aria-label="The Pudding (opens in a new tab)"
+			rel="noreferrer noopener">Russell Samora</a
 		></span
 	>
 </div>

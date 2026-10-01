@@ -31,13 +31,8 @@
           "value": "This is pi."
         },
         {
-          "type": "Figure",
-          "value": {
-            "src": "assets/images/pi-roll.gif",
-            "alt": "An animation of a circle unrolling and leaving behind its edge length.",
-            "className": "small",
-            "figcaption": "todo remake this"
-          }
+          "type": "Unroll",
+          "value": {}
         },
         {
           "type": "text",
@@ -195,7 +190,7 @@
         },
         {
           "type": "text",
-          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel=noreferrer>calculated pi to 100 decimal places</a>, and documented the process. He estimated that Shanks’ calculations to arrive at 707 decimal places would fill over 5,000 pages. More pages than the entire stack of the Harry Potter series."
+          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel='noreferrer noopener' aria-label='Engert’s website (opens in a new tab)'>calculated pi to 100 decimal places</a>, and documented the process. He estimated that Shanks’ calculations to arrive at 707 decimal places would fill over 5,000 pages. More pages than the entire stack of the Harry Potter series."
         },
         {
           "type": "Figure",
@@ -312,7 +307,7 @@
         },
         {
           "type": "text",
-          "value": "I scoured the internet to see if anyone could confirm my suspicions. I only found one measly mention&mdash;a lone comment in a <a href=https://statpics.blogspot.com/2010/06/first-published-random-walk.html target=_blank rel=noreferrer>brief blog post</a> about Venn’s pi path."
+          "value": "I scoured the internet to see if anyone could confirm my suspicions. I only found one measly mention&mdash;a lone comment in a <a href=https://statpics.blogspot.com/2010/06/first-published-random-walk.html target=_blank rel='noreferrer noopener' aria-label='statpics blog (opens in a new tab)'>brief blog post</a> about Venn’s pi path."
         },
         {
           "type": "Figure",
@@ -380,7 +375,7 @@
         },
         {
           "type": "text",
-          "value": "Pearson gave a name to Venn’s wandering pen. “Random walk” stuck, and is still <a href=https://en.wikipedia.org/wiki/Random_walk target=_blank rel=noreferrer>the term</a> used in mathematics today."
+          "value": "Pearson gave a name to Venn’s wandering pen. “Random walk” stuck, and is still <a href=https://en.wikipedia.org/wiki/Random_walk target=_blank rel='noreferrer noopener' aria-label='Wikipedia (opens in a new tab)'>the term</a> used in mathematics today."
         }
       ]
     },
