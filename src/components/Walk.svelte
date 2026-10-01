@@ -67,7 +67,7 @@
 		const { width, height } = canvasEl.getBoundingClientRect();
 		canvasEl.width = width * DPR;
 		canvasEl.height = height * DPR;
-		unit = width * 0.0175;
+		unit = width * 0.02;
 		if (!ctx) ctx = canvasEl.getContext("2d");
 		ctx.scale(DPR, DPR);
 	}
@@ -79,8 +79,8 @@
 			ctx.clearRect(0, 0, canvasEl.width / DPR, canvasEl.height / DPR);
 
 		if (version === "venn") {
-			baseX = canvasEl.width / 8 / DPR;
-			baseY = canvasEl.height / 8 / DPR;
+			baseX = canvasEl.width / 20 / DPR;
+			baseY = canvasEl.height / 20 / DPR;
 		} else {
 			baseX = canvasEl.width / 2 / DPR;
 			baseY = canvasEl.height / 2 / DPR;
@@ -105,6 +105,7 @@
 
 	function step(e) {
 		pause();
+		if (frame === -1) reset();
 		frame = +e.currentTarget.value;
 	}
 

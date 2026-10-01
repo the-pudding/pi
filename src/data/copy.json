@@ -35,7 +35,8 @@
           "value": {
             "src": "assets/images/pi-roll.gif",
             "alt": "An animation of a circle unrolling and leaving behind its edge length.",
-            "className": "small"
+            "className": "small",
+            "figcaption": "todo remake this"
           }
         },
         {
@@ -86,7 +87,7 @@
         },
         {
           "type": "text",
-          "value": "But at the exact same time over in England, in the small coal-mining town of Houghton-le-Spring, a schoolmaster sent a book to the printer. Back then photos were rare, but I found this impressive ox from the town."
+          "value": "But at the <em>exact same time</em> over in England, in the small coal-mining town of Houghton-le-Spring, a schoolmaster sent a book to the printer. Back then photos were rare, but I found this impressive ox from the town."
         },
         {
           "type": "Figure",
@@ -207,7 +208,7 @@
         },
         {
           "type": "text",
-          "value": "It hurt my hand just thinking about it. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. I needed to go further. I counted the individual marks on a sample of Engert’s pages (and my own) for a ballpark approximation."
+          "value": "It hurt my hand just thinking about it. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. I needed to go further. I counted every single number written from my own calculations for a ballpark approximation.*"
         },
         {
           "type": "mark",
@@ -228,7 +229,7 @@
         },
         {
           "type": "text",
-          "value": "Practically speaking, the 707 decimal places are superfluous. The most sophisticated engineering challenges of modern day don’t need more than 15 digits. But the digits of pi started taking on a life of their own outside of their geometric confines."
+          "value": "Practically speaking, the 707 decimal places are superfluous. The most sophisticated engineering challenges of modern day don’t need more than 15. But the digits of pi started taking on a life of their own outside of their geometric confines."
         },
         {
           "type": "text",
@@ -294,7 +295,7 @@
             "src": "assets/images/vennpen.jpg",
             "alt": "Tk",
             "className": "small",
-            "figcaption": "Tk"
+            "figcaption": "From the super snappy-titled book <em>The Logic of Chance - An Essay on the Foundations and Province of the Theory of Probability, with Especial Reference to its Logical Bearings and its Application to Moral and Social Science and to Statistics</em> by John Venn, 1888."
           }
         },
         {
@@ -318,8 +319,7 @@
           "value": {
             "src": "assets/images/mark.jpg",
             "alt": "Tk",
-            "className": "small",
-            "figcaption": "Tk"
+            "className": "small"
           }
         },
         {
@@ -397,7 +397,7 @@
         },
         {
           "type": "text",
-          "value": "Hungarian mathematician <span class=relative><span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg alt='George Pólya portrait'> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
+          "value": "<span class=relative>Hungarian mathematician <span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg alt='George Pólya portrait'> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
         },
         {
           "type": "text",
@@ -409,7 +409,7 @@
         },
         {
           "type": "text",
-          "value": "He posed a similar question to that of Pearson, though he elegantly used the term “promenaders” in place of “walkers”. Simply put, <strong>given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?</strong>"
+          "value": "He posed a similar question to that of Pearson, though used the more elegant term “promenaders” in place of “walkers.” Simply put, <strong>given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?</strong>"
         },
         {
           "type": "mark",
