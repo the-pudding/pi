@@ -166,11 +166,13 @@
 
 <!-- <div>debug: {frame}: {lastDigit} and {specimenWalk[frame]?.index}</div> -->
 <div class="c">
-	<div class="controls">
-		<button onclick={() => play()}>Play</button>
-		<button onclick={() => pause()}>Pause</button>
-		<button onclick={() => restart()}>Restart</button>
-		<div class="fps">
+	<div class="ui">
+		<div class="toggles">
+			<button onclick={() => play()}>Play</button>
+			<button onclick={() => pause()}>Pause</button>
+			<button onclick={() => restart()}>Restart</button>
+		</div>
+		<div class="speed">
 			<span class="label">Speed:</span>
 			{#each Object.keys(FPS_OPTS) as opt}
 				<label>
@@ -178,32 +180,31 @@
 					{opt}
 				</label>
 			{/each}
-
-			{#if maxFrame >= 0}
-				<div class="fps">
-					<label>
-						Step
-						<input
-							type="range"
-							min="0"
-							max={maxFrame}
-							value={Math.max(0, frame)}
-							oninput={step}
-						/>
-					</label>
-				</div>
-			{/if}
 		</div>
-		<div class="pi">
-			<span class="inner" style:transform="translateX({tickerOffset})">
-				{#each specimen as { digit, index }}
-					{@const unused = digit > degrees.length - 1}
-					{@const active = activeIndex === index}
-					<span class="decimal" class:unused class:active>{digit}</span>
-				{/each}
-			</span>
+
+		<div class="frame">
+			<label>
+				<span>Step:</span>
+				<input
+					type="range"
+					min="0"
+					max={maxFrame}
+					value={Math.max(0, frame)}
+					oninput={step}
+				/>
+			</label>
 		</div>
 	</div>
+	<div class="pi">
+		<span class="inner" style:transform="translateX({tickerOffset})">
+			{#each specimen as { digit, index }}
+				{@const unused = digit > degrees.length - 1}
+				{@const active = activeIndex === index}
+				<span class="decimal" class:unused class:active>{digit}</span>
+			{/each}
+		</span>
+	</div>
+
 	<div class="canvas">
 		<!-- <img class="venn" src="assets/images/vennpen.jpg" alt="Venn's path drawing" /> -->
 		<canvas bind:this={canvasEl}></canvas>
@@ -241,22 +242,37 @@
 		z-index: 1;
 	}
 
-	.controls {
+	.ui {
 		text-align: center;
-		margin-bottom: 8px;
+		margin-bottom: 0.5rem;
+		gap: 0.5rem;
+		display: flex;
+		justify-content: center;
 	}
 
-	.fps {
+	.ui > div {
+		line-height: 1;
+		/* vertical-align: middle; */
+	}
+
+	.speed,
+	.frame,
+	.toggles {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+		gap: 0.5rem;
 	}
 
 	label,
 	.label {
 		font-family: var(--font-sans);
 		font-size: var(--14px);
+		text-transform: uppercase;
 		vertical-align: middle;
+		display: flex;
+		align-items: center;
+		line-height: 1;
 	}
 
 	input[type="range"] {

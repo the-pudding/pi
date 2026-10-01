@@ -26,7 +26,7 @@
 		width: 62.5%;
 		aspect-ratio: 1 / 1;
 		border-radius: 50%;
-		border: 2px solid currentColor;
+		border: 3px solid currentColor;
 		display: flex;
 		align-items: center;
 		justify-content: center;
