@@ -11,11 +11,20 @@
 	import Specimen from "$components/Specimen.svelte";
 	import Distribution from "$components/Distribution.svelte";
 	import Walk from "$components/Walk.svelte";
+	import VennDiagram from "$components/VennDiagram.svelte";
 
 	const copy = getContext("copy");
 	const { body } = copy;
 	setContext("pi", copy.pi);
-	const components = { Figure, Hero, Warning, Specimen, Distribution, Walk };
+	const components = {
+		Figure,
+		Hero,
+		Warning,
+		Specimen,
+		Distribution,
+		Walk,
+		VennDiagram
+	};
 </script>
 
 <Menu />

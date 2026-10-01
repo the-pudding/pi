@@ -30,11 +30,11 @@
 	--color-bg: var(--color-white);
 	--color-fg: var(--color-black);
 	--color-fg-light: var(--color-gray-500);
-	--color-primary: var(--color-black);
+	--color-primary: var(--color-red);
 	--color-link: var(--color-black);
 	--color-link-hover: var(--color-black);
 	--color-focus: var(--color-gray-500);
-	--color-mark: var(--color-yellow);
+	--color-mark: Mark;
 	--color-selection: var(--color-gray-300);
 	--color-border: var(--color-gray-300);
 	--color-button-fg-primary: var(--color-white);
