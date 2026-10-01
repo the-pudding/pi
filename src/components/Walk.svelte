@@ -268,7 +268,6 @@
 		font-size: var(--14px);
 		width: 100%;
 		margin: 1rem auto;
-		/* margin-left: 50%; */
 		overflow: hidden;
 	}
 
@@ -278,8 +277,6 @@
 		display: block;
 		line-height: 1;
 		padding-left: 50%;
-		/* padding-left: 1ch; */
-		/* transition: transform 0.2s linear; */
 	}
 
 	.pi .decimal {
