@@ -59,7 +59,6 @@
 
 <style>
 	.unroll {
-		--red: var(--color-primary, #ef0000);
 		--ground: calc(0.25 * var(--d));
 		--line: max(1.5px, calc(0.025 * var(--d)));
 		position: relative;
@@ -84,7 +83,7 @@
 
 	.rim {
 		fill: none;
-		stroke: var(--red);
+		stroke: var(--color-primary);
 		stroke-width: 3;
 		stroke-dasharray: 100.1;
 		stroke-dashoffset: 0;
@@ -107,7 +106,7 @@
 		bottom: var(--ground);
 		width: calc(3.14159 * var(--d));
 		height: var(--line);
-		background: var(--red);
+		background: var(--color-primary);
 		transform-origin: left center;
 		transform: scaleX(1);
 		animation: trace var(--dur) infinite both;
@@ -140,7 +139,7 @@
 	}
 
 	.mark-pi {
-		color: var(--red);
+		color: var(--color-primary);
 		animation-name: tick-pi;
 	}
 
@@ -204,17 +203,17 @@
 		0%,
 		3% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0.5em);
+			transform: translateX(-50%);
 		}
 		8%,
 		84% {
 			opacity: 1;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 		88%,
 		100% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 	}
 
@@ -223,17 +222,17 @@
 		0%,
 		8% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0.5em);
+			transform: translateX(-50%);
 		}
 		13%,
 		84% {
 			opacity: 1;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 		88%,
 		100% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 	}
 
@@ -242,17 +241,17 @@
 		0%,
 		13% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0.5em);
+			transform: translateX(-50%);
 		}
 		18%,
 		84% {
 			opacity: 1;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 		88%,
 		100% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 	}
 
@@ -261,17 +260,17 @@
 		0%,
 		18% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0.5em);
+			transform: translateX(-50%);
 		}
 		23%,
 		84% {
 			opacity: 1;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 		88%,
 		100% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 	}
 
@@ -280,17 +279,17 @@
 		0%,
 		64% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0.5em);
+			transform: translateX(-50%);
 		}
 		70%,
 		84% {
 			opacity: 1;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 		88%,
 		100% {
 			opacity: 0;
-			transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%);
 		}
 	}
 

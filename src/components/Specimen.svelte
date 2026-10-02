@@ -5,11 +5,17 @@
 	let digits = $derived(`3.${pi[version]}`);
 </script>
 
-<code>
-	{digits}
-</code>
+<div class="c">
+	<code>
+		{digits}
+	</code>
+</div>
 
 <style>
+	div {
+		margin: 4rem auto;
+	}
+
 	code {
 		display: block;
 		font-size: var(--20px);
