@@ -36,7 +36,7 @@
 	const uid = $props.id();
 
 	const LINE = $derived(
-		alt ? variables.color["gray-400"] : variables.color["gray-600"]
+		alt ? variables.color["gray-500"] : variables.color["gray-600"]
 	);
 	const ACCENT = $derived(alt ? "Mark" : variables.color.red);
 
@@ -384,7 +384,12 @@
 			<span class="label">Speed:</span>
 			{#each Object.keys(FPS_OPTS) as opt}
 				<label>
-					<input type="radio" name="speed-{uid}" value={opt} bind:group={speed} />
+					<input
+						type="radio"
+						name="speed-{uid}"
+						value={opt}
+						bind:group={speed}
+					/>
 					{opt}
 				</label>
 			{/each}

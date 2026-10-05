@@ -24,7 +24,7 @@
 			{alt}
 			loop
 			muted
-			poster={src.replace(".mp4", ".jpg").replace("videos", "images")}
+			poster={src.replace(".mp4", ".jpg")}
 		></video>
 	{:else}
 		<img {src} {alt} />

@@ -70,9 +70,9 @@
 
 	.unroll.alt {
 		--color-primary: var(--color-mark);
-		background: var(--color-black);
-		color: var(--color-gray-400);
-		border: 0.5rem solid var(--color-black);
+		background: var(--color-gray-500);
+		color: var(--color-gray-500);
+		border: 0.5rem solid var(--color-gray-500);
 	}
 
 	svg {
@@ -84,7 +84,7 @@
 
 	.base {
 		fill: none;
-		stroke: currentColor;
+		stroke: var(--color-gray-500);
 		stroke-width: 3;
 	}
 
@@ -104,7 +104,7 @@
 		right: 0;
 		bottom: var(--ground);
 		height: var(--line);
-		background: currentColor;
+		background: var(--color-gray-500);
 	}
 
 	.trace {
@@ -138,7 +138,7 @@
 	.mark .line {
 		width: var(--line);
 		height: calc(0.18 * var(--d));
-		background: currentColor;
+		background: var(--color-gray-500);
 	}
 
 	.mark .label {
