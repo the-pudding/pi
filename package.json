@@ -25,6 +25,7 @@
 		"postcss": "^8.5.28",
 		"prettier": "^3.9.6",
 		"prettier-plugin-svelte": "^4.1.1",
+		"random": "^5.5.1",
 		"rollup": "^4.63.1",
 		"rollup-plugin-svg": "^2.0.0",
 		"runed": "^0.37.1",

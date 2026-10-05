@@ -388,15 +388,19 @@
         },
         {
           "type": "mark",
-          "value": "TK graphic - animated walkers perhaps"
+          "value": "TK animation or simulation?"
         },
         {
           "type": "text",
           "value": "He found that this concept of two walkers meeting can actually be decomposed and reframed to ask the question, will a walker return to his origin? Yes. A simple random walk on a two-dimensional grid returns to its starting point with probability one. Given unlimited time, it returns infinitely often."
         },
         {
-          "type": "mark",
-          "value": "TK graphic - simulation"
+          "type": "Walk",
+          "value": {
+            "version": "polya",
+            "source": "random",
+            "target": "origin"
+          }
         },
         {
           "type": "text",

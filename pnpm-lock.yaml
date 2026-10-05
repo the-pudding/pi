@@ -50,6 +50,9 @@ importers:
       prettier-plugin-svelte:
         specifier: ^4.1.1
         version: 4.1.1(prettier@3.9.6)(svelte@5.57.0)
+      random:
+        specifier: ^5.5.1
+        version: 5.5.1
       rollup:
         specifier: ^4.63.1
         version: 4.63.1
@@ -1629,6 +1632,10 @@ packages:
   qs@6.16.0:
     resolution: {integrity: sha512-h6fhOIaRrID2CbEY2fqs+7t+UXZo+MLAnU5gRIq85uFtdiUPCdsApMlHhXogKVM4HM2DVbIjGNTTYH2OcmP1vA==}
     engines: {node: '>=0.6'}
+
+  random@5.5.1:
+    resolution: {integrity: sha512-2TIJKf/BGjy0FGeZaan2+a/vq37afbSyscquADMFC13KBjFmg+10T/TkACpP9GMHfbEruKYbHqq0rjCA9x8gNA==}
+    engines: {node: '>=20'}
 
   regexparam@3.0.0:
     resolution: {integrity: sha512-RSYAtP31mvYLkAHrOlh25pCNQ5hWnT106VukGaaFfuJrZFkGRX5GhUAdPqpSDXxOhA2c4akmRuplv1mRqnBn6Q==}
@@ -3248,6 +3255,8 @@ snapshots:
     dependencies:
       es-define-property: 1.0.1
       side-channel: 1.1.1
+
+  random@5.5.1: {}
 
   regexparam@3.0.0: {}
 
