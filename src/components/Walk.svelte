@@ -252,6 +252,7 @@
 
 	.ui > div {
 		line-height: 1;
+		margin-right: 1rem;
 		/* vertical-align: middle; */
 	}
 
@@ -273,6 +274,7 @@
 		display: flex;
 		align-items: center;
 		line-height: 1;
+		gap: 0.25em;
 	}
 
 	input[type="range"] {

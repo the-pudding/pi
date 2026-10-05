@@ -138,15 +138,20 @@
         },
         {
           "type": "text",
-          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it was pretty straightforward. But each digit gets increasingly more computationally taxing to calculate. For perspective, here is the volume of the calculations to just the tenth decimal."
-        },
-        {
-          "type": "mark",
-          "value": "TK graphic - grid of papers"
+          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it was pretty straightforward. But each digit gets increasingly more computationally taxing to calculate. As the desired decimal place grows, more terms are needed to be calculated, to even greater precision."
         },
         {
           "type": "text",
-          "value": "I was starting to appreciate the scale of the challenge Shanks faced."
+          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel='noreferrer noopener' aria-label='Engert’s website (opens in a new tab)'>calculated pi to 100 decimal places</a>, and documented the process. He estimated that Shanks’ calculations to arrive at 707 decimal places would fill over 5,000 pages. More pages than the entire stack of the Harry Potter series."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/harrypotter-stack.jpg",
+            "alt": "A stack of the series Harry Potter books",
+            "className": "small",
+            "figcaption": "All seven books of the <cite>Harry Potter</cite> series."
+          }
         },
         {
           "type": "text",
@@ -187,31 +192,6 @@
             "alt": "A scan of the page that contains pi to 707 decimal places.",
             "figcaption": "From the article <cite>On the Extension of the Numerical value of π</cite> by William Shanks, 1873."
           }
-        },
-        {
-          "type": "text",
-          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel='noreferrer noopener' aria-label='Engert’s website (opens in a new tab)'>calculated pi to 100 decimal places</a>, and documented the process. He estimated that Shanks’ calculations to arrive at 707 decimal places would fill over 5,000 pages. More pages than the entire stack of the Harry Potter series."
-        },
-        {
-          "type": "Figure",
-          "value": {
-            "src": "assets/images/harrypotter-stack.jpg",
-            "alt": "A stack of the series Harry Potter books",
-            "className": "small",
-            "figcaption": "All seven books of the <cite>Harry Potter</cite> series."
-          }
-        },
-        {
-          "type": "text",
-          "value": "It hurt my hand just thinking about it. How many numbers did Shanks write? Think of all the decimal places for each division, each number carried. I needed to go further. I counted every single number written from my own calculations for a ballpark approximation.*"
-        },
-        {
-          "type": "mark",
-          "value": "TK graphic - chart/table"
-        },
-        {
-          "type": "text",
-          "value": "It took about X written numbers to compute 707 decimal places. If I may, that is the equivalent of swiping on Tik Tok once per second, for <em>57 days straight</em>. A tremendous act of perseverance no matter how you frame it."
         }
       ]
     },
