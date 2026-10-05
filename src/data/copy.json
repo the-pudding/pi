@@ -310,7 +310,7 @@
         },
         {
           "type": "text",
-          "value": "This wandering pen thing had legs."
+          "value": "While the result is quite a bit different, they both looked random to me. This wandering pen thing had legs."
         }
       ]
     },
@@ -343,7 +343,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually.” He solved this problem 25 years ago with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
+          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually”&mdash; he solved this problem 25 years prior with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
         },
         {
           "type": "text",
@@ -427,8 +427,12 @@
           "value": "You may now be wondering if our pi thread got lost. Me too, to be honest. Let’s bring back our main character. If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll please…"
         },
         {
-          "type": "mark",
-          "value": "TK graphic - random walker simulation"
+          "type": "Walk",
+          "value": {
+            "version": "polya",
+            "source": "shanks707",
+            "target": "origin"
+          }
         },
         {
           "type": "text",
