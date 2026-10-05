@@ -7,7 +7,7 @@
 	let width = $state(0);
 
 	let d = $derived(width / SPAN);
-	$inspect(d);
+
 	let marks = $derived(
 		Array.from({ length: UNITS + 1 }, (_, i) => (0.5 + i) * d)
 	);

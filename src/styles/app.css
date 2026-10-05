@@ -121,3 +121,8 @@ img.headshot {
 button {
 	text-transform: uppercase;
 }
+
+html.no-scroll {
+	overflow: hidden;
+	height: 100vh;
+}

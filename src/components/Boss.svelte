@@ -1,5 +1,6 @@
 <script>
 	import { modes } from "../runes/misc.svelte.js";
+	import focusTrap from "$actions/focusTrap.js";
 	let { chat } = $props();
 
 	const history = {
@@ -18,25 +19,35 @@
 	};
 </script>
 
-<section id="boss" class:visible={modes.boss}>
+<div
+	id="boss"
+	role="dialog"
+	aria-modal="true"
+	aria-label="PiGPT chat"
+	use:focusTrap={{
+		disable: !modes.boss,
+		onEscape: () => (modes.boss = false)
+	}}
+	class:visible={modes.boss}
+>
 	<div class="panel">
 		<div class="panel-top">
-			<button>New chat</button>
-			<button>Search chats</button>
-			<button>Library</button>
+			<button tabindex="-1">New chat</button>
+			<button tabindex="-1">Search chats</button>
+			<button tabindex="-1">Library</button>
 		</div>
 
 		<div class="panel-history">
 			{#each Object.entries(history) as [label, items]}
 				<h3>{label}</h3>
 				{#each items as item}
-					<button>{item}</button>
+					<button tabindex="-1">{item}</button>
 				{/each}
 			{/each}
 		</div>
 
 		<div class="panel-account">
-			<button><span class="avatar">U</span>User</button>
+			<button tabindex="-1"><span class="avatar">U</span>User</button>
 		</div>
 	</div>
 
@@ -64,16 +75,16 @@
 
 		<footer>
 			<div class="composer">
-				<input placeholder="Ask anything" />
-				<button class="round">+</button>
-				<button class="round send">&#8593;</button>
+				<input placeholder="Ask anything" tabindex="-1" />
+				<button class="round" tabindex="-1">+</button>
+				<button class="round send" tabindex="-1">&#8593;</button>
 			</div>
 			<p class="disclaimer">
 				PiGPT has never made a mistake. Trust it implicitly.
 			</p>
 		</footer>
 	</div>
-</section>
+</div>
 
 <style>
 	#boss {
@@ -84,26 +95,24 @@
 		height: 100vh;
 		z-index: var(--z-overlay);
 		font-family: var(--font-sans);
-		font-size: 16px;
-		color: black;
-		background: white;
+		color: var(--color-black);
+		background: var(--color-white);
 		display: none;
+		overflow: hidden;
 	}
 
 	#boss.visible {
 		display: flex;
 	}
 
-	/* panel */
-
 	.panel {
-		width: 260px;
+		width: 15rem;
 		flex-shrink: 0;
 		display: flex;
 		flex-direction: column;
-		padding: 8px;
-		background: whitesmoke;
-		border-right: 1px solid gainsboro;
+		padding: 0.5rem;
+		background: var(--color-gray-100);
+		border-right: 1px solid var(--color-gray-300);
 	}
 
 	.panel button {
@@ -112,25 +121,27 @@
 		text-align: left;
 		background: none;
 		border: none;
-		border-radius: 8px;
-		padding: 8px 10px;
+		border-radius: 0.5rem;
+		padding: 0.5rem;
 		font: inherit;
-		color: black;
+		font-size: var(--14px);
+		color: var(--color-gray-700);
 		cursor: pointer;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		text-transform: capitalize;
 	}
 
 	.panel button:hover {
-		background: gainsboro;
+		background: var(--color-gray-300);
 	}
 
 	.panel h3 {
-		margin: 18px 0 4px 10px;
-		font-size: 12px;
+		margin: 1rem 0 0.25rem 0.5rem;
+		font-size: var(--12px);
 		font-weight: normal;
-		color: gray;
+		color: var(--color-gray-500);
 	}
 
 	.panel-history {
@@ -139,21 +150,22 @@
 	}
 
 	.panel-account {
-		border-top: 1px solid gainsboro;
-		padding-top: 8px;
+		border-top: 1px solid var(--color-gray-300);
+		padding-top: 0.5rem;
 	}
 
 	.avatar {
-		display: inline-block;
-		width: 24px;
-		height: 24px;
-		line-height: 24px;
-		margin-right: 8px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.5rem;
+		height: 1.5rem;
+		line-height: 1;
+		margin-right: 0.5rem;
 		border-radius: 50%;
 		background: darkslateblue;
-		color: white;
-		font-size: 12px;
-		text-align: center;
+		color: var(--color-white);
+		font-size: var(--12px);
 		vertical-align: middle;
 	}
 
@@ -168,36 +180,36 @@
 
 	header {
 		position: relative;
-		padding: 12px 16px;
-		border-bottom: 1px solid gainsboro;
+		padding: 1rem;
+		border-bottom: 1px solid var(--color-gray-300);
 		font-weight: bold;
 	}
 
 	header span {
-		color: gray;
+		color: var(--color-gray-500);
 		font-weight: normal;
 	}
 
 	.close {
 		position: absolute;
 		top: 50%;
-		right: 12px;
+		right: 1rem;
 		transform: translateY(-50%);
-		width: 32px;
-		height: 32px;
+		width: 2rem;
+		height: 2rem;
 		border: none;
 		border-radius: 50%;
 		background: none;
-		color: gray;
+		color: var(--color-gray-500);
 		font-family: inherit;
-		font-size: 24px;
+		font-size: var(--24px);
 		line-height: 1;
 		cursor: pointer;
 	}
 
 	.close:hover {
-		background: gainsboro;
-		color: black;
+		background: var(--color-gray-300);
+		color: var(--color-black);
 	}
 
 	/* chat */
@@ -205,19 +217,19 @@
 	.chat {
 		flex: 1;
 		overflow-y: auto;
-		padding: 24px 0;
+		padding: 1.5rem 0;
 	}
 
 	.chat-text {
-		max-width: 720px;
-		margin: 0 auto 24px auto;
-		padding: 0 16px;
+		max-width: 45rem;
+		margin: 0 auto 1.5rem auto;
+		padding: 0 1rem;
 	}
 
 	.chat p {
-		margin: 0 0 16px 0;
-		font-size: 15px;
-		line-height: 1.6;
+		margin: 0 0 1rem 0;
+		font-size: var(--16px);
+		line-height: 1.5;
 	}
 
 	.user .chat-text {
@@ -228,59 +240,65 @@
 		display: inline-block;
 		max-width: 80%;
 		margin-bottom: 0;
-		padding: 10px 16px;
+		padding: 0.5rem 1rem;
 		text-align: left;
-		background: gainsboro;
-		border-radius: 18px;
+		background: var(--color-gray-300);
+		border-radius: 1rem;
 	}
 
 	/* composer */
 
 	footer {
-		padding: 0 16px 12px 16px;
+		padding: 0 1rem 1rem 1rem;
 	}
 
 	.composer {
 		display: flex;
 		align-items: center;
-		gap: 8px;
-		max-width: 720px;
+		gap: 0.5rem;
+		max-width: 45rem;
 		margin: 0 auto;
-		padding: 8px 8px 8px 16px;
-		background: white;
-		border: 1px solid darkgray;
-		border-radius: 24px;
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+		background: var(--color-white);
+		border: 1px solid var(--color-gray-300);
+		border-radius: 1.5rem;
 	}
 
 	.composer input {
 		flex: 1;
 		border: none;
 		outline: none;
-		font: inherit;
-		padding: 6px 0;
+		font: var(--font-sans);
+		padding: 0.5rem 0;
 	}
 
 	.round {
-		width: 32px;
-		height: 32px;
+		width: 2rem;
+		height: 2rem;
 		flex-shrink: 0;
 		border: none;
 		border-radius: 50%;
-		background: gainsboro;
-		color: black;
-		font-size: 16px;
+		background: var(--color-gray-300);
+		color: var(--color-black);
+		font-size: var(--16px);
 		cursor: pointer;
 	}
 
 	.round.send {
-		background: black;
-		color: white;
+		background: var(--color-black);
+		color: var(--color-white);
 	}
 
 	.disclaimer {
-		margin: 8px 0 0 0;
-		font-size: 12px;
-		color: gray;
+		margin: 0.5rem 0 0 0;
+		font-size: var(--12px);
+		color: var(--color-gray-500);
 		text-align: center;
+	}
+
+	@media (max-width: 60rem) {
+		.panel {
+			display: none;
+		}
 	}
 </style>

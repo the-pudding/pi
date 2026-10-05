@@ -13,6 +13,7 @@
 	import Walk from "$components/Walk.svelte";
 	import VennDiagram from "$components/VennDiagram.svelte";
 	import Unroll from "$components/Unroll.svelte";
+	import { modes } from "$runes/misc.svelte.js";
 
 	const copy = getContext("copy");
 	const { body } = copy;
@@ -27,13 +28,24 @@
 		VennDiagram,
 		Unroll
 	};
+
+	const overlay = $derived(modes.boss || modes.friend);
+
+	$effect(() => {
+		// make the page behind the overlay not scrollable
+		document.documentElement.classList.toggle("no-scroll", overlay);
+	});
 </script>
 
-<Menu />
+<!-- inert while an overlay is open: keeps the background out of the tab order -->
+<div class="page" inert={overlay}>
+	<Menu />
 
-<article>
-	<CMS {body} {components}></CMS>
-</article>
+	<article>
+		<CMS {body} {components}></CMS>
+	</article>
+</div>
+
 <Boss chat={copy.boss.chat}></Boss>
 <Friend></Friend>
 
