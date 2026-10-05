@@ -26,7 +26,19 @@
 	const roll = random.uniformInt(0, 9);
 	const visible = new IsDocumentVisible();
 
-	let { version = "polya", source = "random", target = null } = $props();
+	let {
+		version = "polya",
+		source = "random",
+		target = null,
+		alt = false
+	} = $props();
+
+	const uid = $props.id();
+
+	const LINE = $derived(
+		alt ? variables.color["gray-400"] : variables.color["gray-600"]
+	);
+	const ACCENT = $derived(alt ? "Mark" : variables.color.red);
 
 	let rawDigits = [];
 	let walkIndices = [];
@@ -150,7 +162,7 @@
 
 	function drawOrigin() {
 		if (!showOrigin || !ctx) return;
-		ctx.fillStyle = variables.color.red;
+		ctx.fillStyle = ACCENT;
 		ctx.beginPath();
 		ctx.arc(screenX(0), screenY(0), 5, 0, Math.PI * 2);
 		ctx.fill();
@@ -170,7 +182,7 @@
 		let fromY = 0;
 		let count = 0;
 
-		ctx.strokeStyle = variables.color["gray-600"];
+		ctx.strokeStyle = LINE;
 		ctx.beginPath();
 		ctx.moveTo(screenX(0), screenY(0));
 
@@ -186,7 +198,7 @@
 		ctx.stroke();
 
 		ctx.lineWidth = 3;
-		ctx.strokeStyle = variables.color.red;
+		ctx.strokeStyle = ACCENT;
 		ctx.beginPath();
 		ctx.moveTo(screenX(fromX), screenY(fromY));
 		ctx.lineTo(screenX(ux), screenY(uy));
@@ -215,14 +227,14 @@
 
 		ctx.lineWidth = 1.5;
 
-		ctx.strokeStyle = variables.color["gray-600"];
+		ctx.strokeStyle = LINE;
 		ctx.beginPath();
 		ctx.moveTo(screenX(prevPen.ux), screenY(prevPen.uy));
 		ctx.lineTo(screenX(pen.ux), screenY(pen.uy));
 		ctx.stroke();
 
 		ctx.lineWidth = 3;
-		ctx.strokeStyle = variables.color.red;
+		ctx.strokeStyle = ACCENT;
 		ctx.beginPath();
 		ctx.moveTo(screenX(pen.ux), screenY(pen.uy));
 		ctx.lineTo(toX, toY);
@@ -361,7 +373,7 @@
 	});
 </script>
 
-<div class="c">
+<div class="c" class:alt>
 	<div class="ui">
 		<div class="toggles">
 			<button onclick={() => play()}>Play</button>
@@ -372,7 +384,7 @@
 			<span class="label">Speed:</span>
 			{#each Object.keys(FPS_OPTS) as opt}
 				<label>
-					<input type="radio" name="speed" value={opt} bind:group={speed} />
+					<input type="radio" name="speed-{uid}" value={opt} bind:group={speed} />
 					{opt}
 				</label>
 			{/each}
@@ -426,6 +438,14 @@
 
 	.canvas {
 		position: relative;
+	}
+
+	.alt canvas {
+		background: black;
+	}
+
+	.alt .pi .decimal.active {
+		color: var(--color-mark);
 	}
 
 	canvas {

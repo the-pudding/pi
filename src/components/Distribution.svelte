@@ -102,7 +102,7 @@
 
 	.bar {
 		width: 100%;
-		background-color: currentColor;
+		background-color: var(--color-white);
 		height: 0;
 		display: inline-block;
 		text-align: center;
@@ -121,6 +121,6 @@
 	}
 
 	.highlight .bar {
-		background: Mark;
+		background: var(--color-primary);
 	}
 </style>

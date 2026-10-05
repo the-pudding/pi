@@ -62,6 +62,7 @@
 
 	.circle span {
 		max-width: 37.5%;
+		z-index: 0;
 	}
 
 	.circle:first-of-type span {
@@ -69,8 +70,21 @@
 		transform: translateX(-33.33%);
 	}
 
+	.center {
+		z-index: 1;
+	}
+
 	.circle:last-of-type span {
 		text-align: right;
 		transform: translateX(33.33%);
 	}
+
+	/* .alt .circle {
+		background: var(--color-black);
+		opacity: 0.75;
+	}
+
+	.alt span {
+		color: var(--color-white);
+	} */
 </style>

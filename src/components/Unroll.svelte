@@ -68,6 +68,13 @@
 		overflow: hidden;
 	}
 
+	.unroll.alt {
+		--color-primary: var(--color-mark);
+		background: var(--color-black);
+		color: var(--color-gray-400);
+		border: 0.5rem solid var(--color-black);
+	}
+
 	svg {
 		display: block;
 		width: 100%;
