@@ -15,7 +15,6 @@
 	let width = $state(0);
 	let height = $state(0);
 
-	// decimal place where the incorrect digits begin (index 0 is the "3", index 1 the ".")
 	const WRONG_FROM = INCORRECT_THRESHOLD - 1;
 
 	let label = $derived(
@@ -29,7 +28,6 @@
 	const isIncorrect = (i) =>
 		version === "shanks707" && i >= INCORRECT_THRESHOLD;
 
-	// random spin and stagger, picked once per digit
 	let spin = $derived(
 		digits.map((_, i) =>
 			isIncorrect(i)
@@ -41,13 +39,10 @@
 		)
 	);
 
-	// distance from each digit to the bottom of the container, re-measured
-	// whenever the container resizes (the text may rewrap)
 	let dist = $derived.by(() => {
 		width;
 		height;
 		if (!fallen || !codeEl) return [];
-		// span offsets are relative to <code>, so find the floor in its coordinates
 		const floor = height - codeEl.offsetTop;
 		return digits.map((_, i) => {
 			const el = spans[i];
@@ -101,7 +96,6 @@
 	}
 
 	.c.falling {
-		/* room under the text for the digits to land in */
 		padding-bottom: 6rem;
 	}
 
@@ -131,10 +125,8 @@
 		display: inline-block;
 	}
 
-	/* turn red, then after a beat translate eases in like gravity while rotate stays steady */
 	.fallen .incorrect {
-		/* darkened for 4.5:1 against white; the strikethrough means color isn't the only cue */
-		color: color-mix(in srgb, var(--color-red, red), black 20%);
+		color: var(--color-red);
 		text-decoration: line-through;
 		translate: 0 calc(var(--dist) * 1px);
 		rotate: calc(var(--turn) * 1deg);

@@ -30,9 +30,7 @@
 		version = "polya",
 		source = "random",
 		target = null,
-		// static text alternative for the canvas (what the walk shows / what to notice)
 		description = "",
-		// short name used to tell apart controls when a page has several walks
 		label = "Walk"
 	} = $props();
 
@@ -312,8 +310,6 @@
 
 	let running = $derived(animation.running);
 
-	// plain-language state of the walk, only built while paused so screen
-	// readers aren't flooded at 60 steps per second
 	let status = $derived.by(() => {
 		walkLength;
 		if (running || frame < 0) return "";

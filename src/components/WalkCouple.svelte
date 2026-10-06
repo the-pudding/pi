@@ -11,17 +11,15 @@
 		medium: 12,
 		fast: 60
 	};
-	// lattice units between the two starting corners, on each axis (keep even so paths can meet)
 	const GAP = 5;
-	// the walk ends after this many steps each if the walkers never meet
+
 	const MAX_STEPS = 1000;
 	const FIT = 0.85;
 	const IMG = 128;
 	const IMG_MIN = IMG * 0.5;
-	// image size in lattice units, so figures shrink as the view zooms out
+
 	const IMG_UNITS = 3;
 
-	// up, right, down, left
 	const DELTAS = [
 		[0, -1],
 		[1, 0],
@@ -36,7 +34,6 @@
 		{ src: "assets/images/walk-couple.png", color: variables.color.red }
 	];
 
-	// created in the browser only (no Image during SSR)
 	let images = [];
 
 	function load() {
@@ -50,7 +47,7 @@
 
 	let canvasEl = $state(null);
 	let ctx = $state(null);
-	let outcome = $state(null); // null | "meet" | "max"
+	let outcome = $state(null);
 	let steps = $state(0);
 	let speed = $state("slow");
 	let fps = $derived(FPS_OPTS[speed]);
@@ -181,7 +178,6 @@
 
 	let restartEl = $state(null);
 
-	// the buttons behind the overlay are disabled, so hand focus to its restart button
 	$effect(() => {
 		if (outcome) restartEl?.focus();
 	});
@@ -240,10 +236,11 @@
 		<summary>Text description</summary>
 		<p>
 			Two walkers start in opposite corners of a grid. Each step, both walkers
-			move one square up, down, left or right at random. The red line and
-			couple figure are one walker, and the blue line and single figure are the
-			other. The walk ends when both are on the same square at the same time,
-			or after {format(",")(MAX_STEPS)} steps each.
+			move one square up, down, left or right at random. The red line and couple
+			figure are one walker, and the blue line and single figure are the other.
+			The walk ends when both are on the same square at the same time, or after {format(
+				","
+			)(MAX_STEPS)} steps each.
 		</p>
 	</details>
 </div>
@@ -321,7 +318,6 @@
 		gap: 0.75rem;
 		padding: 1rem 1.5rem;
 		background: white;
-		/* visible in forced-colors mode, where shadows are removed */
 		border: 1px solid transparent;
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 		font-family: var(--font-sans);
