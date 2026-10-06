@@ -387,8 +387,8 @@
           "value": "He posed a similar question to that of Pearson, though used the more elegant term “promenaders” in place of “walkers.” Simply put, <strong>given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?</strong>"
         },
         {
-          "type": "mark",
-          "value": "TK animation or simulation?"
+          "type": "WalkCouple",
+          "value": {}
         },
         {
           "type": "text",
@@ -473,28 +473,45 @@
           "value": "In 1937, the Palais de la Découverte, a science museum, opened in Paris. In it was a room entirely dedicated to pi. Shanks’ laborious digits were celebrated as a giant ceiling installation around the room."
         },
         {
-          "type": "mark",
-          "value": "TK images"
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/placeholder1.jpg",
+            "alt": "Tk",
+            "figcaption": "Lo-res placeholder 1",
+            "className": "small"
+          }
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/placeholder2.jpg",
+            "alt": "Tk",
+            "figcaption": "Lo-res placeholder 2",
+            "className": "small"
+          }
         },
         {
           "type": "text",
-          "value": "Pi’s digits had gone from an idle-time filler, to a published reference, to a museum display. His work would be immortalized forever. That is, until 1944."
-        },
-        {
-          "type": "mark",
-          "value": "TK dramatic pause visual?"
+          "value": "Pi’s digits had gone from an idle-time filler, to a published reference, to a museum display. His work would be immortalized forever."
         },
         {
           "type": "text",
-          "value": "British mathematician D.F. Ferguson (sadly no photo available) took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
+          "value": "Until 1944."
         },
         {
           "type": "text",
-          "value": "Ferugson compared his result to Shanks’ digits. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything after that point, from 528 to 707, was entirely wrong."
+          "value": "British mathematician D.F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
         },
         {
-          "type": "mark",
-          "value": "Tk graphic - diff/highlight (or animated they fall off)"
+          "type": "text",
+          "value": "Ferugson compared his result to Shanks’ digits. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything Shanks had computed after that point, from 528 to 707, was entirely wrong."
+        },
+        {
+          "type": "Specimen",
+          "value": {
+            "version": "shanks707",
+            "mode": "falling"
+          }
         },
         {
           "type": "text",
@@ -510,7 +527,7 @@
         },
         {
           "type": "text",
-          "value": "The first when the error appeared. In the 1853 preface, dated Feb 28, Shanks wrote:"
+          "value": "The first was when the error appeared. In his 1853 book’s preface, dated Feb 28, Shanks wrote:"
         },
         {
           "type": "blockquote",
@@ -522,7 +539,7 @@
         },
         {
           "type": "text",
-          "value": "The second was his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 441 decimal places. Shanks wrote:"
+          "value": "The second fact was his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 441 decimal places. Shanks wrote:"
         },
         {
           "type": "blockquote",
@@ -530,7 +547,7 @@
         },
         {
           "type": "text",
-          "value": "Indeed there were no errors in the next 86 places, but not the 87th."
+          "value": "There were indeed no errors in the next 86 places, but not the 87th."
         }
       ]
     },
@@ -673,7 +690,20 @@
         },
         {
           "type": "text",
-          "value": "Let’s keep moving forward. In 1949, the museum’s ceiling was corrected with the true value of pi. Also around that time, lowercase computers entered the scene. Non-human, electronic, digital, and programmable."
+          "value": "Let’s keep moving forward. In 1949, the museum’s ceiling was corrected with the true value of pi."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/placeholder3.jpg",
+            "alt": "Tk",
+            "figcaption": "Lo-res placeholder",
+            "className": "small"
+          }
+        },
+        {
+          "type": "text",
+          "value": "Also around that time, lowercase computers entered the scene. Non-human, electronic, digital, and programmable."
         },
         {
           "type": "text",

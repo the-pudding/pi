@@ -11,6 +11,7 @@
 	import Specimen from "$components/Specimen.svelte";
 	import Distribution from "$components/Distribution.svelte";
 	import Walk from "$components/Walk.svelte";
+	import WalkCouple from "$components/WalkCouple.svelte";
 	import VennDiagram from "$components/VennDiagram.svelte";
 	import Unroll from "$components/Unroll.svelte";
 	import { modes } from "$runes/misc.svelte.js";
@@ -26,7 +27,8 @@
 		Distribution,
 		Walk,
 		VennDiagram,
-		Unroll
+		Unroll,
+		WalkCouple
 	};
 
 	const overlay = $derived(modes.boss || modes.friend);
