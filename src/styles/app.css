@@ -19,7 +19,7 @@
 	--z-modal: 1000;
 
 	/* presets (used in reset.css) */
-	--font-body: var(--font-sans);
+	--font-body: var(--font-serif);
 	--font-form: var(--font-sans);
 
 	--radius-xs: 0.125rem;
@@ -30,20 +30,14 @@
 	--color-bg: var(--color-white);
 	--color-fg: var(--color-black);
 	--color-fg-light: var(--color-gray-500);
+
 	--color-primary: var(--color-red);
-	--color-link: var(--color-black);
-	--color-link-hover: var(--color-black);
-	--color-focus: var(--color-gray-500);
-	--color-mark: Mark;
-	--color-selection: var(--color-gray-300);
-	--color-border: var(--color-gray-300);
-	--color-button-fg-primary: var(--color-white);
-	--color-button-bg-primary: var(--color-gray-900);
-	--color-button-fg-secondary: var(--color-white);
-	--color-button-bg-secondary: var(--color-gray-500);
-	--color-input-bg: var(--color-gray-50);
-	--color-input-fg: var(--color-gray-900);
-	--color-placeholder: var(--color-gray-500);
+	--color-link: var(--color-blue);
+	--color-link-hover: var(--color-blue);
+	--color-link-active: var(--color-red);
+	--color-link-visited: var(--color-purple);
+
+	--color-mark: var(--color-yellow);
 
 	--fs-small: var(--18px);
 
@@ -62,6 +56,28 @@
 	:root {
 		--1s: 1s;
 	}
+}
+
+body {
+	background: var(--color-bg);
+	color: var(--color-fg);
+	font-family: var(--font-body);
+}
+
+a {
+	color: var(--color-link);
+}
+
+a:hover {
+	color: var(--color-link-hover);
+}
+
+a:visited {
+	color: var(--color-link-visited);
+}
+
+a:active {
+	color: var(--color-link-active);
 }
 
 h1 {

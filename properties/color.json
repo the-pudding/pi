@@ -39,6 +39,15 @@
 		"gray-950": {
 			"value": "oklch(14.5% 0 0)"
 		},
+		"blue": {
+			"value": "#0000ee"
+		},
+		"purple": {
+			"value": "#551a8b"
+		},
+		"yellow": {
+			"value": "#ffff00"
+		},
 		"red": {
 			"value": "#ef0000"
 		}

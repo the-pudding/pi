@@ -68,12 +68,12 @@
 		overflow: hidden;
 	}
 
-	.unroll.alt {
+	/* .unroll.alt {
 		--color-primary: var(--color-mark);
-		background: var(--color-gray-500);
-		color: var(--color-gray-500);
-		border: 0.5rem solid var(--color-gray-500);
-	}
+		background: var(--color-fg-light);
+		color: var(--color-fg-light);
+		border: 0.5rem solid var(--color-fg-light);
+	} */
 
 	svg {
 		display: block;
@@ -84,7 +84,7 @@
 
 	.base {
 		fill: none;
-		stroke: var(--color-gray-500);
+		stroke: var(--color-fg-light);
 		stroke-width: 3;
 	}
 
@@ -104,7 +104,7 @@
 		right: 0;
 		bottom: var(--ground);
 		height: var(--line);
-		background: var(--color-gray-500);
+		background: var(--color-fg-light);
 	}
 
 	.trace {
@@ -138,7 +138,7 @@
 	.mark .line {
 		width: var(--line);
 		height: calc(0.18 * var(--d));
-		background: var(--color-gray-500);
+		background: var(--color-fg-light);
 	}
 
 	.mark .label {

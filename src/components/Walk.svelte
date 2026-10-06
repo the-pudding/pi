@@ -467,12 +467,12 @@
 		margin-bottom: 0.5rem;
 		gap: 0.5rem;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
 	.ui > div {
 		line-height: 1;
-		margin-right: 1rem;
 	}
 
 	.speed,
@@ -483,6 +483,12 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.5rem;
+	}
+
+	.toggles {
+		flex: 1 auto;
+		width: 100%;
+		margin-bottom: 1rem;
 	}
 
 	label,
