@@ -60,7 +60,6 @@
 </div>
 <button
 	class="toggle"
-	aria-pressed={paused}
 	onclick={() => (paused = !paused)}
 	>{paused ? "Play" : "Pause"} animation</button
 >

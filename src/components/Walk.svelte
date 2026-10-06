@@ -405,8 +405,9 @@
 <div class="c">
 	<div class="ui">
 		<div class="toggles" role="group" aria-label="{label} playback">
-			<button onclick={() => play()}>Play</button>
-			<button onclick={() => pause()}>Pause</button>
+			<button onclick={() => (running ? pause() : play())}
+				>{running ? "Pause" : "Play"}</button
+			>
 			<button onclick={() => restart()}>Restart</button>
 		</div>
 		<div class="speed" role="radiogroup" aria-labelledby="speed-label-{uid}">

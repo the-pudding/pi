@@ -168,7 +168,6 @@
 	<div class="nav">
 		<button
 			onclick={() => (paused = !paused)}
-			aria-pressed={paused}
 			aria-label={paused ? "Play videos" : "Pause videos"}
 			>{#if paused}<Play />{:else}<Pause />{/if}</button
 		>

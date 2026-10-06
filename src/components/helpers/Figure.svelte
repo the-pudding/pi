@@ -17,7 +17,6 @@
 	{#if isVideo}
 		<div class="controls">
 			<button
-				aria-pressed={playing}
 				onclick={() => (playing ? videoElement.pause() : videoElement.play())}
 				>{playing ? "Pause" : "Play"}</button
 			>
