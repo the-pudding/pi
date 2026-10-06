@@ -114,6 +114,12 @@ svg {
 	height: auto;
 }
 
+blockquote {
+	background: var(--color-mark);
+	display: inline;
+	font-weight: bold;
+}
+
 span.relative {
 	position: relative;
 	display: inline-block;

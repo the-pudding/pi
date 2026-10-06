@@ -134,14 +134,14 @@
 	}
 
 	.panel button:hover {
-		background: var(--color-gray-300);
+		background: var(--color-gray-200);
 	}
 
 	.panel h3 {
 		margin: 1rem 0 0.25rem 0.5rem;
 		font-size: var(--12px);
 		font-weight: normal;
-		color: var(--color-gray-500);
+		color: var(--color-gray-600);
 	}
 
 	.panel-history {
@@ -163,7 +163,7 @@
 		line-height: 1;
 		margin-right: 0.5rem;
 		border-radius: 50%;
-		background: darkslateblue;
+		background: var(--color-blue);
 		color: var(--color-white);
 		font-size: var(--12px);
 		vertical-align: middle;
@@ -186,7 +186,7 @@
 	}
 
 	header span {
-		color: var(--color-gray-500);
+		color: var(--color-gray-600);
 		font-weight: normal;
 	}
 
@@ -200,7 +200,7 @@
 		border: none;
 		border-radius: 50%;
 		background: none;
-		color: var(--color-gray-500);
+		color: var(--color-gray-600);
 		font-family: inherit;
 		font-size: var(--24px);
 		line-height: 1;
@@ -242,7 +242,7 @@
 		margin-bottom: 0;
 		padding: 0.5rem 1rem;
 		text-align: left;
-		background: var(--color-gray-300);
+		background: var(--color-gray-200);
 		border-radius: 1rem;
 	}
 

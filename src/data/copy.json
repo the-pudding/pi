@@ -88,7 +88,7 @@
           "type": "Figure",
           "value": {
             "src": "assets/images/ox.jpg",
-            "alt": "A pen line drawing of a large ox."
+            "alt": "A pen line drawing of a large ox"
           }
         },
         {
@@ -99,7 +99,7 @@
           "type": "Figure",
           "value": {
             "src": "assets/images/specimen-1853.jpg",
-            "alt": "A scan of the book page that contains pi to 607 decimal places.",
+            "alt": "A scan of the book page that contains pi to 607 decimal places",
             "figcaption": "From the snappy-titled book <cite>Contributions to mathematics, comprising chiefly the rectification of the circle to 607 places of decimals.</cite> by William Shanks, 1853."
           }
         },
@@ -150,7 +150,7 @@
             "src": "assets/images/harrypotter-stack.jpg",
             "alt": "A stack of the series Harry Potter books",
             "className": "small",
-            "figcaption": "All seven books of the <cite>Harry Potter</cite> series."
+            "figcaption": "All seven books of the <cite>Harry Potter</cite> series via <a href=https://commons.wikimedia.org/wiki/File:Harry_Potter_1st_USA_ed._complete_hardback_set_stacked_diagonal.JPG target=_blank rel='noreferrer noopener'>Wikimedia Commons</a>."
           }
         },
         {
@@ -163,7 +163,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“be productive of anything in the shape of pecuniary recompense at all adequate to the labour of such lengthy computations.”</strong></mark>"
+          "value": "“be productive of anything in the shape of pecuniary recompense at all adequate to the labour of such lengthy computations.”"
         },
         {
           "type": "text",
@@ -175,7 +175,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong> “should not subject him either to great tension of thought, or to consult books.”</mark></strong>"
+          "value": "“should not subject him either to great tension of thought, or to consult books.”"
         },
         {
           "type": "text",
@@ -268,7 +268,7 @@
           "type": "Figure",
           "value": {
             "src": "assets/images/vennpen.jpg",
-            "alt": "Tk",
+            "alt": "A line drawing with a random pattern and Start and End are labeled",
             "className": "small",
             "figcaption": "From the super snappy-titled book <em>The Logic of Chance - An Essay on the Foundations and Province of the Theory of Probability, with Especial Reference to its Logical Bearings and its Application to Moral and Social Science and to Statistics</em> by John Venn, 1888."
           }
@@ -279,7 +279,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“The result seems to me to furnish a very fair graphical indication of randomness.”</strong></mark>"
+          "value": "“The result seems to me to furnish a very fair graphical indication of randomness.”"
         },
         {
           "type": "text",
@@ -293,7 +293,7 @@
           "type": "Figure",
           "value": {
             "src": "assets/images/mark.jpg",
-            "alt": "Tk",
+            "alt": "A comment from a blog post that says “Mark said…Is it possible that Venn had some incorrect digits for pi? I tried to replicate his image using Mathematica but my picture differs from his…”",
             "className": "small"
           }
         },
@@ -329,7 +329,7 @@
           "type": "Figure",
           "value": {
             "src": "assets/images/nature.jpg",
-            "alt": "Scan of the Nature article with the question “The Problem of The Random Walk”.",
+            "alt": "Scan of the Nature article with the question “The Problem of The Random Walk”",
             "className": "small"
           }
         },
@@ -351,7 +351,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“The lesson of Lord Rayleigh’s solution is that in open country the most probable place to find a drunken man who is at all capable of keeping on his feet is somewhere near his starting point!”</strong></mark>"
+          "value": "“The lesson of Lord Rayleigh’s solution is that in open country the most probable place to find a drunken man who is at all capable of keeping on his feet is somewhere near his starting point!”"
         },
         {
           "type": "text",
@@ -410,7 +410,8 @@
           "type": "Figure",
           "value": {
             "src": "assets/images/annalen.jpg",
-            "alt": "Tk",
+            "alt": "A scan of a portion of a page from Pólya’s article that has a complicated math formulas and some writing in German",
+            "figcaption": "Excerpt from the article <em>Über eine Aufgabe der Wahrscheinlichkeitsrechnung betreffend die Irrfahrt im Straßennetz</em> by George Pólya, 1921.",
             "className": "small"
           }
         },
@@ -420,11 +421,11 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“A drunk man will find his way home, but a drunk bird may get lost forever.”</strong></mark>"
+          "value": "“A drunk man will find his way home, but a drunk bird may get lost forever.”"
         },
         {
           "type": "text",
-          "value": "You may now be wondering if our pi thread got lost. Me too, to be honest. Let’s bring back our main character. If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll please…"
+          "value": "You may now be wondering if our pi thread got lost. Same. So let’s bring back our main character. If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll please…"
         },
         {
           "type": "Walk",
@@ -513,7 +514,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“In the following pages, the ratio of the circumference of a circle to its diameter, is determined to the great extent of 527 places of decimals.”</mark></strong>"
+          "value": "“In the following pages, the ratio of the circumference of a circle to its diameter, is determined to the great extent of 527 places of decimals.”"
         },
         {
           "type": "text",
@@ -525,7 +526,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“so the accuracy is ensured at least to that extent; and it is confidently hoped no error has crept into the remaining 86 places.”</mark></strong>"
+          "value": "“so the accuracy is ensured at least to that extent; and it is confidently hoped no error has crept into the remaining 86 places.”"
         },
         {
           "type": "text",
@@ -688,7 +689,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“obtaining a statistical measure of the randomness of the distribution of the digits.”</strong></mark>"
+          "value": "“obtaining a statistical measure of the randomness of the distribution of the digits.”"
         },
         {
           "type": "text",
@@ -773,7 +774,7 @@
         },
         {
           "type": "blockquote",
-          "value": "<mark><strong>“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’s computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’s work, but he also spoke admiringly of ‘the power to calculate, and...the courage to face the labour.’”</strong></mark>"
+          "value": "“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’s computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’s work, but he also spoke admiringly of ‘the power to calculate, and...the courage to face the labour.’”"
         },
         {
           "type": "text",

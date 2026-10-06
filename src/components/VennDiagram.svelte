@@ -3,7 +3,7 @@
 </script>
 
 <div class="c">
-	<div class="diagram">
+	<div class="diagram" role="img" aria-label="Example of a basic Venn diagram">
 		<div class="circle"><span>{@html left}</span></div>
 		<div class="center"><span>{@html center}</span></div>
 		<div class="circle"><span>{@html right}</span></div>

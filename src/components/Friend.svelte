@@ -9,6 +9,8 @@
 	import ChevronUp from "@lucide/svelte/icons/chevron-up";
 	import ChevronDown from "@lucide/svelte/icons/chevron-down";
 	import Plus from "@lucide/svelte/icons/plus";
+	import Play from "@lucide/svelte/icons/play";
+	import Pause from "@lucide/svelte/icons/pause";
 	import X from "@lucide/svelte/icons/x";
 
 	const videos = [
@@ -42,6 +44,16 @@
 	];
 
 	let feedEl;
+	let videoEls = $state([]);
+	const reduceMotion =
+		typeof matchMedia !== "undefined" &&
+		matchMedia("(prefers-reduced-motion: reduce)").matches;
+	let paused = $state(reduceMotion);
+
+	// "40.1T" -> "40.1 trillion" so screen readers don't read a bare letter
+	const UNITS = { T: "trillion", M: "million", K: "thousand" };
+	const spoken = (n) =>
+		n.replace(/([TMK])$/, (_, u) => ` ${UNITS[u]}`);
 	let scrollTop = $state(0);
 	let scrollMax = $state(0);
 
@@ -55,11 +67,24 @@
 	}
 
 	function nav(dir) {
-		feedEl?.scrollBy({ top: dir * feedEl.clientHeight, behavior: "smooth" });
+		if (dir < 0 ? atTop : atBottom) return;
+		feedEl?.scrollBy({
+			top: dir * feedEl.clientHeight,
+			behavior: reduceMotion ? "auto" : "smooth"
+		});
 	}
 
 	$effect(() => {
 		if (modes.friend) measure();
+	});
+
+	$effect(() => {
+		const play = modes.friend && !paused;
+		videoEls.forEach((v) => {
+			if (!v) return;
+			if (play) v.play().catch(() => {});
+			else v.pause();
+		});
 	});
 </script>
 
@@ -85,15 +110,22 @@
 		aria-label="Close"><X /></button
 	>
 
-	<div class="feed" bind:this={feedEl} onscroll={measure}>
-		{#each videos as { id, user, caption, likes, comments, saves, alt }}
+	<div
+		class="feed"
+		role="region"
+		aria-label="Videos"
+		tabindex="0"
+		bind:this={feedEl}
+		onscroll={measure}
+	>
+		{#each videos as { id, user, caption, likes, comments, saves, alt }, i}
 			<div class="video">
 				<div class="frame">
 					<video
 						src="{base}/assets/videos/friend-{id}.mp4"
 						poster="{base}/assets/videos/friend-{id}.jpg"
-						{alt}
-						autoplay
+						aria-label={alt}
+						bind:this={videoEls[i]}
 						muted
 						loop
 					></video>
@@ -111,15 +143,18 @@
 					</div>
 					<div class="action">
 						<span class="icon"><Heart /></span>
-						<span class="count">{likes}</span>
+						<span class="count" aria-hidden="true">{likes}</span>
+						<span class="sr-only">{spoken(likes)} likes</span>
 					</div>
 					<div class="action">
 						<span class="icon"><MessageCircle /></span>
-						<span class="count">{comments}</span>
+						<span class="count" aria-hidden="true">{comments}</span>
+						<span class="sr-only">{spoken(comments)} comments</span>
 					</div>
 					<div class="action">
 						<span class="icon"><Bookmark /></span>
-						<span class="count">{saves}</span>
+						<span class="count" aria-hidden="true">{saves}</span>
+						<span class="sr-only">{spoken(saves)} saves</span>
 					</div>
 					<div class="action">
 						<span class="icon"><Share2 /></span>
@@ -131,10 +166,16 @@
 	</div>
 
 	<div class="nav">
-		<button onclick={() => nav(-1)} disabled={atTop} aria-label="Previous video"
+		<button
+			onclick={() => (paused = !paused)}
+			aria-pressed={paused}
+			aria-label={paused ? "Play videos" : "Pause videos"}
+			>{#if paused}<Play />{:else}<Pause />{/if}</button
+		>
+		<button onclick={() => nav(-1)} aria-disabled={atTop} aria-label="Previous video"
 			><ChevronUp /></button
 		>
-		<button onclick={() => nav(1)} disabled={atBottom} aria-label="Next video"
+		<button onclick={() => nav(1)} aria-disabled={atBottom} aria-label="Next video"
 			><ChevronDown /></button
 		>
 	</div>
@@ -160,6 +201,15 @@
 	#friend.visible {
 		display: flex;
 	}
+	#friend :focus-visible {
+		outline: 3px solid var(--color-white);
+		outline-offset: 2px;
+	}
+
+	#friend .feed:focus-visible {
+		outline-offset: -4px;
+	}
+
 	.tabs {
 		position: absolute;
 		top: 1rem;
@@ -344,7 +394,7 @@
 		background: var(--color-gray-500);
 	}
 
-	.nav button:disabled {
+	.nav button[aria-disabled="true"] {
 		opacity: 0.33;
 		cursor: default;
 	}

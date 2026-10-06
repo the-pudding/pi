@@ -30,15 +30,16 @@
 		version = "polya",
 		source = "random",
 		target = null,
-		alt = false
+		// static text alternative for the canvas (what the walk shows / what to notice)
+		description = "",
+		// short name used to tell apart controls when a page has several walks
+		label = "Walk"
 	} = $props();
 
 	const uid = $props.id();
 
-	const LINE = $derived(
-		alt ? variables.color["gray-500"] : variables.color["gray-600"]
-	);
-	const ACCENT = $derived(alt ? "Mark" : variables.color.red);
+	const LINE = variables.color["gray-600"];
+	const ACCENT = variables.color.red;
 
 	let rawDigits = [];
 	let walkIndices = [];
@@ -309,6 +310,34 @@
 		{ fpsLimit: () => +fps, immediate: false }
 	);
 
+	let running = $derived(animation.running);
+
+	// plain-language state of the walk, only built while paused so screen
+	// readers aren't flooded at 60 steps per second
+	let status = $derived.by(() => {
+		walkLength;
+		if (running || frame < 0) return "";
+		let x = 0;
+		let y = 0;
+		let back = 0;
+		for (let i = 0; i <= frame; i++) {
+			const [dx, dy] = deltas[rawDigits[walkIndices[i]]];
+			x += dx;
+			y += dy;
+			if (x === 0 && y === 0) back++;
+		}
+		const parts = [];
+		if (y) parts.push(`${Math.abs(y)} ${y < 0 ? "north" : "south"}`);
+		if (x) parts.push(`${Math.abs(x)} ${x > 0 ? "east" : "west"}`);
+		const where = parts.length
+			? `${parts.join(" and ")} of the start`
+			: "back at the start";
+		const returns = showOrigin
+			? ` It has returned to the start ${back} ${back === 1 ? "time" : "times"}.`
+			: "";
+		return `Step ${frame + 1} of ${walkLength}. The walk is ${where}.${returns}`;
+	});
+
 	function play() {
 		if (frame === -1) reset();
 		animation.start();
@@ -373,15 +402,15 @@
 	});
 </script>
 
-<div class="c" class:alt>
+<div class="c">
 	<div class="ui">
-		<div class="toggles">
+		<div class="toggles" role="group" aria-label="{label} playback">
 			<button onclick={() => play()}>Play</button>
 			<button onclick={() => pause()}>Pause</button>
 			<button onclick={() => restart()}>Restart</button>
 		</div>
-		<div class="speed">
-			<span class="label">Speed:</span>
+		<div class="speed" role="radiogroup" aria-labelledby="speed-label-{uid}">
+			<span class="label" id="speed-label-{uid}">Speed:</span>
 			{#each Object.keys(FPS_OPTS) as opt}
 				<label>
 					<input
@@ -415,7 +444,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class="pi">
+	<div class="pi" aria-hidden="true">
 		<span class="inner" style:transform="translateX({tickerOffset})">
 			{#each ticker as digit, i (windowStart + i)}
 				{@const index = windowStart + i}
@@ -428,9 +457,30 @@
 		</span>
 	</div>
 
-	<div class="canvas">
+	<div
+		class="canvas"
+		role="img"
+		aria-label={description ||
+			`A line drawn by a walk on a lattice, one step per ${source === "random" ? "random number" : "digit of pi"}.`}
+	>
 		<canvas bind:this={canvasEl}></canvas>
 	</div>
+
+	<div class="sr-only" aria-live="polite">{status}</div>
+
+	<details class="text-alt">
+		<summary>Text description</summary>
+		<p>
+			Key: the red segment is the latest step and the gray line is the path so
+			far.{#if showOrigin}
+				The red dot is the starting point.{/if}
+			Each digit of pi sets a direction ({degrees.length} directions: digits 0 to
+			{degrees.length - 1}). Faded digits in the strip above the drawing are
+			skipped and don't move the line.
+		</p>
+		{#if description}<p>{description}</p>{/if}
+		<p>{status || "Press play or move the step slider to start the walk."}</p>
+	</details>
 </div>
 
 <style>
@@ -443,14 +493,6 @@
 
 	.canvas {
 		position: relative;
-	}
-
-	.alt canvas {
-		background: black;
-	}
-
-	.alt .pi .decimal.active {
-		color: var(--color-mark);
 	}
 
 	canvas {
@@ -493,6 +535,7 @@
 
 	label,
 	.label {
+		min-height: 24px;
 		font-family: var(--font-sans);
 		font-size: var(--14px);
 		text-transform: uppercase;
@@ -503,8 +546,24 @@
 		gap: 0.25em;
 	}
 
+	button {
+		min-height: 24px;
+		min-width: 24px;
+	}
+
 	input[type="range"] {
+		height: 24px;
 		vertical-align: middle;
+	}
+
+	.text-alt {
+		margin-top: 0.75rem;
+		font-family: var(--font-sans);
+		font-size: var(--14px);
+	}
+
+	.text-alt p {
+		margin: 0.5rem 0 0 0;
 	}
 
 	.pi {

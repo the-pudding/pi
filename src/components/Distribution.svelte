@@ -19,7 +19,7 @@
 		scaleLinear().domain([0, maxCount]).range([0, 100])
 	);
 
-	const uid = Math.random().toString(36).slice(2);
+	const uid = $props.id();
 </script>
 
 <figure class="wrap">
@@ -51,7 +51,8 @@
 		<tbody>
 			{#each byNumber as { number, count }}
 				<tr>
-					<th scope="row">{number}</th>
+					<th scope="row">{number}{#if number === 7}
+							<span class="sr-only"> (highlighted in the chart)</span>{/if}</th>
 					<td>{count}</td>
 				</tr>
 			{/each}

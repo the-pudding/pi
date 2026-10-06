@@ -10,11 +10,15 @@
 	</div> -->
 
 	<div class="menu-item">
-		<button onclick={() => (modes.boss = !modes.boss)}>BOSS BUTTON</button>
+		<button aria-haspopup="dialog" onclick={() => (modes.boss = !modes.boss)}
+			>BOSS BUTTON</button
+		>
 	</div>
 
 	<div class="menu-item">
-		<button onclick={() => (modes.friend = !modes.friend)}>FRIEND BUTTON</button
+		<button
+			aria-haspopup="dialog"
+			onclick={() => (modes.friend = !modes.friend)}>FRIEND BUTTON</button
 		>
 	</div>
 </div>
@@ -26,6 +30,13 @@
 		right: 0;
 		display: flex;
 		z-index: var(--z-overlay);
+	}
+
+	/* small viewports and high zoom: let the menu scroll away instead of covering text */
+	@media (max-width: 40rem), (max-height: 30rem) {
+		.menu {
+			position: absolute;
+		}
 	}
 
 	.menu-item {

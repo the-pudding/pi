@@ -6,7 +6,7 @@
 </script>
 
 <div class="c">
-	<code>
+	<code aria-label="Pi digits to {digits.length - 2} decimal places">
 		{digits}
 	</code>
 </div>

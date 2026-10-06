@@ -5,6 +5,7 @@
 	const SPAN = UNITS + 1.5; // container width in diameters
 
 	let width = $state(0);
+	let paused = $state(false);
 
 	let d = $derived(width / SPAN);
 
@@ -24,6 +25,7 @@
 	</svg>
 {/snippet}
 
+<div class="wrap" class:paused>
 <div
 	class="unroll"
 	role="img"
@@ -56,8 +58,25 @@
 		<div class="trace"></div>
 	{/if}
 </div>
+<button
+	class="toggle"
+	aria-pressed={paused}
+	onclick={() => (paused = !paused)}
+	>{paused ? "Play" : "Pause"} animation</button
+>
+</div>
 
 <style>
+	.wrap.paused :global(*) {
+		animation-play-state: paused !important;
+	}
+
+	.toggle {
+		display: block;
+		margin: 0 auto;
+		min-height: 24px;
+	}
+
 	.unroll {
 		--ground: calc(0.25 * var(--d));
 		--line: max(1.5px, calc(0.025 * var(--d)));
@@ -126,7 +145,7 @@
 		flex-direction: column;
 		align-items: center;
 		font-family: var(--font-mono, monospace);
-		font-size: calc(0.14 * var(--d));
+		font-size: max(12px, calc(0.14 * var(--d)));
 		line-height: 1;
 		opacity: 1;
 		transform: translateX(-50%);
@@ -408,6 +427,10 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
+		.toggle {
+			display: none;
+		}
+
 		.trace,
 		.mark,
 		.clone,
