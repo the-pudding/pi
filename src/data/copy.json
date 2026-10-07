@@ -142,20 +142,7 @@
         },
         {
           "type": "text",
-          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel='noreferrer noopener' aria-label='Engert’s website (opens in a new tab)'>calculated pi to 100 decimal places</a>, and documented the process. He estimated that Shanks’ calculations to arrive at 707 decimal places would fill over 5,000 pages. More pages than the entire stack of the Harry Potter series."
-        },
-        {
-          "type": "Figure",
-          "value": {
-            "src": "assets/images/harrypotter-stack.jpg",
-            "alt": "A stack of the series Harry Potter books",
-            "className": "small",
-            "figcaption": "All seven books of the <cite>Harry Potter</cite> series via <a href=https://commons.wikimedia.org/wiki/File:Harry_Potter_1st_USA_ed._complete_hardback_set_stacked_diagonal.JPG target=_blank rel='noreferrer noopener'>Wikimedia Commons</a>."
-          }
-        },
-        {
-          "type": "text",
-          "value": "But Shanks knew his effort did nothing for his reputation as an (amateur) mathematician. Possibly something, though, for his reputation as a Computer. Back then that was a job for humans, a person who computes. He was darn good."
+          "value": "Shanks knew his effort did nothing for his reputation as an (amateur) mathematician. Possibly something, though, for his reputation as a Computer. Back then that was a job for humans, a person who computes. He was darn good."
         },
         {
           "type": "text",
@@ -191,6 +178,19 @@
             "src": "assets/images/specimen-1873.jpg",
             "alt": "A scan of the page that contains pi to 707 decimal places.",
             "figcaption": "From the article <cite>On the Extension of the Numerical value of π</cite> by William Shanks, 1873."
+          }
+        },
+        {
+          "type": "text",
+          "value": "How many pencils (or pens) did Shanks wear through? What was the physical toll? My obsession with how he calculated pi started to mirror his obsession with producing it. Lucky for me, number enthusiast Erwin Engert <a href=https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf target=_blank rel='noreferrer noopener' aria-label='Engert’s website (opens in a new tab)'>calculated pi to 100 decimal places</a>, and documented the process. He estimated that Shanks’ calculations to arrive at 707 decimal places would fill over 5,000 pages. More pages than the entire stack of the Harry Potter series."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/harrypotter-stack.jpg",
+            "alt": "A stack of the series Harry Potter books",
+            "className": "small",
+            "figcaption": "All seven books of the <cite>Harry Potter</cite> series via <a href=https://commons.wikimedia.org/wiki/File:Harry_Potter_1st_USA_ed._complete_hardback_set_stacked_diagonal.JPG target=_blank rel='noreferrer noopener'>Wikimedia Commons</a>."
           }
         }
       ]
@@ -496,7 +496,7 @@
         },
         {
           "type": "text",
-          "value": "Until 1944."
+          "value": "Until 1946."
         },
         {
           "type": "text",
@@ -504,7 +504,7 @@
         },
         {
           "type": "text",
-          "value": "Ferugson compared his result to Shanks’ digits. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything Shanks had computed after that point, from 528 to 707, was entirely wrong."
+          "value": "Ferguson compared his result to Shanks’ digits. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything Shanks had computed after that point, from 528 to 707, was entirely wrong."
         },
         {
           "type": "Specimen",
@@ -560,7 +560,7 @@
         },
         {
           "type": "text",
-          "value": "Many mathematical historians have been drawn to this notorious miscalculation. Why did it happen? A brief micro-mathametical forensic investigation was in order. In 2014, a science writer at American Scientist named Brian Hayes did exactly that."
+          "value": "Many mathematical historians have been drawn to this notorious miscalculation. Why did it happen? A brief micro-mathemetical forensic investigation was in order. In 2014, a science writer at American Scientist named Brian Hayes did exactly that."
         },
         {
           "type": "text",
@@ -637,7 +637,7 @@
         },
         {
           "type": "text",
-          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the  original 607 decimal places. The true version has 50 sevens. Part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
+          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the  original 607 decimal places. The true version has 50 sevens. A part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
         },
         {
           "type": "Distribution",
@@ -706,19 +706,44 @@
         },
         {
           "type": "text",
-          "value": "Also around that time, lowercase computers entered the scene. Non-human, electronic, digital, and programmable."
+          "value": "A few years earlier, lowercase computers entered the scene. Non-human, electronic, digital, and programmable."
+        },
+        {
+          "type": "text",
+          "value": "The job title Computer used to belong to people, like Shanks. During World War II, the University of Pennsylvania employed hundreds of them (mostly women) to calculate ballistic trajectories by hand. But then the Army built a machine to do it faster."
         },
         {
           "type": "text",
           "value": "Dude, you’re getting a <del>Dell</del> Electronic Numerical Integrator and Computer! (ENIAC for short)."
         },
         {
-          "type": "mark",
-          "value": "Tk image"
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/eniac.jpg",
+            "alt": "Two of the ENIAC programmers, are preparing the computer for Demonstration Day in February 1946. Left: Betty Jennings, right: Frances Bilas.",
+            "figcaption": "Jennings (left) and Bilas (right) at the ENIAC, 1946.  Via <a href=https://en.wikipedia.org/wiki/File:Two_women_operating_ENIAC_(full_resolution).jpg target=_blank rel='noreferrer noopener'>Wikipedia</a>.",
+            "className": "small"
+          }
         },
         {
           "type": "text",
-          "value": "<span class=relative>That same year, Professor <span class=dotted>John von Neumann</span>, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
+          "value": "Six of those Computers (Kay McNulty, Betty Jennings, Betty Snyder, Marlyn Wescoff, Fran Bilas and Ruth Lichterman) had to figure out how to program ENIAC with just diagrams since they didn’t yet have clearance to see it."
+        },
+        {
+          "type": "text",
+          "value": "By hand it would take around 40 hours to calculate a shell’s trajectory. By machine, according to Jennings:"
+        },
+        {
+          "type": "blockquote",
+          "value": "“ENIAC calculated the trajectory faster than it took the bullet to travel.”"
+        },
+        {
+          "type": "text",
+          "value": "The six women weren’t invited to the celebration dinner, and none were named in the press coverage."
+        },
+        {
+          "type": "text",
+          "value": "<span class=relative>Back to pi. The same year the museum fixed the digits, Professor <span class=dotted>John von Neumann</span>, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
         },
         {
           "type": "blockquote",
@@ -726,11 +751,7 @@
         },
         {
           "type": "text",
-          "value": "ENIAC and its human operators were up for the challenge. They computed 2,037 decimal places of pi."
-        },
-        {
-          "type": "text",
-          "value": "There was mayhem in the streets. A surge of babies were named Pi. Okay, neither of those things happened, but the record was shattered and von Neumann got his sweet, sweet digits."
+          "value": "ENIAC computed 2,037 decimal places of pi. There was mayhem in the streets. A surge of babies were named Pi. Okay, neither of those things happened, but the record was shattered and von Neumann got his sweet, sweet digits."
         },
         {
           "type": "text",
@@ -758,7 +779,7 @@
         },
         {
           "type": "text",
-          "value": "Today, the most accurate value of pi is 314,000,000,000,000 digits, set in 2025, though the attempt took Shanksian 110 days. Imagine for a moment, you are holding one of the Harry Potter books. It doesn’t matter which one. <em>“Deletrius Aparecium!”</em> you shout with enthusiasm. Every single letter in that book vanishes and turns into a digit of pi. (Go ahead, fact check this spell). Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy with their own digits. That is 314 trillion, give or take a few."
+          "value": "Today, the most accurate value of pi is 314,000,000,000,000 digits, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment, you are holding one of the Harry Potter books. It doesn’t matter which one. <em>“Deletrius Aparecium!”</em> you shout with enthusiasm. Every single letter in that book vanishes and turns into a digit of pi. (Go ahead, fact check this spell). Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy with their own digits. That is 314 trillion, give or take a few."
         },
         {
           "type": "mark",
