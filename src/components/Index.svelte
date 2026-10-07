@@ -14,6 +14,7 @@
 	import WalkCouple from "$components/WalkCouple.svelte";
 	import VennDiagram from "$components/VennDiagram.svelte";
 	import Unroll from "$components/Unroll.svelte";
+	import Term from "$components/Term.svelte";
 	import { modes } from "$runes/misc.svelte.js";
 
 	const copy = getContext("copy");
@@ -28,7 +29,8 @@
 		Walk,
 		VennDiagram,
 		Unroll,
-		WalkCouple
+		WalkCouple,
+		Term
 	};
 
 	const overlay = $derived(modes.boss || modes.friend);
@@ -36,6 +38,17 @@
 	$effect(() => {
 		// make the page behind the overlay not scrollable
 		document.documentElement.classList.toggle("no-scroll", overlay);
+	});
+
+	$effect(() => {
+		document.querySelectorAll('a[href^="#"]').forEach((a) => {
+			a.addEventListener("click", (e) => {
+				const target = document.getElementById(a.hash.slice(1));
+				if (!target) return;
+				e.preventDefault();
+				target.scrollIntoView({ behavior: "auto", block: "start" });
+			});
+		});
 	});
 </script>
 
