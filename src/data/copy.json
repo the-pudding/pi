@@ -123,7 +123,7 @@
         },
         {
           "type": "text",
-          "value": "<strong>pi/4 = 4arctan1/5 - arctan1/239</strong>"
+          "value": "<strong><span aria-label=pi>π</span> = 16arctan1/5 - 4arctan1/239</strong>"
         },
         {
           "type": "text",
@@ -441,7 +441,7 @@
         },
         {
           "type": "mark",
-          "value": "maybe cut rest of this section, or expand with a good visual"
+          "value": "Tk - maybe cut this aside? or expand with a good little visual"
         },
         {
           "type": "text",
@@ -504,7 +504,7 @@
         },
         {
           "type": "text",
-          "value": "Ferguson compared his result to Shanks’ digits. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything Shanks had computed after that point, from 528 to 707, was entirely wrong."
+          "value": "Ferguson compared his result to Shanks’ digits. Everything was peachy until the 528th digit. Somewhere along the way, Shanks’ unflappable exactness faltered. Ferguson discovered that everything Shanks had computed after that point, from the 528th to 707th digit, was <em>entirely wrong</em>."
         },
         {
           "type": "Specimen",
@@ -527,7 +527,7 @@
         },
         {
           "type": "text",
-          "value": "The first was when the error appeared. In his 1853 book’s preface, dated Feb 28, Shanks wrote:"
+          "value": "The first was when the error appeared. In his book’s preface from 1853, dated Feb 28, Shanks wrote:"
         },
         {
           "type": "blockquote",
@@ -560,7 +560,11 @@
         },
         {
           "type": "text",
-          "value": "Many mathematical historians have been drawn to this notorious miscalculation. Why did it happen? A brief micro-mathemetical forensic investigation was in order. In 2014, a science writer at American Scientist named Brian Hayes did exactly that."
+          "value": "Many mathematical historians have been drawn to this notorious miscalculation. How did a man who spent years calculating by hand suddenly slip up? A brief micro-mathemetical forensic investigation was in order."
+        },
+        {
+          "type": "text",
+          "value": "In 2014, a science writer at <em>American Scientist</em> named Brian Hayes <a href=https://www.americanscientist.org/article/pencil-paper-and-pi target=_blank rel='noreferrer noopener'>did exactly that</a>."
         },
         {
           "type": "text",
@@ -568,59 +572,103 @@
         },
         {
           "type": "text",
-          "value": "Remember Machin's formula? pi/4 = 4arctan1/5 - arctan1/239."
+          "value": "Remember Machin’s formula? No, probably not. A refresher:"
         },
         {
           "type": "text",
-          "value": "Two arctan series. Each is a long list of fractions that get smaller and smaller, and you add them all up. Every fraction in the list is a term."
+          "value": "<strong><span aria-label=pi>π</span> = 16arctan1/5 - 4arctan1/239</strong>"
         },
         {
           "type": "text",
-          "value": "The two sides are lopsided though. The 1/239 terms shrink and die out fast. The 1/5 terms shrink slowly, so that side alone took 506 of them, each written out to 709 decimal places."
+          "value": "It contains two arctan series. Think of each as a long list of fractions that get smaller and smaller, and you add them all up. Every fraction in the list is a “term.”"
         },
         {
           "type": "text",
-          "value": "Hayes measured exactly how far Shanks’ final value shifted the truth. Then he walked back through all 506 terms to see what spot was the culprit."
+          "value": "The two sides are lopsided, though. The 1/239 terms shrink and die out fast. The 1/5 terms shrink slowly. To reach his desired accuracy, Shanks had to calculate 506 individual fractions for just that side of the equation, each written out to 709 decimal places."
         },
         {
           "type": "text",
-          "value": "Suspect one: term 248. This term, which sat deep in the list, was a repeating decimal that cycles every 210 digits. So when Shanks extended that term from 530 digits out to 609, he didn't have to calculate anything. He just had to copy a chunk he had already done."
+          "value": "Pedantic note: Shanks needed to calculate two extra “guard digits” at the end to prevent rounding errors. So for 707 decimal places that would be 709. You’ll notice that shift below."
+        },
+        {
+          "type": "text",
+          "value": "Shanks had also published his intermediate scratch work, including the final sums for both arctan series. Hayes measured exactly how far Shanks’ final value shifted the truth. Then he walked back through all 506 terms to spot the culprit."
+        },
+        {
+          "type": "text",
+          "value": "<strong>Suspect one: term 248</strong>"
+        },
+        {
+          "type": "text",
+          "value": "This term was a repeating decimal that cycles every 210 digits. So when Shanks extended that term from 530 out to 609, he didn't have to calculate anything. He just had to copy a chunk he had already done."
         },
         {
           "type": "mark",
-          "value": "Tk graphic"
+          "value": "Tk graphic - show the term being typed out, above is shanks, below is real. play/pause/restart/slider"
         },
         {
           "type": "text",
-          "value": "In doing so, he skipped a zero. Every digit after it slid one column to the left. This was actually spotted by another Shanks fan, Erwin Engert."
+          "value": "In doing so, he skipped a zero. Every digit after it slid one column to the left. This was actually spotted and credited to our other Shanks superfan, Erwin Engert."
         },
         {
           "type": "text",
-          "value": "Worth noting: The slip-up happened at the 530th place of arctan 1/5, but because of how Machin’s formula multiplied that whole value by 16, its effect showed up two digits earlier at 528."
+          "value": "For those of you still paying attention, you noticed that the typo happened at the 530th decimal place, but Shanks’ final value broke at the 528th. Because Machin’s formula multiplied the arctan series by 16, it magnified the error, corrupting the final value of pi two decimal places earlier."
         },
         {
           "type": "text",
-          "value": "Deliberately breaking the correct version reproduced Shanks’ digits until decimal place 569. But then there was another fracture."
+          "value": "<strong>Suspect two: term 72</strong>"
         },
         {
           "type": "text",
-          "value": "Suspect two: term 72. Ferguson flagged that same spot in 1946. Hayes found that dropping five digits at that point and sliding the rest left does the trick. Same type of error as before."
+          "value": "Ferguson&mdash;the man who calculated pi using the desk calculator&mdash;actually flagged the term 72 anomaly back in 1946. Hayes found that dropping five digits at that point and sliding the rest left does the trick. It was the same type of error as before."
         },
         {
           "type": "mark",
-          "value": "Tk graphic"
+          "value": "Tk graphic - simplified static version of above"
         },
         {
           "type": "text",
-          "value": "With both of these errors accounted for, Shanks’ digits were reproduced until 601 digits."
+          "value": "With both of these errors accounted for, Hayes reproduced Shanks’ up to 601 digits on the 1/5 side of the equation."
         },
         {
           "type": "text",
-          "value": "Suspect three: still at large. Nobody knows why it failed after that. Also, the last eight digits Shanks published in 1853 changed when he reprinted in 1873 without explanation."
+          "value": "<strong>Suspects three and four: still at large</strong>"
         },
         {
           "type": "text",
-          "value": "So there were a handful of errors, all coming in those months before publication in April 1853. None of them were computing mistakes, but rather clerical errors. It is more surprising to me that given the sheer amount of numbers he had to calculate and write, there weren’t more&mdash;a testament to both his endurance and focus."
+          "value": "At digit 601, the 1/5 side fractured again, and the trail went cold for detective Hayes."
+        },
+        {
+          "type": "text",
+          "value": "A similarly unexplained fracturing occurred on the 1/239 side starting at the 592nd decimal place."
+        },
+        {
+          "type": "text",
+          "value": "Because both sides are ultimately combined into one final number, pi was corrupted from the first error all the way to the end."
+        },
+        {
+          "type": "mark",
+          "value": "Tk graphic - highlighting pi errors/fixed and unresolved"
+        },
+        {
+          "type": "text",
+          "value": "Stranger still, the last eight digits Shanks originally published in 1853 were silently changed when he reprinted his work in 1873 with no explanation."
+        },
+        {
+          "type": "text",
+          "value": "But perhaps the sadder and more relatable part of this cold case is that Shanks <em>knew</em> he had made clerical errors."
+        },
+        {
+          "type": "text",
+          "value": "In the preface to his 1873 publication, Shanks issued an apology for a few mismatched digits, explaining he had lost track of his own scratch work revisions. Confident he had found the only typo, he wrote:"
+        },
+        {
+          "type": "blockquote",
+          "value": "“At all events, from some strange cause or accident (perhaps from being overworked) the addition of 128 was very soon afterwards made…Hence arose the double error, which remained, strange to say, undetected for upwards of twenty years! This mistake, however, <em>from its nature, in no wise affects the accuracy of the other figures</em>.”"
+        },
+        {
+          "type": "text",
+          "value": "So there were a handful of errors, all seemingly in those months before publication in April 1853. None of them were computing mistakes, but rather clerical errors. It is more surprising to me that given the sheer amount of numbers he had to calculate, track, and copy by hand, there weren’t more&mdash;a testament to both his endurance and focus."
         }
       ]
     },
@@ -648,7 +696,7 @@
         },
         {
           "type": "text",
-          "value": "Remember Pearson (name giver of the random walk)? He and De Morgan coincidentally both went to University College of London–different generations. They both were looking to answer the same question of how do you test probability without a machine?"
+          "value": "Remember Pearson (who coined the term “random walk”)? He and De Morgan coincidentally both went to University College of London&mdash;different generations. They both were looking to answer the same question: how do you test probability without a machine?"
         },
         {
           "type": "text",
