@@ -15,6 +15,8 @@
 	import VennDiagram from "$components/VennDiagram.svelte";
 	import Unroll from "$components/Unroll.svelte";
 	import Term from "$components/Term.svelte";
+	import Records from "$components/Records.svelte";
+	import Chat from "$components/Chat.svelte";
 	import { modes } from "$runes/misc.svelte.js";
 
 	const copy = getContext("copy");
@@ -30,7 +32,9 @@
 		VennDiagram,
 		Unroll,
 		WalkCouple,
-		Term
+		Term,
+		Records,
+		Chat
 	};
 
 	const overlay = $derived(modes.boss || modes.friend);

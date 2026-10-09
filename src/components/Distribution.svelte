@@ -1,23 +1,30 @@
 <script>
 	import { getContext } from "svelte";
-	import { groups, ascending, scaleLinear, max } from "d3";
+	import { groups, ascending, scaleLinear, max, format, sum } from "d3";
+	import computePi from "$utils/computePi.js";
+
 	const pi = getContext("pi");
-	let { version, caption } = $props();
+	let { source, caption, highlight, values } = $props();
+
+	let piDigits = $derived(source ? pi[source].split("").map(Number) : null);
 
 	let byNumber = $derived(
-		groups(
-			pi[version].split("").map((d) => +d),
-			(d) => d
-		)
-			.map(([number, c]) => ({ number, count: c.length }))
-			.sort((a, b) => ascending(a.number, b.number))
+		values
+			? values.map((c, i) => ({ number: i, count: +c }))
+			: groups(piDigits, (d) => d)
+					.map(([number, c]) => ({ number, count: c.length }))
+					.sort((a, b) => ascending(a.number, b.number))
 	);
 
+	let tally = $derived(sum(byNumber, (d) => d.count));
+
 	let maxCount = $derived(max(byNumber, (d) => d.count));
-	let total = $derived(pi[version].length);
+	let total = $derived(tally);
 	let scaleCount = $derived(
 		scaleLinear().domain([0, maxCount]).range([0, 100])
 	);
+
+	let fontSize = $derived(0.75 - (`${maxCount}`.length - 2) * 0.1);
 
 	const uid = $props.id();
 </script>
@@ -26,12 +33,14 @@
 	<div class="c" aria-hidden="true">
 		{#each byNumber as { number, count }}
 			{@const height = `${scaleCount(count)}%`}
-			{@const highlight = number === 7}
-			<div class="number" class:highlight>
+			{@const high = `${number}` === highlight}
+			<div class="number" class:high>
 				<div class="track">
-					<span class="bar" style:height
-						><span class="count">{count}</span></span
-					>
+					<span class="bar" style:height>
+						<span class="count" style:font-size="{fontSize}em"
+							>{format(",")(count)}</span
+						>
+					</span>
 				</div>
 				<span class="label">
 					{number}
@@ -51,8 +60,10 @@
 		<tbody>
 			{#each byNumber as { number, count }}
 				<tr>
-					<th scope="row">{number}{#if number === 7}
-							<span class="sr-only"> (highlighted in the chart)</span>{/if}</th>
+					<th scope="row"
+						>{number}{#if number === 7}
+							<span class="sr-only"> (highlighted in the chart)</span>{/if}</th
+					>
 					<td>{count}</td>
 				</tr>
 			{/each}
@@ -108,20 +119,23 @@
 		display: inline-block;
 		text-align: center;
 		border: 4px solid currentColor;
+		position: relative;
 	}
 
 	.count {
-		transform: translateY(calc(-100% - 16px));
+		transform: translate(-50%, -100%);
+		top: -0.5rem;
+		left: 50%;
+		position: absolute;
 		display: inline-block;
 		line-height: 1;
-		font-size: 0.75em;
 	}
 
 	.label {
 		margin-top: 8px;
 	}
 
-	.highlight .bar {
+	.high .bar {
 		background: var(--color-primary);
 	}
 </style>

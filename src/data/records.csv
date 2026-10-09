@@ -1,0 +1,73 @@
+raw,date,who,digits,time,method
+250 BC,1/1/-250,Archimedes,2,,223/71 < π < 22/7
+150,01/0150,Ptolemy,3,,377/120
+480,01/0480,Zu Chongzhi,7,,3.1415926 < π < 3.1415927; 355/113
+1400,1400/01,Madhava of Sangamagrama,10,,Infinite power series (Leibniz formula for pi)
+1424,1424/01,Jamshīd al-Kāshī,16,,
+1500,1500/01,Kerala School,31,,Recorded using Katapayadi number system
+1615,1615/01,Ludolph van Ceulen,32,,
+1621,1621/01,Willebrord Snell (Snellius),35,,Pupil of Van Ceulen
+1630,1630/01,Christoph Grienberger,38,,
+1699,1699/01,Abraham Sharp,71,,"Calculated 72 digits, not all correct"
+1706,1706/01,John Machin,100,,
+1719,1719/01,Thomas Fantet de Lagny,112,,"Calculated 127 decimal places, not all correct"
+1721,1721/01,Anonymous,152,,"Calculated in Philadelphia; 154 digits, 152 correct"
+1844,1844/01,Zacharias Dase and Strassnitzky,200,,"Calculated 205 decimal places, not all correct"
+1847,1847/01,Thomas Clausen,248,,"Calculated 250 decimal places, not all correct"
+1853,1853/01,Lehmann,261,,
+1853,1853/02,Rutherford,440,,
+1853,1853/03,William Shanks,527,,
+1946,1946/01,D. F. Ferguson,620,,Desk calculator
+January 1947,1947/01,D. F. Ferguson,710,,Desk calculator
+September 1947,1947/09,D. F. Ferguson,808,,Desk calculator
+1949,1949/01,Levi B. Smith and John Wrench,1120,,Desk calculator
+September 1949,1949/09,G. W. Reitwiesner et al.,2037,70 hours,ENIAC
+1954,1954/01,S. C. Nicholson & J. Jeenel,3093,13 minutes,NORC
+1957,1957/01,George E. Felton,7480,33 hours,"Ferranti Pegasus (London); calculated 10,021 digits, not all correct"
+January 1958,1958/01,Francois Genuys,10000,1.7 hours,IBM 704
+May 1958,1958/05,George E. Felton,10021,33 hours,Pegasus (London)
+1959,1959/01,Francois Genuys,16167,4.3 hours,IBM 704 (Paris)
+1961,1961/01,Daniel Shanks and John Wrench,100265,8.7 hours,IBM 7090 (New York)
+February 1966,1966/02,Jean Guilloud and J. Filliatre,250000,41.92 hours,IBM 7030 (Paris)
+1967,1967/01,Jean Guilloud and M. Dichampt,500000,28 hours,CDC 6600 (Paris)
+1973,1973/01,Jean Guilloud and Martine Bouyer,1001250,23.3 hours,CDC 7600
+1981,1981/01,Kazunori Miyoshi and Yasumasa Kanada,2000036,137.3 hours,FACOM M-200
+1981,1981/02,Jean Guilloud,2000050,,Not known
+1982,1982/01,Yoshiaki Tamura,2097144,7.23 hours,MELCOM 900II
+1982,1982/02,Yoshiaki Tamura and Yasumasa Kanada,4194288,2.9 hours,HITAC M-280H
+1982,1982/03,Yoshiaki Tamura and Yasumasa Kanada,8388576,6.86 hours,HITAC M-280H
+1983,1983/01,"Yasumasa Kanada, Sayaka Yoshino and Yoshiaki Tamura",16777206,<30 hours,HITAC M-280H
+October 1985,1985/10,Bill Gosper,17526200,,Symbolics 3670
+January 1986,1986/01,David H. Bailey,29360111,28 hours,CRAY-2
+September 1986,1986/09,"Yasumasa Kanada, Yoshiaki Tamura",33554414,6.6 hours,HITAC S-810/20
+October 1986,1986/10,"Yasumasa Kanada, Yoshiaki Tamura",67108839,23 hours,HITAC S-810/20
+January 1987,1987/01,"Yasumasa Kanada, Yoshiaki Tamura, Yoshinobu Kubo and others",134214700,35.25 hours,NEC SX-2
+January 1988,1988/01,Yasumasa Kanada and Yoshiaki Tamura,201326551,5.95 hours,HITAC S-820/80
+May 1989,1989/05,Gregory V. Chudnovsky & David V. Chudnovsky,480000000,,CRAY-2 & IBM 3090/VF
+June 1989,1989/06,Gregory V. Chudnovsky & David V. Chudnovsky,535339270,,IBM 3090
+13 July 1989,1989/08,Yasumasa Kanada and Yoshiaki Tamura,536870898,,HITAC S-820/80
+August 1989,1989/08,Gregory V. Chudnovsky & David V. Chudnovsky,1011196691,,IBM 3090
+19 November 1989,1989/11,Yasumasa Kanada and Yoshiaki Tamura,1073740799,,HITAC S-820/80
+August 1991,1991/08,Gregory V. Chudnovsky & David V. Chudnovsky,2260000000,,"Homemade parallel computer (details unknown, not verified)"
+18 May 1994,1994/05,Gregory V. Chudnovsky & David V. Chudnovsky,4044000000,,"New homemade parallel computer (details unknown, not verified)"
+28 August 1995,1995/08,Yasumasa Kanada and Daisuke Takahashi,4294960000,56.74 hours?,HITAC S-3800/480 (dual CPU)
+11 October 1995,1995/10,Yasumasa Kanada and Daisuke Takahashi,6442450000,116.63 hours,HITAC S-3800/480 (dual CPU)
+6 July 1997,1997/07,Yasumasa Kanada and Daisuke Takahashi,51539600000,29.05 hours,HITACHI SR2201 (1024 CPU)
+5 April 1999,1999/04,Yasumasa Kanada and Daisuke Takahashi,68719470000,32.9 hours,HITACHI SR8000 (64 of 128 nodes)
+20 September 1999,1999/09,Yasumasa Kanada and Daisuke Takahashi,206158430000,37.35 hours,HITACHI SR8000/MPP (128 nodes)
+24 November 2002,2002/11,Yasumasa Kanada & 9 man team,1241100000000,600 hours,HITACHI SR8000/MPP (64 nodes)
+29 April 2009,2009/04,Daisuke Takahashi et al.,2576980377524,29.09 hours,T2K Open Supercomputer (640 nodes); Gauss–Legendre algorithm
+31 December 2009,2009/12,Fabrice Bellard,2699999990000,131 days,Chudnovsky algorithm; Intel Core i7 @ 2.93 GHz
+2 August 2010,2010/08,Shigeru Kondo,5000000000000,90 days,y-cruncher 0.5.4; 2x Intel Xeon X5680
+17 October 2011,2011/10,Shigeru Kondo,10000000000050,371 days,y-cruncher 0.5.5; 2x Intel Xeon X5680
+28 December 2013,2013/12,Shigeru Kondo,12100000000050,94 days,y-cruncher 0.6.3; 2x Intel Xeon E5-2690
+8 October 2014,2014/10,"Sandon Nash Van Ness ""houkouonchi""",13300000000000,208 days,y-cruncher 0.6.3; 2x Xeon E5-4650L
+11 November 2016,2016/11,Peter Trueb,22459157718361,105 days,y-cruncher 0.7.1; 4x Xeon E7-8890 v3
+14 March 2019,2019/03,Emma Haruka Iwao,31415926535897,121 days,y-cruncher 0.7.6; Google Cloud n1-megamem-96
+29 January 2020,2020/01,Timothy Mullican,50000000000000,303 days,y-cruncher 0.7.7; 4x Intel Xeon E7-4880 v2
+14 August 2021,2021/08,Team DAViS of the University of Applied Sciences of the Grisons,62831853071796,108 days,y-cruncher 0.7.8; AMD Epyc 7542
+21 March 2022,2022/03,Emma Haruka Iwao,100000000000000,158 days,y-cruncher 0.7.8; Google Cloud n2-highmem-128
+14 March 2024,2024/03,"Jordan Ranous, Kevin O'Brien and Brian Beeler",105000000000000,75 days,y-cruncher 0.8.3; 2x AMD EPYC 9754
+28 June 2024,2024/06,"Jordan Ranous, Kevin O'Brien and Brian Beeler",202112290000000,104 days,y-cruncher 0.8.3; 2x Intel Xeon Platinum 8592+
+2 April 2025,2025/04,"Linus Media Group, Kioxia",300000000000000,226 days,y-cruncher 0.8.5; 2x AMD EPYC 9684X
+1 November 2025,2025/11,"Kevin O'Brien, Divyansh Jain, Brian Beeler",314000000000000,110 days,y-cruncher 0.8.6; 2x AMD EPYC 9965

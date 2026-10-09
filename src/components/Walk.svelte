@@ -1,9 +1,10 @@
 <script>
 	import random from "random";
 
-	import { tick, getContext } from "svelte";
+	import { tick, untrack, getContext } from "svelte";
 	import { AnimationFrames, IsDocumentVisible } from "runed";
 	import variables from "$data/variables.json";
+	import computePi from "$utils/computePi.js";
 	const DPR = 2;
 
 	const DEGREE_OPTS = {
@@ -17,9 +18,19 @@
 		fast: 60
 	};
 
+	// `speed="hyper"` swaps medium for a 300 fps option, listed last
+	const HYPER_OPTS = {
+		slow: 2,
+		fast: 60,
+		hyper: 300
+	};
+	const SPEED_LABELS = { hyper: "very fast" };
+	const REFRESH_FPS = 60;
+	const MAX_STEPS_PER_TICK = 10;
+
 	const TICKER_HALF = 100;
 	const CHUNK = 512;
-	const MAX_DIGITS = 1e6;
+	const MAX_DIGITS = 50000;
 	const FIT = 0.9;
 
 	const pi = getContext("pi");
@@ -31,13 +42,17 @@
 		source = "random",
 		target = null,
 		description = "",
-		label = "Walk"
+		label = "Walk",
+		start = undefined,
+		ghostSource = null,
+		speed: initialSpeed = "slow"
 	} = $props();
 
 	const uid = $props.id();
 
 	const LINE = variables.color["gray-600"];
 	const ACCENT = variables.color.red;
+	const GHOST = variables.color["gray-400"];
 
 	let rawDigits = [];
 	let walkIndices = [];
@@ -52,14 +67,29 @@
 
 	let canvasEl = $state(null);
 	let ctx = $state(null);
+	let ghostEl = $state(null);
 
 	let frame = $state(-1);
 	let walkLength = $state(0);
-	let speed = $state("slow");
+	let speed = $state(untrack(() => initialSpeed));
 	let originReturnCount = $state(0);
 
-	let fps = $derived(FPS_OPTS[speed]);
+	let piDigits = $derived(
+		source.includes("real")
+			? computePi(+source.split("real")[1]).split("").map(Number)
+			: null
+	);
+
+	// $inspect(piDigits.length)
+
+	let speedOpts = $derived(initialSpeed === "hyper" ? HYPER_OPTS : FPS_OPTS);
+	let fps = $derived(speedOpts[speed] ?? speedOpts.slow);
 	let degrees = $derived(DEGREE_OPTS[version]);
+	let startDigit = $derived(
+		start === undefined || start === null || start === "" || isNaN(+start)
+			? undefined
+			: Math.max(0, Math.floor(+start))
+	);
 	let isRandom = $derived(source === "random");
 	let showOrigin = $derived(target === "origin");
 
@@ -73,6 +103,30 @@
 			];
 		})
 	);
+
+	let ghostPath = $derived.by(() => {
+		if (!ghostSource || !pi[ghostSource]) return [];
+		const ghostDegrees = DEGREE_OPTS[version];
+		const ghostDeltas = ghostDegrees.map((a) => {
+			const rad = (a * Math.PI) / 180;
+			const len = a % 90 ? Math.SQRT2 : 1;
+			return [
+				Math.round(Math.sin(rad) * len),
+				Math.round(-Math.cos(rad) * len)
+			];
+		});
+		const path = [[0, 0]];
+		let ux = 0;
+		let uy = 0;
+		for (const ch of pi[ghostSource]) {
+			const d = +ch;
+			if (d >= ghostDegrees.length) continue;
+			ux += ghostDeltas[d][0];
+			uy += ghostDeltas[d][1];
+			path.push([ux, uy]);
+		}
+		return path;
+	});
 
 	let maxFrame = $derived(walkLength - 1);
 	let activeIndex = $derived.by(() => {
@@ -108,6 +162,35 @@
 		if (walkIndices.length !== before) walkLength = walkIndices.length;
 	}
 
+	// step whose raw digit index is the last one <= rawIndex (-1 if none yet)
+	function lastStepAtOrBefore(rawIndex) {
+		let lo = 0;
+		let hi = walkIndices.length;
+		while (lo < hi) {
+			const mid = (lo + hi) >> 1;
+			if (walkIndices[mid] <= rawIndex) lo = mid + 1;
+			else hi = mid;
+		}
+		return lo - 1;
+	}
+
+	// first step drawn in red; with a ghost, everything after `start` is red
+	function redFrom() {
+		if (!ghostPath.length) return Infinity;
+		return startDigit === undefined ? 0 : lastStepAtOrBefore(startDigit) + 1;
+	}
+
+	function seedBounds() {
+		const b = { minX: 0, maxX: 0, minY: 0, maxY: 0 };
+		for (const [x, y] of ghostPath) {
+			if (x < b.minX) b.minX = x;
+			else if (x > b.maxX) b.maxX = x;
+			if (y < b.minY) b.minY = y;
+			else if (y > b.maxY) b.maxY = y;
+		}
+		return b;
+	}
+
 	function size() {
 		return { w: canvasEl.width / DPR, h: canvasEl.height / DPR };
 	}
@@ -132,6 +215,24 @@
 			ox: w / 2 - ((bounds.minX + bounds.maxX) / 2) * scale,
 			oy: h / 2 - ((bounds.minY + bounds.maxY) / 2) * scale
 		};
+		drawGhost();
+	}
+
+	function drawGhost() {
+		if (!ghostEl) return;
+		const g = ghostEl.getContext("2d");
+		const { w, h } = size();
+		g.setTransform(DPR, 0, 0, DPR, 0, 0);
+		g.clearRect(0, 0, w, h);
+		if (ghostPath.length < 2) return;
+		g.lineWidth = 1.5;
+		g.lineJoin = "round";
+		g.strokeStyle = GHOST;
+		g.beginPath();
+		g.moveTo(screenX(0), screenY(0));
+		for (let i = 1; i < ghostPath.length; i++)
+			g.lineTo(screenX(ghostPath[i][0]), screenY(ghostPath[i][1]));
+		g.stroke();
 	}
 
 	function outside(sx, sy) {
@@ -149,7 +250,7 @@
 	function measure(toFrame) {
 		let ux = 0;
 		let uy = 0;
-		bounds = { minX: 0, maxX: 0, minY: 0, maxY: 0 };
+		bounds = seedBounds();
 
 		for (let i = 0; i <= toFrame; i++) {
 			const [dx, dy] = deltas[rawDigits[walkIndices[i]]];
@@ -181,6 +282,8 @@
 		let fromY = 0;
 		let count = 0;
 
+		const red = redFrom();
+
 		ctx.strokeStyle = LINE;
 		ctx.beginPath();
 		ctx.moveTo(screenX(0), screenY(0));
@@ -192,7 +295,15 @@
 			ux += dx;
 			uy += dy;
 			if (ux === 0 && uy === 0) count++;
-			if (i < toFrame) ctx.lineTo(screenX(ux), screenY(uy));
+			if (i < toFrame) {
+				if (i === red) {
+					ctx.stroke();
+					ctx.strokeStyle = ACCENT;
+					ctx.beginPath();
+					ctx.moveTo(screenX(fromX), screenY(fromY));
+				}
+				ctx.lineTo(screenX(ux), screenY(uy));
+			}
 		}
 		ctx.stroke();
 
@@ -226,7 +337,7 @@
 
 		ctx.lineWidth = 1.5;
 
-		ctx.strokeStyle = LINE;
+		ctx.strokeStyle = toFrame - 1 >= redFrom() ? ACCENT : LINE;
 		ctx.beginPath();
 		ctx.moveTo(screenX(prevPen.ux), screenY(prevPen.uy));
 		ctx.lineTo(screenX(pen.ux), screenY(pen.uy));
@@ -250,8 +361,10 @@
 	function draw(toFrame) {
 		if (!ctx || !canvasEl || toFrame < 0 || toFrame > maxFrame) return;
 		if (toFrame === drawnFrame) return;
-		if (toFrame === drawnFrame + 1) advance(toFrame);
-		else render(toFrame);
+		const gap = toFrame - drawnFrame;
+		if (drawnFrame >= 0 && gap > 0 && gap <= MAX_STEPS_PER_TICK) {
+			for (let f = drawnFrame + 1; f <= toFrame; f++) advance(f);
+		} else render(toFrame);
 	}
 
 	function resize() {
@@ -259,6 +372,10 @@
 		const { width, height } = canvasEl.getBoundingClientRect();
 		canvasEl.width = width * DPR;
 		canvasEl.height = height * DPR;
+		if (ghostEl) {
+			ghostEl.width = width * DPR;
+			ghostEl.height = height * DPR;
+		}
 		if (!ctx) ctx = canvasEl.getContext("2d");
 		ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 		baseUnit = width * 0.05;
@@ -278,7 +395,7 @@
 		originReturnCount = 0;
 		pen = { ux: 0, uy: 0 };
 		prevPen = { ux: 0, uy: 0 };
-		bounds = { minX: 0, maxX: 0, minY: 0, maxY: 0 };
+		bounds = seedBounds();
 
 		if (isRandom) {
 			rawDigits = [];
@@ -287,6 +404,11 @@
 		}
 
 		ensure(1);
+		if (startDigit !== undefined) {
+			while (rawDigits.length <= startDigit && rawDigits.length < MAX_DIGITS)
+				ensure(walkIndices.length + 1);
+			frame = lastStepAtOrBefore(startDigit);
+		}
 		fitView();
 
 		if (ctx && canvasEl) {
@@ -297,13 +419,23 @@
 	}
 
 	const animation = new AnimationFrames(
-		() => {
-			ensure(frame + 2);
-			if (frame + 1 > walkLength - 1) {
-				pause();
-				return;
+		({ delta }) => {
+			// above the display refresh rate, take several steps per animation frame
+			const n =
+				fps > REFRESH_FPS
+					? Math.max(
+							1,
+							Math.min(Math.round((delta * fps) / 1000), MAX_STEPS_PER_TICK)
+						)
+					: 1;
+			for (let i = 0; i < n; i++) {
+				ensure(frame + 2);
+				if (frame + 1 > walkLength - 1) {
+					pause();
+					return;
+				}
+				frame++;
 			}
-			frame++;
 		},
 		{ fpsLimit: () => +fps, immediate: false }
 	);
@@ -357,7 +489,7 @@
 	}
 
 	$effect(() => {
-		if (!canvasEl) return;
+		if (!canvasEl || !ghostEl) return;
 		resize();
 		const ro = new ResizeObserver(resize);
 		ro.observe(canvasEl);
@@ -366,7 +498,8 @@
 
 	function rebuild() {
 		const deg = DEGREE_OPTS[version].length;
-		if (source !== "random") rawDigits = pi[source].split("").map(Number);
+		if (source !== "random")
+			rawDigits = piDigits || pi[source].split("").map(Number);
 
 		walkIndices = [];
 		for (let i = 0; i < rawDigits.length; i++)
@@ -382,6 +515,22 @@
 		source;
 		version;
 		rebuild();
+	});
+
+	let jumped = false;
+	$effect(() => {
+		if (!ctx || jumped || startDigit === undefined) return;
+		jumped = true;
+		untrack(() => reset());
+	});
+
+	$effect(() => {
+		ghostPath;
+		untrack(() => {
+			if (!canvasEl) return;
+			if (frame < 0) bounds = seedBounds();
+			resize();
+		});
 	});
 
 	$effect(() => {
@@ -408,7 +557,7 @@
 		</div>
 		<div class="speed" role="radiogroup" aria-labelledby="speed-label-{uid}">
 			<span class="label" id="speed-label-{uid}">Speed:</span>
-			{#each Object.keys(FPS_OPTS) as opt}
+			{#each Object.keys(speedOpts) as opt}
 				<label>
 					<input
 						type="radio"
@@ -416,7 +565,7 @@
 						value={opt}
 						bind:group={speed}
 					/>
-					{opt}
+					{SPEED_LABELS[opt] ?? opt}
 				</label>
 			{/each}
 		</div>
@@ -460,6 +609,7 @@
 		aria-label={description ||
 			`A line drawn by a walk on a lattice, one step per ${source === "random" ? "random number" : "digit of pi"}.`}
 	>
+		<canvas bind:this={ghostEl} class="ghost"></canvas>
 		<canvas bind:this={canvasEl}></canvas>
 	</div>
 
@@ -490,15 +640,21 @@
 
 	.canvas {
 		position: relative;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 	}
 
 	canvas {
 		display: block;
 		width: 100%;
 		aspect-ratio: 1 / 1;
-		box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 		position: relative;
 		z-index: 1;
+	}
+
+	canvas.ghost {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
 	}
 
 	.ui {

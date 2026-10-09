@@ -2,8 +2,8 @@
 	import { getContext, tick } from "svelte";
 
 	const pi = getContext("pi");
-	let { version, mode } = $props();
-	let digits = $derived(`3.${pi[version]}`.split(""));
+	let { source, mode } = $props();
+	let digits = $derived(`3.${pi[source]}`.split(""));
 
 	const INCORRECT_THRESHOLD = 527;
 	const GRAVITY = 750;
@@ -19,14 +19,14 @@
 
 	let label = $derived(
 		`Pi to ${digits.length - 2} decimal places, starting ${digits.slice(0, 7).join("")}.` +
-			(version === "shanks707"
+			(source === "shanks707updated"
 				? ` Every digit from decimal place ${WRONG_FROM} onward is incorrect.`
 				: "")
 	);
 
 	const between = (min, max) => min + Math.random() * (max - min);
 	const isIncorrect = (i) =>
-		version === "shanks707" && i >= INCORRECT_THRESHOLD;
+		source === "shanks707updated" && i >= INCORRECT_THRESHOLD;
 
 	let spin = $derived(
 		digits.map((_, i) =>
