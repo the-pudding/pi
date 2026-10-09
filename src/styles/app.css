@@ -29,7 +29,9 @@
 	
 	--color-bg: var(--color-white);
 	--color-fg: var(--color-black);
-	--color-fg-light: var(--color-gray-500);
+	--color-fg-a4: #595959;
+	--color-fg-a3: #767676;
+	--color-fg-a2: #949494;
 
 	--color-primary: var(--color-red);
 	--color-link: var(--color-blue);

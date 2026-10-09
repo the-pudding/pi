@@ -52,8 +52,7 @@
 
 	// "40.1T" -> "40.1 trillion" so screen readers don't read a bare letter
 	const UNITS = { T: "trillion", M: "million", K: "thousand" };
-	const spoken = (n) =>
-		n.replace(/([TMK])$/, (_, u) => ` ${UNITS[u]}`);
+	const spoken = (n) => n.replace(/([TMK])$/, (_, u) => ` ${UNITS[u]}`);
 	let scrollTop = $state(0);
 	let scrollMax = $state(0);
 
@@ -171,11 +170,15 @@
 			aria-label={paused ? "Play videos" : "Pause videos"}
 			>{#if paused}<Play />{:else}<Pause />{/if}</button
 		>
-		<button onclick={() => nav(-1)} aria-disabled={atTop} aria-label="Previous video"
-			><ChevronUp /></button
+		<button
+			onclick={() => nav(-1)}
+			aria-disabled={atTop}
+			aria-label="Previous video"><ChevronUp /></button
 		>
-		<button onclick={() => nav(1)} aria-disabled={atBottom} aria-label="Next video"
-			><ChevronDown /></button
+		<button
+			onclick={() => nav(1)}
+			aria-disabled={atBottom}
+			aria-label="Next video"><ChevronDown /></button
 		>
 	</div>
 </div>
@@ -222,7 +225,7 @@
 	}
 
 	.tabs span {
-		color: var(--color-gray-400);
+		color: var(--color-fg-a3);
 	}
 
 	.tabs .active {
@@ -246,13 +249,13 @@
 		border: none;
 		border-radius: 50%;
 		background: none;
-		background: var(--color-gray-700);
+		background: var(--color-fg-a4);
 		color: var(--color-white);
 		cursor: pointer;
 	}
 
 	.close:hover {
-		background: var(--color-gray-500);
+		background: var(--color-fg-a2);
 		color: var(--color-white);
 	}
 
@@ -320,7 +323,7 @@
 		line-height: 2.75rem;
 		border-radius: 50%;
 		border: 1px solid var(--color-white);
-		background: var(--color-gray-600);
+		background: var(--color-fg-a3);
 		color: var(--color-white);
 		font-size: var(--18px);
 		font-weight: bold;
@@ -384,13 +387,13 @@
 		padding: 0.5rem;
 		border: none;
 		border-radius: 50%;
-		background: var(--color-gray-700);
+		background: var(--color-fg-a4);
 		color: var(--color-white);
 		cursor: pointer;
 	}
 
 	.nav button:hover {
-		background: var(--color-gray-500);
+		background: var(--color-fg-a2);
 	}
 
 	.nav button[aria-disabled="true"] {

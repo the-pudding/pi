@@ -125,7 +125,7 @@
 		padding: 0.5rem;
 		font: inherit;
 		font-size: var(--14px);
-		color: var(--color-gray-700);
+		color: var(--color-fg-a4);
 		cursor: pointer;
 		white-space: nowrap;
 		overflow: hidden;
@@ -141,7 +141,7 @@
 		margin: 1rem 0 0.25rem 0.5rem;
 		font-size: var(--12px);
 		font-weight: normal;
-		color: var(--color-gray-600);
+		color: var(--color-fg-a3);
 	}
 
 	.panel-history {
@@ -186,7 +186,7 @@
 	}
 
 	header span {
-		color: var(--color-gray-600);
+		color: var(--color-fg-a3);
 		font-weight: normal;
 	}
 
@@ -200,7 +200,7 @@
 		border: none;
 		border-radius: 50%;
 		background: none;
-		color: var(--color-gray-600);
+		color: var(--color-gray-fg-a3);
 		font-family: inherit;
 		font-size: var(--24px);
 		line-height: 1;
@@ -292,7 +292,7 @@
 	.disclaimer {
 		margin: 0.5rem 0 0 0;
 		font-size: var(--12px);
-		color: var(--color-gray-500);
+		color: var(--color-fg-a3);
 		text-align: center;
 	}
 

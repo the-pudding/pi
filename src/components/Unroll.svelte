@@ -26,43 +26,41 @@
 {/snippet}
 
 <div class="wrap" class:paused>
-<div
-	class="unroll"
-	role="img"
-	aria-label="A circle repeated four times to mark off four of its own widths along a line. The circle then rolls one full turn, unwrapping its red edge onto the line. The unwrapped edge reaches just past the third mark: pi, about 3.14 widths."
-	bind:clientWidth={width}
-	style:--d="{d}px"
-	style:--dur="{duration}s"
->
-	{#if d > 0}
-		<div class="ground"></div>
-		{#each marks as x, i}
-			<div class="mark mark-{i}" style:left="{x}px">
+	<div
+		class="unroll"
+		role="img"
+		aria-label="A circle repeated four times to mark off four of its own widths along a line. The circle then rolls one full turn, unwrapping its red edge onto the line. The unwrapped edge reaches just past the third mark: pi, about 3.14 widths."
+		bind:clientWidth={width}
+		style:--d="{d}px"
+		style:--dur="{duration}s"
+	>
+		{#if d > 0}
+			<div class="ground"></div>
+			{#each marks as x, i}
+				<div class="mark mark-{i}" style:left="{x}px">
+					<span class="line"></span>
+					<span class="label">{i}</span>
+				</div>
+			{/each}
+
+			<div class="mark mark-pi" style:left="{(0.5 + Math.PI) * d}px">
 				<span class="line"></span>
-				<span class="label">{i}</span>
+				<span class="label">&pi;</span>
 			</div>
-		{/each}
 
-		<div class="mark mark-pi" style:left="{(0.5 + Math.PI) * d}px">
-			<span class="line"></span>
-			<span class="label">&pi;</span>
-		</div>
+			{#each [1, 2, 3] as i}
+				<div class="clone clone-{i}" style:left="{(0.5 + i) * d}px">
+					{@render disc()}
+				</div>
+			{/each}
 
-		{#each [1, 2, 3] as i}
-			<div class="clone clone-{i}" style:left="{(0.5 + i) * d}px">
-				{@render disc()}
-			</div>
-		{/each}
-
-		<div class="wheel">{@render disc()}</div>
-		<div class="trace"></div>
-	{/if}
-</div>
-<button
-	class="toggle"
-	onclick={() => (paused = !paused)}
-	>{paused ? "Play" : "Pause"} animation</button
->
+			<div class="wheel">{@render disc()}</div>
+			<div class="trace"></div>
+		{/if}
+	</div>
+	<button class="toggle" onclick={() => (paused = !paused)}
+		>{paused ? "Play" : "Pause"} animation</button
+	>
 </div>
 
 <style>
@@ -85,14 +83,6 @@
 		margin: 2rem auto;
 		overflow: hidden;
 	}
-
-	/* .unroll.alt {
-		--color-primary: var(--color-mark);
-		background: var(--color-fg-light);
-		color: var(--color-fg-light);
-		border: 0.5rem solid var(--color-fg-light);
-	} */
-
 	svg {
 		display: block;
 		width: 100%;
@@ -102,7 +92,7 @@
 
 	.base {
 		fill: none;
-		stroke: var(--color-fg-light);
+		stroke: var(--color-fg-aa);
 		stroke-width: 3;
 	}
 
@@ -122,7 +112,7 @@
 		right: 0;
 		bottom: var(--ground);
 		height: var(--line);
-		background: var(--color-fg-light);
+		background: var(--color-fg-aa);
 	}
 
 	.trace {
@@ -156,7 +146,7 @@
 	.mark .line {
 		width: var(--line);
 		height: calc(0.18 * var(--d));
-		background: var(--color-fg-light);
+		background: var(--color-fg-aa);
 	}
 
 	.mark .label {
