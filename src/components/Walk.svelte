@@ -50,9 +50,9 @@
 
 	const uid = $props.id();
 
-	const LINE = variables.color["fg-a2"];
+	const LINE = variables.color["color-fg-a2"];
 	const ACCENT = variables.color.red;
-	const GHOST = variables.color["fg-a2"];
+	const GHOST = variables.color["color-fg-a2"];
 
 	let rawDigits = [];
 	let walkIndices = [];

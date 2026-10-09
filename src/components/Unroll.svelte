@@ -92,7 +92,7 @@
 
 	.base {
 		fill: none;
-		stroke: var(--color-fg-aa);
+		stroke: var(--color-fg-a2);
 		stroke-width: 3;
 	}
 
@@ -112,7 +112,7 @@
 		right: 0;
 		bottom: var(--ground);
 		height: var(--line);
-		background: var(--color-fg-aa);
+		background: var(--color-fg-a2);
 	}
 
 	.trace {
@@ -146,7 +146,7 @@
 	.mark .line {
 		width: var(--line);
 		height: calc(0.18 * var(--d));
-		background: var(--color-fg-aa);
+		background: var(--color-fg-a2);
 	}
 
 	.mark .label {
