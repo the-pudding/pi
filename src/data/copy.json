@@ -17,7 +17,7 @@
         {
           "type": "Warning",
           "value": {
-            "text": "The following is a 3,000 word essay* on math and history. It contains material that may educate and entertain. Reader discretion advised.",
+            "text": "The following is a 4,000 word essay* on math and history. It contains material that may educate and entertain. Reader discretion advised.",
             "note": "Don’t worry, there are pictures and graphics too."
           }
         }
@@ -56,7 +56,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>It was the spring of 1853. You might remember it as the time when <span class=dotted>Gail Borden</span> <img class=headshot src=assets/images/borden.jpg alt='Gail Borden portrait'> patented his process for condensed milk in the US (his name is on the tin).</span>"
+          "value": "<span class=relative>It was the spring of 1853. You might remember it as the time when <span class=dotted>Gail Borden</span> <img class=headshot src=assets/images/borden.jpg alt='Gail Borden portrait'> applied to patent his process for condensed milk in the US (his name is on the tin).</span>"
         },
         {
           "type": "Figure",
@@ -166,7 +166,7 @@
         },
         {
           "type": "text",
-          "value": "For this, we have Tik Tok. For Shanks, he had the manual computation of the digits of pi."
+          "value": "For this, we have TikTok. For Shanks, he had the manual computation of the digits of pi."
         },
         {
           "type": "text",
@@ -373,7 +373,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Hungarian mathematician <span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg alt='George Pólya portrait'> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancé. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
+          "value": "<span class=relative>Hungarian mathematician <span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg alt='George Pólya portrait'> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancée. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
         },
         {
           "type": "text",
@@ -450,7 +450,7 @@
         },
         {
           "type": "text",
-          "value": "Another brief tangent, this time to back to 1909 and Émile Borel. He defined the concept of normality in numbers. Basically, a number is normal if <strong>“its infinite sequence of digits is distributed uniformly in the sense that each of the b digit values has the same natural density 1/b.”</strong>"
+          "value": "Another brief tangent, this time back to 1909 and Émile Borel. He defined the concept of normality in numbers. Basically, a number is normal if <strong>“its infinite sequence of digits is distributed uniformly in the sense that each of the b digit values has the same natural density 1/b.”</strong>"
         },
         {
           "type": "text",
@@ -561,7 +561,7 @@
         },
         {
           "type": "text",
-          "value": "Many mathematical historians have been drawn to this notorious miscalculation. How did a man who spent years calculating by hand suddenly slip up? A brief micro-mathemetical forensic investigation was in order."
+          "value": "Many mathematical historians have been drawn to this notorious miscalculation. How did a man who spent years calculating by hand suddenly slip up? A brief micro-mathematical forensic investigation was in order."
         },
         {
           "type": "text",
@@ -605,7 +605,7 @@
         },
         {
           "type": "text",
-          "value": "To calculate this specific term, <strong>(1/5)^497/497</strong>, Shanks was doing standard long division by hand. At the 530th decimal place he skipped a zero."
+          "value": "To calculate this specific term, <strong>(1/5)^497/497</strong>, Shanks was doing standard long division by hand. At the 531st decimal place he skipped a zero."
         },
         {
           "type": "Term",
@@ -623,7 +623,7 @@
         },
         {
           "type": "text",
-          "value": "For those of you still paying attention, you noticed that the typo happened at the 531th decimal place, but Shanks’ final value broke at the 528th. Because Machin’s formula multiplied the arctan series by 16, it magnified the error, corrupting the final value of pi two decimal places earlier."
+          "value": "For those of you still paying attention, you noticed that the typo happened at the 531st decimal place, but Shanks’ final value broke at the 528th. Because Machin’s formula multiplied the arctan series by 16, it magnified the error, corrupting the final value of pi a few places earlier."
         },
         {
           "type": "text",
@@ -665,11 +665,7 @@
         },
         {
           "type": "text",
-          "value": "Stranger still, the last eight digits Shanks originally published in 1853 were silently changed when he reprinted his work in 1873 with no explanation."
-        },
-        {
-          "type": "text",
-          "value": "But perhaps the sadder and more relatable part of this cold case is that Shanks <em>knew</em> he had made clerical errors."
+          "value": "Perhaps the sadder and more relatable part of this cold case is that Shanks <em>knew</em> he had made clerical errors."
         },
         {
           "type": "text",
@@ -698,7 +694,7 @@
         },
         {
           "type": "text",
-          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the  original 607 decimal places. The true version has 50 sevens. A part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
+          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the original 607 decimal places. The true version has 50 sevens. A part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
         },
         {
           "type": "Distribution",
@@ -721,7 +717,7 @@
         },
         {
           "type": "text",
-          "value": "Remember Pearson (who coined the term “random walk”)? He and De Morgan coincidentally both taught at University College of London&mdash;different generations. They both were looking to answer the same question: how do you test probability without a machine?"
+          "value": "Remember Pearson (who coined the term “random walk”)? He and De Morgan coincidentally both taught at University College London&mdash;different generations. They both were looking to answer the same question: how do you test probability without a machine?"
         },
         {
           "type": "text",
@@ -729,7 +725,7 @@
         },
         {
           "type": "text",
-          "value": "Pearson never used his test on Shanks’ digits, so I did on both versions. Shanks’ 607 digits have a p value = 0.61. The correct digits have a p value = 0.92. A p-value is the odds of seeing counts this lopsided if the digits were truly random. Near 1 means they look exactly like chance."
+          "value": "Pearson never used his test on Shanks’ digits, so I did on both versions. Shanks’ 607 digits have a p value = 0.61. The correct digits have a p value = 0.92. A p-value is the probability of seeing counts this lopsided if the digits were truly random. Near 1 means they look exactly like chance."
         },
         {
           "type": "text",
@@ -737,7 +733,7 @@
         },
         {
           "type": "text",
-          "value": "Next up, John Venn. Let’s fix his walk with the true value of pi through the same number of digits as his original. A walk made from Shanks’s digits and one made from the corrected digits would initially follow the same instructions and then diverge."
+          "value": "Next up, John Venn. Let’s fix his walk with the true value of pi through the same number of digits as his original. A walk made from Shanks’ digits and one made from the corrected digits would initially follow the same instructions and then diverge."
         },
         {
           "type": "Walk",
@@ -798,7 +794,7 @@
         },
         {
           "type": "text",
-          "value": "The job title Computer used to belong to people, like Shanks. During World War II, the University of Pennsylvania employed hundreds of them (mostly women) to calculate ballistic trajectories by hand. But then the Army built a machine to do it faster."
+          "value": "The job title Computer used to belong to people, like Shanks. During World War II, the University of Pennsylvania employed nearly a hundred of them (mostly women) to calculate ballistic trajectories by hand. But then the Army built a machine to do it faster."
         },
         {
           "type": "text",
@@ -809,7 +805,7 @@
           "value": {
             "src": "assets/images/eniac.jpg",
             "alt": "Two of the ENIAC programmers, are preparing the computer for Demonstration Day in February 1946. Left: Betty Jennings, right: Frances Bilas.",
-            "figcaption": "Jennings (left) and Bilas (right) at the ENIAC, 1946.  Via <a href=https://en.wikipedia.org/wiki/File:Two_women_operating_ENIAC_(full_resolution).jpg target=_blank rel='noreferrer noopener'>Wikipedia</a>.",
+            "figcaption": "Jennings (left) and Bilas (right) at the ENIAC, 1946. Via <a href=https://en.wikipedia.org/wiki/File:Two_women_operating_ENIAC_(full_resolution).jpg target=_blank rel='noreferrer noopener'>Wikipedia</a>.",
             "className": "small"
           }
         },
@@ -843,7 +839,7 @@
         },
         {
           "type": "text",
-          "value": "Now there was a healthy serving of  7s. The updated distribution of pi’s digits looked like this:"
+          "value": "Now there was a healthy serving of sevens. The updated distribution of pi’s digits looked like this:"
         },
         {
           "type": "Distribution",
@@ -895,7 +891,7 @@
         },
         {
           "type": "text",
-          "value": "Today, the most accurate value of pi is 314,000,000,000,000 digits, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment, you are holding one of the Harry Potter books. It doesn’t matter which one. <em>“Deletrius Aparecium!”</em> you shout with enthusiasm. Every single letter in that book vanishes and turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own digits. That is 314 trillion, give or take a few."
+          "value": "Today, the most digits calculated of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <em>Harry Potter and the Deathly Hallows</em> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a wanting British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
         },
         {
           "type": "Records",
@@ -946,11 +942,11 @@
         },
         {
           "type": "text",
-          "value": "At the 21,343rd decimal place, our walker comes home, and again a few digits later. Then it wanders off and doesn’t return for the rest of the first million."
+          "value": "At the 21,344th decimal place, our walker comes home, and again several digits later. Then it wanders off and doesn’t return for the rest of the first million."
         },
         {
           "type": "text",
-          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching pi digits being calculated in realtime guiding a random walk. Their eyes staring unblinking at the screen, like a toddler watching Bluey the cart seat in the grocery store. Pearson passes around a carafe of unknown contents."
+          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching pi digits being calculated in realtime guiding a random walk. Their eyes staring unblinking at the screen, like a toddler watching <emBluey</em> in the cart in the grocery store. Pearson passes around a carafe of unknown contents."
         },
         {
           "type": "Chat",
@@ -978,7 +974,7 @@
               },
               {
                 "name": "Pólya",
-                "text": "Never again, so far. I proved forever for a random walker. Nobody has proved anything for pi."
+                "text": "Never again, so far."
               },
               {
                 "name": "Shanks",
@@ -1001,7 +997,7 @@
         },
         {
           "type": "text",
-          "value": "Shanks died in 1882, unaware of De Morgan’s doubts, Venn’s path, the museum’s celebration, and the error and its correction."
+          "value": "Shanks died in 1882, unaware of Venn’s path, the museum’s celebration, and the error and its correction."
         },
         {
           "type": "text",
