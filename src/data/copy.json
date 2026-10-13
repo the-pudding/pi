@@ -1,9 +1,8 @@
 {
-  "meta": {
-    "title": "The Afterlife of Pi",
-    "description": "The unexpected paths of one calculation across a century.",
-    "keywords": "math, pi, random"
-  },
+  "title": "The Afterlife of Pi",
+  "description": "The unexpected paths of one calculation across a century.",
+  "url": "https://pudding.cool/2026/11/pi",
+  "keywords": "math, pi, random",
   "body": [
     {
       "section": "hero",
@@ -528,7 +527,7 @@
         },
         {
           "type": "text",
-          "value": "The first was when the error appeared. In his book’s preface from 1853, dated Feb 28, Shanks wrote:"
+          "value": "The first was when the error appeared. In his book’s preface from 1853, dated February 28th, Shanks wrote:"
         },
         {
           "type": "blockquote",
@@ -536,7 +535,7 @@
         },
         {
           "type": "text",
-          "value": "He had initially stopped calculating and was planning to publish 527 decimal places. An April 30 addendum stated how he extended the values to 607 decimals. The slip-up came quite literally in the first digit in that two-month sprint to add 80 more."
+          "value": "He had initially stopped calculating and was planning to publish 527 decimal places. An April 30th addendum stated how he extended the values to 607 decimals. The slip-up came quite literally in the first digit in that two-month sprint to add 80 more."
         },
         {
           "type": "text",

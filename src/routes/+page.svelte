@@ -6,7 +6,7 @@
 	import copy from "$data/copy.json";
 	import "$utils/version.js";
 
-	let { data } = $props();
+	// let { data } = $props();
 
 	const preloadFont = [
 		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2",
@@ -17,7 +17,6 @@
 
 	const { title, description, url, keywords } = copy;
 	setContext("copy", copy);
-	setContext("data", data);
 </script>
 
 <Meta {title} {description} {url} {preloadFont} {keywords} />
