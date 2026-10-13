@@ -6,6 +6,7 @@
 	import variables from "$data/variables.json";
 	import computePi from "$utils/computePi.js";
 	const DPR = 2;
+	const LINE_WIDTH = 3;
 
 	const DEGREE_OPTS = {
 		polya: [0, 90, 180, 270],
@@ -32,6 +33,10 @@
 	const CHUNK = 512;
 	const MAX_DIGITS = 50000;
 	const FIT = 0.9;
+	// walker image: half the size of WalkCouple's
+	const IMG = 64;
+	const IMG_MIN = IMG * 0.5;
+	const IMG_UNITS = 3;
 
 	const pi = getContext("pi");
 	const roll = random.uniformInt(0, 9);
@@ -50,7 +55,7 @@
 
 	const uid = $props.id();
 
-	const LINE = variables.color["fg-a4"];
+	const LINE = variables.color["fg-a3"];
 	const ACCENT = variables.color.red;
 	const GHOST = variables.color["fg-a2"];
 
@@ -68,6 +73,9 @@
 	let canvasEl = $state(null);
 	let ctx = $state(null);
 	let ghostEl = $state(null);
+	let walkerEl = $state(null);
+
+	let walkerImg = null;
 
 	let frame = $state(-1);
 	let walkLength = $state(0);
@@ -225,7 +233,7 @@
 		g.setTransform(DPR, 0, 0, DPR, 0, 0);
 		g.clearRect(0, 0, w, h);
 		if (ghostPath.length < 2) return;
-		g.lineWidth = 1.5;
+		g.lineWidth = LINE_WIDTH;
 		g.lineJoin = "round";
 		g.strokeStyle = GHOST;
 		g.beginPath();
@@ -268,13 +276,32 @@
 		ctx.fill();
 	}
 
+	function drawWalker() {
+		if (!walkerEl || !canvasEl) return;
+		if (!walkerImg) {
+			walkerImg = new Image();
+			walkerImg.onload = () => drawWalker();
+			walkerImg.src = "assets/images/walk-polya.png";
+		}
+		const g = walkerEl.getContext("2d");
+		const { w, h } = size();
+		g.setTransform(DPR, 0, 0, DPR, 0, 0);
+		g.clearRect(0, 0, w, h);
+		if (!walkerImg.complete || !walkerImg.naturalWidth) return;
+		const s = Math.min(IMG, Math.max(IMG_MIN, view.scale * IMG_UNITS));
+		const x = screenX(pen.ux);
+		const y = screenY(pen.uy);
+		g.drawImage(walkerImg, x - s / 2, y - s, s, s);
+	}
+
 	function render(toFrame) {
 		measure(toFrame);
 		fitView();
 
 		const { w, h } = size();
 		ctx.clearRect(0, 0, w, h);
-		ctx.lineWidth = 1.5;
+		ctx.lineWidth = LINE_WIDTH;
+		ctx.lineJoin = "round";
 
 		let ux = 0;
 		let uy = 0;
@@ -307,7 +334,8 @@
 		}
 		ctx.stroke();
 
-		ctx.lineWidth = 3;
+		ctx.lineWidth = LINE_WIDTH * 2;
+		ctx.lineJoin = "round";
 		ctx.strokeStyle = ACCENT;
 		ctx.beginPath();
 		ctx.moveTo(screenX(fromX), screenY(fromY));
@@ -320,6 +348,7 @@
 
 		prevPen = { ux: fromX, uy: fromY };
 		pen = { ux, uy };
+		drawWalker();
 		drawnFrame = toFrame;
 	}
 
@@ -335,7 +364,8 @@
 			return;
 		}
 
-		ctx.lineWidth = 1.5;
+		ctx.lineWidth = LINE_WIDTH;
+		ctx.lineJoin = "round";
 
 		ctx.strokeStyle = toFrame - 1 >= redFrom() ? ACCENT : LINE;
 		ctx.beginPath();
@@ -343,7 +373,7 @@
 		ctx.lineTo(screenX(pen.ux), screenY(pen.uy));
 		ctx.stroke();
 
-		ctx.lineWidth = 3;
+		ctx.lineWidth = LINE_WIDTH * 2;
 		ctx.strokeStyle = ACCENT;
 		ctx.beginPath();
 		ctx.moveTo(screenX(pen.ux), screenY(pen.uy));
@@ -355,6 +385,7 @@
 		grow(ux, uy);
 		if (ux === 0 && uy === 0) originReturnCount = ++returns;
 		drawOrigin();
+		drawWalker();
 		drawnFrame = toFrame;
 	}
 
@@ -372,9 +403,10 @@
 		const { width, height } = canvasEl.getBoundingClientRect();
 		canvasEl.width = width * DPR;
 		canvasEl.height = height * DPR;
-		if (ghostEl) {
-			ghostEl.width = width * DPR;
-			ghostEl.height = height * DPR;
+		for (const el of [ghostEl, walkerEl]) {
+			if (!el) continue;
+			el.width = width * DPR;
+			el.height = height * DPR;
 		}
 		if (!ctx) ctx = canvasEl.getContext("2d");
 		ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
@@ -385,6 +417,7 @@
 		else {
 			fitView();
 			drawOrigin();
+			drawWalker();
 		}
 	}
 
@@ -416,6 +449,7 @@
 			ctx.clearRect(0, 0, w, h);
 			drawOrigin();
 		}
+		drawWalker();
 	}
 
 	const animation = new AnimationFrames(
@@ -489,7 +523,7 @@
 	}
 
 	$effect(() => {
-		if (!canvasEl || !ghostEl) return;
+		if (!canvasEl || !ghostEl || !walkerEl) return;
 		resize();
 		const ro = new ResizeObserver(resize);
 		ro.observe(canvasEl);
@@ -611,6 +645,7 @@
 	>
 		<canvas bind:this={ghostEl} class="ghost"></canvas>
 		<canvas bind:this={canvasEl}></canvas>
+		<canvas bind:this={walkerEl} class="walker"></canvas>
 	</div>
 
 	<div class="sr-only" aria-live="polite">{status}</div>
@@ -651,10 +686,16 @@
 		z-index: 1;
 	}
 
-	canvas.ghost {
+	canvas.ghost,
+	canvas.walker {
 		position: absolute;
 		inset: 0;
 		z-index: 0;
+	}
+
+	canvas.walker {
+		z-index: 2;
+		pointer-events: none;
 	}
 
 	.ui {

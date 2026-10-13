@@ -1,5 +1,5 @@
 <script>
-	let { duration = 10 } = $props();
+	let { duration = 12 } = $props();
 
 	const UNITS = 4;
 	const SPAN = UNITS + 1.5; // container width in diameters
@@ -16,7 +16,7 @@
 
 {#snippet disc()}
 	<svg viewBox="0 0 100 100" aria-hidden="true">
-		<circle class="base" cx="50" cy="50" r="48.5" />
+		<!-- <circle class="base" cx="50" cy="50" r="48.5" /> -->
 		<path
 			class="rim"
 			pathLength="100"
@@ -44,8 +44,8 @@
 			{/each}
 
 			<div class="mark mark-pi" style:left="{(0.5 + Math.PI) * d}px">
-				<span class="line"></span>
-				<span class="label">&pi;</span>
+				<!-- <span class="line"></span> -->
+				<span class="label">&pi; = ~3.14</span>
 			</div>
 
 			{#each [1, 2, 3] as i}
@@ -77,12 +77,14 @@
 	.unroll {
 		--ground: calc(0.25 * var(--d));
 		--line: max(1.5px, calc(0.025 * var(--d)));
+		--strokeWidth: 3;
 		position: relative;
 		width: 100%;
 		aspect-ratio: 5.5 / 1.5;
 		margin: 2rem auto;
 		overflow: hidden;
 	}
+
 	svg {
 		display: block;
 		width: 100%;
@@ -90,17 +92,17 @@
 		overflow: visible;
 	}
 
-	.base {
+	/* .base {
 		fill: none;
 		stroke: var(--color-fg-a2);
 		stroke-width: 3;
-	}
+	} */
 
 	.rim {
 		fill: none;
 		stroke: var(--color-primary);
-		stroke-width: 3;
-		stroke-dasharray: 100.1;
+		stroke-width: var(--strokeWidth);
+		stroke-dasharray: 101;
 		stroke-dashoffset: 0;
 		transform-box: view-box;
 		transform-origin: 50% 50%;
@@ -118,7 +120,7 @@
 	.trace {
 		position: absolute;
 		left: calc(0.5 * var(--d));
-		bottom: var(--ground);
+		bottom: calc(var(--ground) + var(--strokeWidth) * 1px);
 		width: calc(3.14159 * var(--d));
 		height: var(--line);
 		background: var(--color-primary);
@@ -145,7 +147,7 @@
 
 	.mark .line {
 		width: var(--line);
-		height: calc(0.18 * var(--d));
+		height: calc(0.15 * var(--d));
 		background: var(--color-fg-a2);
 	}
 
@@ -156,11 +158,12 @@
 	.mark-pi {
 		color: var(--color-primary);
 		animation-name: tick-pi;
+		transform: translate(0, calc(var(--ground) * -1));
 	}
 
-	.mark-pi .line {
+	/* .mark-pi .line {
 		height: calc(0.24 * var(--d));
-	}
+	} */
 
 	.mark-0,
 	.mark-1 {
@@ -178,7 +181,7 @@
 
 	.clone {
 		position: absolute;
-		bottom: var(--ground);
+		bottom: calc(var(--ground) + var(--strokeWidth) * 1px);
 		width: var(--d);
 		height: var(--d);
 		opacity: 0;
@@ -201,7 +204,7 @@
 	.wheel {
 		position: absolute;
 		left: calc(0.5 * var(--d));
-		bottom: calc(var(--ground));
+		bottom: calc(var(--ground) + var(--strokeWidth) * 1px);
 		width: var(--d);
 		height: var(--d);
 		transform: translateX(264.159%) rotate(0deg);
@@ -209,117 +212,117 @@
 	}
 
 	.wheel .rim {
-		stroke-dashoffset: -100;
+		stroke-dashoffset: -101;
 		animation: unwrap var(--dur) infinite both;
 	}
 
-	/* 3-8% marks 0 and 1 */
+	/* 2.5-6.7% marks 0 and 1 */
 	@keyframes tick-a {
 		0%,
-		3% {
+		2.5% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
-		8%,
-		84% {
+		6.667%,
+		86.667% {
 			opacity: 1;
 			transform: translateX(-50%);
 		}
-		88%,
+		90%,
 		100% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
 	}
 
-	/* 8-13% mark 2 */
+	/* 6.7-10.8% mark 2 */
 	@keyframes tick-b {
 		0%,
-		8% {
+		6.667% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
-		13%,
-		84% {
+		10.833%,
+		86.667% {
 			opacity: 1;
 			transform: translateX(-50%);
 		}
-		88%,
+		90%,
 		100% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
 	}
 
-	/* 13-18% mark 3 */
+	/* 10.8-15% mark 3 */
 	@keyframes tick-c {
 		0%,
-		13% {
+		10.833% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
-		18%,
-		84% {
+		15%,
+		86.667% {
 			opacity: 1;
 			transform: translateX(-50%);
 		}
-		88%,
+		90%,
 		100% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
 	}
 
-	/* 18-23% mark 4 */
+	/* 15-19.2% mark 4 */
 	@keyframes tick-d {
 		0%,
-		18% {
+		15% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
-		23%,
-		84% {
+		19.167%,
+		86.667% {
 			opacity: 1;
 			transform: translateX(-50%);
 		}
-		88%,
+		90%,
 		100% {
 			opacity: 0;
 			transform: translateX(-50%);
 		}
 	}
 
-	/* pi lands at 64% */
+	/* pi lands at 53.3% */
 	@keyframes tick-pi {
 		0%,
-		64% {
+		53.333% {
 			opacity: 0;
-			transform: translateX(-50%);
+			transform: translate(0, calc(var(--ground) * -1 - (0.15 * var(--d))));
 		}
-		70%,
-		84% {
+		58.333%,
+		86.667% {
 			opacity: 1;
-			transform: translateX(-50%);
+			transform: translate(0, calc(var(--ground) * -1 - (0.15 * var(--d))));
 		}
-		88%,
+		90%,
 		100% {
 			opacity: 0;
-			transform: translateX(-50%);
+			transform: translate(0, calc(var(--ground) * -1));
 		}
 	}
 
 	@keyframes clone-a {
 		0%,
-		8% {
+		6.667% {
 			opacity: 0;
 			transform: scale(1);
 		}
-		13%,
-		27% {
+		10.833%,
+		22.5% {
 			opacity: 1;
 			transform: scale(1);
 		}
-		32%,
+		26.667%,
 		100% {
 			opacity: 0;
 			transform: scale(1);
@@ -328,16 +331,16 @@
 
 	@keyframes clone-b {
 		0%,
-		13% {
+		10.833% {
 			opacity: 0;
 			transform: scale(1);
 		}
-		18%,
-		27% {
+		15%,
+		22.5% {
 			opacity: 1;
 			transform: scale(1);
 		}
-		32%,
+		26.667%,
 		100% {
 			opacity: 0;
 			transform: scale(1);
@@ -346,16 +349,16 @@
 
 	@keyframes clone-c {
 		0%,
-		18% {
+		15% {
 			opacity: 0;
 			transform: scale(1);
 		}
-		23%,
-		27% {
+		19.167%,
+		22.5% {
 			opacity: 1;
 			transform: scale(1);
 		}
-		32%,
+		26.667%,
 		100% {
 			opacity: 0;
 			transform: scale(1);
@@ -366,19 +369,19 @@
 		0% {
 			transform: translateX(0) rotate(0deg);
 		}
-		32% {
+		26.667% {
 			transform: translateX(0) rotate(0deg);
 			animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
 		}
-		38% {
+		31.667% {
 			transform: translateX(-50%) rotate(0deg);
 		}
-		44% {
+		36.667% {
 			transform: translateX(-50%) rotate(0deg);
 			animation-timing-function: linear;
 		}
 		/* 5.5 diameters of travel is 5.5 / pi = 1.7507  */
-		79%,
+		65.833%,
 		100% {
 			transform: translateX(500%) rotate(630.254deg);
 		}
@@ -386,29 +389,29 @@
 
 	@keyframes unwrap {
 		0%,
-		44% {
+		36.667% {
 			stroke-dashoffset: 0;
 			animation-timing-function: linear;
 		}
-		64%,
+		53.333%,
 		100% {
-			stroke-dashoffset: -100;
+			stroke-dashoffset: -100.1;
 		}
 	}
 
 	@keyframes trace {
 		0%,
-		44% {
+		36.667% {
 			transform: scaleX(0);
 			opacity: 1;
 			animation-timing-function: linear;
 		}
-		64%,
-		84% {
+		53.333%,
+		86.667% {
 			transform: scaleX(1);
 			opacity: 1;
 		}
-		88%,
+		90%,
 		100% {
 			transform: scaleX(1);
 			opacity: 0;

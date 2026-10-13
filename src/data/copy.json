@@ -5,6 +5,54 @@
   "keywords": "math, pi, random",
   "body": [
     {
+      "section": "prelude",
+      "content": [
+        {
+          "type": "text",
+          "value": "This story has two main characters. The first is pi (a.k.a. π)."
+        },
+        {
+          "type": "Unroll",
+          "value": {}
+        },
+        {
+          "type": "text",
+          "value": "Pi represents the ratio of a circle’s circumference to its diameter. Put another way, a circle’s edge is always about 3.14 times longer than its width."
+        },
+        {
+          "type": "text",
+          "value": "<strong>But the geometry doesn’t matter for our story.</strong> We only care about pi’s digits."
+        },
+        {
+          "type": "text",
+          "value": "Our second character is more of a concept: the idea of a walk, but where the walker lets randomness decide their path."
+        },
+        {
+          "type": "WalkCouple",
+          "value": {
+            "mode": "single"
+          }
+        },
+        {
+          "type": "text",
+          "value": "We’ll end up at this image."
+        },
+        {
+          "type": "Figure",
+          "value": {
+            "src": "assets/images/100billion.jpg",
+            "alt": "A rendering of a random walk of pi to 100 billion digits, rainbow colored.",
+            "figcaption": "By Francisco Javier Aragón Artacho via <a href=https://gigapan.com/gigapans/106803 target=_blank rel='noreferrer noopener'>GigaPan</a>.",
+            "className": "small"
+          }
+        },
+        {
+          "type": "text",
+          "value": "We’ll get there through a wandering journey across 150 years that connects people and mathematical discoveries. Here we go!"
+        }
+      ]
+    },
+    {
       "section": "hero",
       "content": [
         {
@@ -16,7 +64,7 @@
         {
           "type": "Warning",
           "value": {
-            "text": "The following is a 4,000 word essay* on math and history. It contains material that may educate and entertain. Reader discretion advised.",
+            "text": "The following is a 4,000-word essay* on math and history. You are already 2% of the way there! It contains material that may educate and entertain. Reader discretion advised.",
             "note": "Don’t worry, there are pictures and graphics too."
           }
         }
@@ -27,27 +75,7 @@
       "content": [
         {
           "type": "text",
-          "value": "This is pi."
-        },
-        {
-          "type": "Unroll",
-          "value": {}
-        },
-        {
-          "type": "text",
-          "value": "Pi represents the ratio of a circle’s circumference to its diameter. Or, a circle’s edge is always about 3.14 times longer than its width."
-        },
-        {
-          "type": "text",
-          "value": "But none of that matters for this story."
-        },
-        {
-          "type": "text",
-          "value": "This story concerns itself with pi’s digits. They will take us on a wandering journey, connecting people and mathematical discoveries."
-        },
-        {
-          "type": "text",
-          "value": "Starting with one man and his obsession with pi."
+          "value": "We begin with one man and his obsession with pi, all the way back in…"
         },
         {
           "type": "h2",
@@ -77,7 +105,7 @@
         },
         {
           "type": "text",
-          "value": "The same man who three years prior, introduced the world to the meat biscuit, an invention that proved to be ahead of its time. I digress&mdash;Gail Borden has nothing to do with this story."
+          "value": "The same man who, three years prior, introduced the world to the meat biscuit, an invention that proved to be ahead of its time. I digress&mdash;Gail Borden is not our pi-obsessed man."
         },
         {
           "type": "text",
@@ -92,14 +120,14 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>His name (the schoolmaster) was <span class=dotted>William Shanks</span><img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
+          "value": "<span class=relative>The schoolmaster’s name was <span class=dotted>William Shanks</span><img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
         },
         {
           "type": "Figure",
           "value": {
             "src": "assets/images/specimen-1853.jpg",
             "alt": "A scan of the book page that contains pi to 607 decimal places",
-            "figcaption": "From the snappy-titled book <cite>Contributions to mathematics, comprising chiefly the rectification of the circle to 607 places of decimals.</cite> by William Shanks, 1853."
+            "figcaption": "From the snappy-titled book <cite>Contributions to mathematics, comprising chiefly the rectification of the circle to 607 places of decimals</cite> by William Shanks, 1853."
           }
         },
         {
@@ -126,7 +154,7 @@
         },
         {
           "type": "text",
-          "value": "I won’t attempt to explain the math, because I can’t. But thanks to YouTube and my decades-old training in long division, here is what it looks like to accurately calculate pi’s first decimal point by hand."
+          "value": "I won’t attempt to explain the math, because I can’t. But thanks to YouTube and my decades-old training in long division, here is what it looks like to accurately calculate pi’s first decimal place by hand."
         },
         {
           "type": "Figure",
@@ -137,7 +165,7 @@
         },
         {
           "type": "text",
-          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it was pretty straightforward. But each digit gets increasingly more computationally taxing to calculate. As the desired decimal place grows, more terms are needed to be calculated, to even greater precision."
+          "value": "Aside from having to watch some basic videos to re-learn how to carry numbers, it was pretty straightforward. But each digit gets increasingly more computationally taxing to calculate. As the desired decimal place grows, more terms need to be calculated, to even greater precision."
         },
         {
           "type": "text",
@@ -157,7 +185,7 @@
         },
         {
           "type": "text",
-          "value": "If it wasn’t for the money or the fame, why do it at all? He had no need for that precise a value of pi. No one did. His motivation was simple and relatable; he wanted to make something original and fill his free time. That something:"
+          "value": "If it wasn’t for the money or the fame, why do it at all? He had no need for that precise a value of pi. No one did. His motivation was simple and relatable: he wanted to make something original and fill his free time. That something:"
         },
         {
           "type": "blockquote",
@@ -165,7 +193,7 @@
         },
         {
           "type": "text",
-          "value": "For this, we have TikTok. For Shanks, he had the manual computation of the digits of pi."
+          "value": "We have TikTok. Shanks had the manual computation of the digits of pi."
         },
         {
           "type": "text",
@@ -213,13 +241,13 @@
           "type": "Distribution",
           "value": {
             "source": "shanks607",
-            "caption": "How often each digit 0-9 appears in Shanks’ original 607 pi decimal places.",
+            "caption": "How often each digit 0&en;9 appears in Shanks’ original 607 pi decimal places.",
             "highlight": "7"
           }
         },
         {
           "type": "text",
-          "value": "He wasn’t so much as troubled by it as he was curious. After all, random sequences have uneven counts too. But it raised a question: Was a low count of 7s a property of pi, or just ordinary fluctuation in a random pattern?"
+          "value": "He wasn’t so much as troubled by it as curious. After all, random sequences have uneven counts too. But it raised a question: Was a low count of 7s a property of pi, or just ordinary fluctuation in a random pattern?"
         }
       ]
     },
@@ -244,7 +272,7 @@
         },
         {
           "type": "text",
-          "value": "After his 1880 smash hit the Venn Diagram, John was (possibly) searching to recreate his earlier success. He was trying to determine whether a sequence can be called random when you know exactly how it was made."
+          "value": "After his 1880 smash hit, the Venn Diagram, John was (possibly) searching to recreate his earlier success. He was trying to determine whether a sequence can be called random when you know exactly how it was made."
         },
         {
           "type": "text",
@@ -255,14 +283,14 @@
           "value": {
             "li": [
               "a sequence everyone knew was produced by a rule,",
-              "long enough to inspect (high five Shanks),",
+              "long enough to inspect (high five, Shanks),",
               "and whose digits looked like chance."
             ]
           }
         },
         {
           "type": "text",
-          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes. He walked through each digit (0-7) and assigned its number to an eight point compass. 8s and 9s had to sit this one out."
+          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes. He walked through each digit (0&en;7) and assigned its number to an eight-point compass. 8s and 9s had to sit this one out."
         },
         {
           "type": "Figure",
@@ -270,7 +298,7 @@
             "src": "assets/images/vennpen.jpg",
             "alt": "A line drawing with a random pattern and Start and End are labeled",
             "className": "small",
-            "figcaption": "From the super snappy-titled book <em>The Logic of Chance - An Essay on the Foundations and Province of the Theory of Probability, with Especial Reference to its Logical Bearings and its Application to Moral and Social Science and to Statistics</em> by John Venn, 1888."
+            "figcaption": "From the super snappy-titled book <cite>The Logic of Chance: An Essay on the Foundations and Province of the Theory of Probability, with Especial Reference to its Logical Bearings and its Application to Moral and Social Science and to Statistics</cite> by John Venn, 1888."
           }
         },
         {
@@ -283,11 +311,11 @@
         },
         {
           "type": "text",
-          "value": "I recreated Venn’s path with code so you could see it animated. However, mine turned out differently than his. I checked and re-checked my numbers, and even drew it out by hand to confirm, but Venn’s dramatically departed mine at the 24th decimal place."
+          "value": "I recreated Venn’s path with code so you could see it animated. However, mine turned out differently than his. I checked and re-checked my numbers, and even drew it out by hand to confirm, but Venn’s path departed dramatically from mine at the 24th decimal place."
         },
         {
           "type": "text",
-          "value": "I scoured the internet to see if anyone could confirm my suspicions. I only found one measly mention&mdash;a lone comment in a <a href=https://statpics.blogspot.com/2010/06/first-published-random-walk.html target=_blank rel='noreferrer noopener' aria-label='statpics blog (opens in a new tab)'>brief blog post</a> about Venn’s pi path."
+          "value": "I scoured the internet to see if anyone could confirm my suspicions. I only found one mention&mdash;a lone comment in a <a href=https://statpics.blogspot.com/2010/06/first-published-random-walk.html target=_blank rel='noreferrer noopener' aria-label='statpics blog (opens in a new tab)'>brief blog post</a> about Venn’s pi path."
         },
         {
           "type": "Figure",
@@ -310,7 +338,7 @@
         },
         {
           "type": "text",
-          "value": "While the result is quite a bit different, they both looked random to me. This wandering pen thing had legs."
+          "value": "While the result is quite a bit different, they both look random to me. This wandering pen thing had legs."
         }
       ]
     },
@@ -343,11 +371,11 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually”&mdash; he solved this problem 25 years prior with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
+          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually”&mdash;he solved this problem 25 years prior with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
         },
         {
           "type": "text",
-          "value": "Pearson replied with an excuse that he was into other stuff and was unaware of Rayleigh’s prior work. Perhaps there were other excuses too, since he famously summed-up this correspondence with:"
+          "value": "Pearson replied with an excuse that he was into other stuff and was unaware of Rayleigh’s prior work. Perhaps there were other excuses too, since he famously summed up this correspondence with:"
         },
         {
           "type": "blockquote",
@@ -380,11 +408,11 @@
         },
         {
           "type": "text",
-          "value": "Instead of confronting the problem head on, Pólya retreated to an abstract and hypothetical world, as one does. He reduced the problem to a two dimensional lattice to find an answer to his <em>definitely-not-snooping</em> incident."
+          "value": "Instead of confronting the problem head-on, Pólya retreated to an abstract and hypothetical world, as one does. He reduced the problem to a two-dimensional lattice to find an answer to his <em>definitely-not-snooping</em> incident."
         },
         {
           "type": "text",
-          "value": "He posed a similar question to that of Pearson, though used the more elegant term “promenaders” in place of “walkers.” Simply put, <strong>given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?</strong>"
+          "value": "He posed a question similar to Pearson’s, though used the more elegant term “promenaders” in place of “walkers.” Simply put, <strong>given an infinite walk and infinite grid, will the probability of two promenaders meeting be a certainty?</strong>"
         },
         {
           "type": "WalkCouple",
@@ -392,7 +420,7 @@
         },
         {
           "type": "text",
-          "value": "He found that this concept of two walkers meeting can actually be decomposed and reframed to ask the question, will a walker return to his origin? Yes. A simple random walk on a two-dimensional grid returns to its starting point with probability one. Given unlimited time, it returns infinitely often."
+          "value": "He found that this concept of two walkers meeting can actually be decomposed and reframed to ask the question, will a walker return to its origin? Yes. A simple random walk on a two-dimensional grid returns to its starting point with probability one. Given unlimited time, it returns infinitely often."
         },
         {
           "type": "Walk",
@@ -404,20 +432,20 @@
         },
         {
           "type": "text",
-          "value": "He published a proof in the German journal Mathematische Annalen, which I don’t understand but it looks thorough and compelling."
+          "value": "He published a proof in the German journal Mathematische Annalen, which I don’t understand, but which looks thorough and compelling."
         },
         {
           "type": "Figure",
           "value": {
             "src": "assets/images/annalen.jpg",
-            "alt": "A scan of a portion of a page from Pólya’s article that has a complicated math formulas and some writing in German",
-            "figcaption": "Excerpt from the article <em>Über eine Aufgabe der Wahrscheinlichkeitsrechnung betreffend die Irrfahrt im Straßennetz</em> by George Pólya, 1921.",
+            "alt": "A scan of a portion of a page from Pólya’s article that has complicated math formulas and some writing in German",
+            "figcaption": "Excerpt from the article <cite>Über eine Aufgabe der Wahrscheinlichkeitsrechnung betreffend die Irrfahrt im Straßennetz</cite> by George Pólya, 1921.",
             "className": "small"
           }
         },
         {
           "type": "text",
-          "value": "<span class=relative>He also found that in a three dimensional space, the probability of a return drops to 34%. This gave way to the saying by <span class=dotted>Shizuo Kakutani</span><img class=headshot src=assets/images/kakutani.jpg alt='Shizuo Kakutani portrait'>:</span>"
+          "value": "<span class=relative>He also found that in a three-dimensional space, the probability of a return drops to 34%. This gave rise to the saying by <span class=dotted>Shizuo Kakutani</span><img class=headshot src=assets/images/kakutani.jpg alt='Shizuo Kakutani portrait'>:</span>"
         },
         {
           "type": "blockquote",
@@ -425,7 +453,7 @@
         },
         {
           "type": "text",
-          "value": "You may now be wondering if our pi thread got lost. Same. So let’s bring back our main character. If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll please…"
+          "value": "You may now be wondering if our pi thread got lost. Same. So let’s bring back our main character. If pi’s digits are random, does a pi promenader in Pólya’s world return to its starting point? Drumroll, please…"
         },
         {
           "type": "Walk",
@@ -438,22 +466,6 @@
         {
           "type": "text",
           "value": "Sadly, no, it does not. But 707 digits are certainly not a lot compared to <em>infinity</em>. Maybe we just need more."
-        },
-        {
-          "type": "mark",
-          "value": "Tk - maybe cut this aside? or expand with a good little visual"
-        },
-        {
-          "type": "text",
-          "value": "Spoiler alert: we still don’t know."
-        },
-        {
-          "type": "text",
-          "value": "Another brief tangent, this time back to 1909 and Émile Borel. He defined the concept of normality in numbers. Basically, a number is normal if <strong>“its infinite sequence of digits is distributed uniformly in the sense that each of the b digit values has the same natural density 1/b.”</strong>"
-        },
-        {
-          "type": "text",
-          "value": "Shades of De Morgan, right? I bring this up because nobody has proved that pi has it. But even that would not, by itself, settle whether our walker keeps coming home."
         }
       ]
     },
@@ -466,7 +478,7 @@
         },
         {
           "type": "text",
-          "value": "Back to pi, for real (math pun). Shanks’ calculation had become authoritative through reuse and time. No one else dared put in his Herculean effort to go further."
+          "value": "Back to pi, for real (math pun). Shanks’ calculation had become authoritative through reuse and time. No one dared match his Herculean effort to go further."
         },
         {
           "type": "text",
@@ -492,7 +504,7 @@
         },
         {
           "type": "text",
-          "value": "Pi’s digits had gone from an idle-time filler, to a published reference, to a museum display. His work would be immortalized forever."
+          "value": "Pi’s digits had gone from an idle-time filler, to a published reference, to a museum display. His work would be immortalized."
         },
         {
           "type": "text",
@@ -500,7 +512,7 @@
         },
         {
           "type": "text",
-          "value": "British mathematician D.F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
+          "value": "British mathematician D. F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
         },
         {
           "type": "text",
@@ -519,7 +531,7 @@
         },
         {
           "type": "text",
-          "value": "When I first read that I felt for the guy. But who doesn’t make mistakes? The other day, I put the milk back in the cupboard instead of the fridge. Like Shanks, the last quarter was spoiled. But Shanks never knew. Maybe that was better."
+          "value": "When I first read that I felt for the guy. But who doesn’t make mistakes? The other day, I put the milk back in the cupboard instead of the fridge. Like Shanks’ pi, the last quarter was spoiled. But Shanks never knew. Maybe that was better."
         },
         {
           "type": "text",
@@ -547,7 +559,7 @@
         },
         {
           "type": "text",
-          "value": "There were indeed no errors in the next 86 places, but not the 87th."
+          "value": "There were indeed no errors in the next 86 places, but there was one in the 87th."
         }
       ]
     },
@@ -564,11 +576,11 @@
         },
         {
           "type": "text",
-          "value": "<strong>The short version:</strong> probably due to a momentary lapse in focus, Shanks forgot to copy a digit here and there, setting up a cascading effect of incorrect numbers. <a href=#part8>Skip ahead</a>."
+          "value": "<strong>The short version:</strong> Shanks forgot to write a zero. Whoopsie! <a href=#part8>Skip ahead</a>."
         },
         {
           "type": "text",
-          "value": "<strong>The long version:</strong> In 2014, a science writer at <em>American Scientist</em> named Brian Hayes <a href=https://www.americanscientist.org/article/pencil-paper-and-pi target=_blank rel='noreferrer noopener'>did exactly that</a>."
+          "value": "<strong>The long version:</strong> In 2014, a science writer at <cite>American Scientist</cite> named Brian Hayes <a href=https://www.americanscientist.org/article/pencil-paper-and-pi target=_blank rel='noreferrer noopener'>did exactly that</a>."
         },
         {
           "type": "text",
@@ -596,7 +608,7 @@
         },
         {
           "type": "text",
-          "value": "Shanks had also published his intermediate scratch work, including the final sums for both arctan series. Hayes measured exactly how far Shanks’ final value shifted the truth. Then he walked back through all 506 terms to spot the culprit."
+          "value": "Shanks had also published his intermediate scratch work, including the final sums for both arctan series. Hayes measured exactly how far Shanks’ final value strayed from the truth. Then he walked back through all 506 terms to spot the culprit."
         },
         {
           "type": "text",
@@ -618,11 +630,11 @@
         },
         {
           "type": "text",
-          "value": "Every digit after it slid one column to the left. (This was actually first spotted and credited to our other Shanks superfan, Erwin Engert.)"
+          "value": "Every digit after it slid one column to the left. (This was actually first spotted by our other Shanks superfan, Erwin Engert.)"
         },
         {
           "type": "text",
-          "value": "For those of you still paying attention, you noticed that the typo happened at the 531st decimal place, but Shanks’ final value broke at the 528th. Because Machin’s formula multiplied the arctan series by 16, it magnified the error, corrupting the final value of pi a few places earlier."
+          "value": "For those of you still paying attention, you may have noticed that the typo happened at the 531st decimal place, but Shanks’ final value broke at the 528th. Because Machin’s formula multiplied the arctan series by 16, it magnified the error, corrupting the final value of pi a few places earlier."
         },
         {
           "type": "text",
@@ -644,7 +656,7 @@
         },
         {
           "type": "text",
-          "value": "With both of these errors accounted for, Hayes reproduced Shanks’ up to 601 digits on the 1/5 side of the equation."
+          "value": "With both of these errors accounted for, Hayes reproduced Shanks’ value up to 601 digits on the 1/5 side of the equation."
         },
         {
           "type": "text",
@@ -676,7 +688,7 @@
         },
         {
           "type": "text",
-          "value": "So there were a handful of errors, all seemingly in those months before publication in April 1853. None of them were computing mistakes, but rather clerical errors. It is more surprising to me that given the sheer amount of numbers he had to calculate, track, and copy by hand, there weren’t more&mdash;a testament to both his endurance and focus."
+          "value": "So there were a handful of errors, all seemingly in those months before publication in April 1853. None of them were computing mistakes, but rather clerical errors. What surprises me more is the sheer amount of numbers he had to calculate, track, and copy by hand, and that there weren’t more&mdash;a testament to both his endurance and focus."
         }
       ]
     },
@@ -693,12 +705,12 @@
         },
         {
           "type": "text",
-          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the original 607 decimal places. The true version has 50 sevens. A part of the shortfall De Morgan noticed was not a property of pi at all, it was the error."
+          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the original 607 decimal places. The true version has 50 sevens. Part of the shortfall De Morgan noticed was not a property of pi at all; it was the error."
         },
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0-9 appears in the first 607 correct pi decimal places.",
+            "caption": "How often each digit 0&en;9 appears in the first 607 correct pi decimal places.",
             "highlight": "7",
             "values": [
               "57",
@@ -716,7 +728,7 @@
         },
         {
           "type": "text",
-          "value": "Remember Pearson (who coined the term “random walk”)? He and De Morgan coincidentally both taught at University College London&mdash;different generations. They both were looking to answer the same question: how do you test probability without a machine?"
+          "value": "Remember Pearson? Recap: he coined the term “random walk.” He and De Morgan coincidentally both taught at University College London&mdash;different generations. They both were looking to answer the same question: how do you test probability without a machine?"
         },
         {
           "type": "text",
@@ -724,11 +736,15 @@
         },
         {
           "type": "text",
-          "value": "Pearson never used his test on Shanks’ digits, so I did on both versions. Shanks’ 607 digits have a p value = 0.61. The correct digits have a p value = 0.92. A p-value is the probability of seeing counts this lopsided if the digits were truly random. Near 1 means they look exactly like chance."
+          "value": "So Pearson curiously gave us the term <em>and</em> a way to determine if pi’s digits were distributed in a true random fashion."
         },
         {
           "type": "text",
-          "value": "While the original digits have a lower score, neither raise a statistical flag. The 7s are short in both, but the test weighs all ten digits at once, and the other nine are fine."
+          "value": "But he never used his test on Shanks’ digits, so I did, on both versions. The test produces a p-value which answers one question: if the digits were truly random, how often would they come out this uneven, or more A small number (e.g., under 0.05) raises a flag. Anything bigger means chance could easily explain it."
+        },
+        {
+          "type": "text",
+          "value": "Shanks’ 607 digits have a p-value of 0.61. The correct 607 score 0.92. Neither are suspicious. (Because although the 7s are short in both versions, the test weighs all ten digits at once, and the other nine are close enough to even that the 7s get drowned out.)"
         },
         {
           "type": "text",
@@ -739,8 +755,7 @@
           "value": {
             "version": "venn",
             "source": "real707",
-            "ghostSource": "shanks707updated",
-            "start": "528"
+            "ghostSource": "shanks707updated"
           }
         },
         {
@@ -757,13 +772,12 @@
             "version": "polya",
             "source": "real707",
             "ghostSource": "shanks707updated",
-            "start": "528",
             "target": "origin"
           }
         },
         {
           "type": "text",
-          "value": "Unsurprisingly, the walker still doesn’t return to origin because of the small sample size."
+          "value": "Unsurprisingly, the walker still hasn't returned to origin. But 707 digits isn’t a very long walk."
         }
       ]
     },
@@ -797,13 +811,13 @@
         },
         {
           "type": "text",
-          "value": "Dude, you’re getting a <del>Dell</del> Electronic Numerical Integrator and Computer! (ENIAC for short)."
+          "value": "Dude, you’re getting a <del>Dell</del> Electronic Numerical Integrator and Computer (ENIAC for short)!"
         },
         {
           "type": "Figure",
           "value": {
             "src": "assets/images/eniac.jpg",
-            "alt": "Two of the ENIAC programmers, are preparing the computer for Demonstration Day in February 1946. Left: Betty Jennings, right: Frances Bilas.",
+            "alt": "Two of the ENIAC programmers are preparing the computer for Demonstration Day in February 1946. Left: Betty Jennings, right: Fran Bilas.",
             "figcaption": "Jennings (left) and Bilas (right) at the ENIAC, 1946. Via <a href=https://en.wikipedia.org/wiki/File:Two_women_operating_ENIAC_(full_resolution).jpg target=_blank rel='noreferrer noopener'>Wikipedia</a>.",
             "className": "small"
           }
@@ -826,7 +840,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Back to pi. The same year the museum fixed the digits, Professor <span class=dotted>John von Neumann</span>, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, was interested to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
+          "value": "<span class=relative>Back to pi. The same year the museum fixed the digits, Professor <span class=dotted>John von Neumann</span>, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, wanted to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
         },
         {
           "type": "blockquote",
@@ -843,7 +857,7 @@
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0-9 appears in ENIAC’s 2,037 pi decimal places.",
+            "caption": "How often each digit 0&en;9 appears in ENIAC’s 2,037 pi decimal places.",
             "values": [
               "184",
               "213",
@@ -860,20 +874,20 @@
         },
         {
           "type": "text",
-          "value": "The pi arms races had begun. As computers got more and more powerful, calculating pi came along for the ride as a sort of benchmark."
+          "value": "The pi arms race had begun. As computers got more and more powerful, calculating pi came along for the ride as a sort of benchmark."
         },
         {
           "type": "text",
-          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> <img class=headshot src=assets/images/dshanks.jpg alt='Daniel Shanks portrait'> that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>."
+          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> <img class=headshot src=assets/images/dshanks.jpg alt='Daniel Shanks portrait'>, that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>."
         },
         {
           "type": "text",
-          "value": "They tested the digit frequencies almost immediately. That continued to be part of why anyone wanted more digits. The digit’s distribution remained perfectly balanced."
+          "value": "They tested the digit frequencies almost immediately. That continued to be part of why anyone wanted more digits. The digits’ distribution remained well balanced."
         },
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0-9 appears in 100,000 pi decimal places.",
+            "caption": "How often each digit 0&en;9 appears in 100,000 pi decimal places.",
             "values": [
               "9999",
               "10137",
@@ -890,7 +904,7 @@
         },
         {
           "type": "text",
-          "value": "Today, the most digits calculated of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <em>Harry Potter and the Deathly Hallows</em> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a wanting British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
+          "value": "Today, the most digits calculated of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <cite>Harry Potter and the Deathly Hallows</cite> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a wanting British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
         },
         {
           "type": "Records",
@@ -898,11 +912,11 @@
         },
         {
           "type": "text",
-          "value": "The amount of compute has exploded so much that I had to chart this with a y-axis on a log scale just to see a curve. Even after my meticulously calculated (and magically accurate) Harry Potter comparison, the magnitude is hard to comprehend."
+          "value": "The amount of compute has exploded so much that I had to chart this with a y-axis on a log scale just to make it readable. Even after my meticulously calculated (and magically accurate) Harry Potter comparison, the magnitude is hard to comprehend."
         },
         {
           "type": "text",
-          "value": "So here is another comparison: If I were to render the chart with a linear scale&mdash;that is a 1:1 scale of digits to pixels&mdash;it would take you about <em>9,950 years of non-stop scrolling on your phone</em> to get from Shanks’ 1853 digits to 2025. You could probably cut it to ~500 years if you used a desktop mouse wheel though."
+          "value": "So here is another comparison: If I were to render the chart with a linear scale&mdash;that is, a 1:1 scale of digits to pixels&mdash;it would take you about <em>9,950 years of non-stop scrolling on your phone</em> to get from Shanks’ 1853 digits to 2025. You could probably cut it to ~500 years if you used a desktop mouse wheel though."
         }
       ]
     },
@@ -915,7 +929,7 @@
         },
         {
           "type": "text",
-          "value": "By 2012, researchers were exploring walks built from 100 billion digits of pi. So to end things, we return to pi’s digits via Pólya’s walker, now with an enormous&mdash;yet still finite&mdash;journey to examine."
+          "value": "To end things, we return to the image at the beginning: a random walk using pi’s digits. In 2012, researchers were exploring walks built from 100 billion digits of pi."
         },
         {
           "type": "Figure",
@@ -928,7 +942,7 @@
         },
         {
           "type": "text",
-          "value": "But they didn’t keep track of the number of times it returned to its origin, so I measured it myself to one million digits. Drumroll please…"
+          "value": "But they didn’t keep track of the number of times it returned to its origin, so I measured it myself to one million digits. Drumroll, please…"
         },
         {
           "type": "Walk",
@@ -945,7 +959,7 @@
         },
         {
           "type": "text",
-          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching pi digits being calculated in realtime guiding a random walk. Their eyes staring unblinking at the screen, like a toddler watching <emBluey</em> in the cart in the grocery store. Pearson passes around a carafe of unknown contents."
+          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching pi digits being calculated in real time guiding a random walk. Their eyes staring unblinking at the screen, like a toddler watching <emBluey</em> in the cart in the grocery store. Pearson passes around a carafe of unknown contents."
         },
         {
           "type": "Chat",
@@ -965,7 +979,7 @@
               },
               {
                 "name": "Pólya",
-                "text": "It came home. Digit 21,343. I’d like that noted. Definitely not snooping."
+                "text": "It came home. Digit 21,344. I’d like that noted. Definitely not snooping."
               },
               {
                 "name": "Pearson",
@@ -989,7 +1003,27 @@
               },
               {
                 "name": "Me",
-                "text": "AI said so, so it must be true."
+                "text": "AI said so. Must be true. 😜"
+              },
+              {
+                "name": "Pólya",
+                "text": "🙏"
+              },
+              {
+                "name": "Pearson",
+                "text": "🍻"
+              },
+              {
+                "name": "Venn",
+                "text": "⭕⭕"
+              },
+              {
+                "name": "De Morgan",
+                "text": "💀"
+              },
+              {
+                "name": "Shanks",
+                "text": "🤞"
               }
             ]
           }

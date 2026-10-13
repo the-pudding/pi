@@ -75,6 +75,7 @@
 <style>
 	article {
 		padding: 0 1rem;
+		margin-top: 4rem;
 	}
 
 	article :global(section .chunk) {

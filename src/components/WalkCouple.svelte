@@ -5,7 +5,13 @@
 	import { AnimationFrames } from "runed";
 	import variables from "$data/variables.json";
 
+	let { mode = "couple" } = $props();
+
+	const single = $derived(mode === "single");
+
 	const DPR = 2;
+	const LINE_WIDTH = 3;
+
 	const FPS_OPTS = {
 		slow: 2,
 		medium: 12,
@@ -30,8 +36,8 @@
 	const roll = random.uniformInt(0, 3);
 
 	const WALKERS = [
-		{ src: "assets/images/walk-polya.png", color: variables.color.blue },
-		{ src: "assets/images/walk-couple.png", color: variables.color.red }
+		{ src: "assets/images/walk-polya.png", color: variables.color.red },
+		{ src: "assets/images/walk-couple.png", color: variables.color.blue }
 	];
 
 	let images = [];
@@ -57,7 +63,7 @@
 	let paths = [];
 
 	function start() {
-		paths = [[[0, 0]], [[GAP, GAP]]];
+		paths = single ? [[[0, 0]]] : [[[0, 0]], [[GAP, GAP]]];
 		steps = 0;
 		outcome = null;
 		draw();
@@ -73,7 +79,7 @@
 		});
 
 		const [a, b] = paths.map((path) => path.at(-1));
-		const met = a[0] === b[0] && a[1] === b[1];
+		const met = !single && a[0] === b[0] && a[1] === b[1];
 		if (met) outcome = "meet";
 		else if (steps >= MAX_STEPS) outcome = "max";
 
@@ -84,10 +90,13 @@
 	function view() {
 		const w = canvasEl.width / DPR;
 		const h = canvasEl.height / DPR;
-		let minX = 0;
-		let maxX = GAP;
-		let minY = 0;
-		let maxY = GAP;
+		// single walker: bounds centered on the start so it begins in the middle
+		const lo = single ? -GAP / 2 : 0;
+		const hi = single ? GAP / 2 : GAP;
+		let minX = lo;
+		let maxX = hi;
+		let minY = lo;
+		let maxY = hi;
 		for (const path of paths)
 			for (const [x, y] of path) {
 				if (x < minX) minX = x;
@@ -113,7 +122,7 @@
 		if (!ctx || !paths.length) return;
 		const { w, h, size, sx, sy } = view();
 		ctx.clearRect(0, 0, w, h);
-		ctx.lineWidth = 1.5;
+		ctx.lineWidth = LINE_WIDTH;
 		ctx.lineJoin = "round";
 
 		paths.forEach((path, i) => {
@@ -183,9 +192,11 @@
 	});
 
 	let message = $derived(
-		outcome === "meet"
-			? `They met after ${format(",")(steps)} steps each.`
-			: `They never met in ${format(",")(steps)} steps each.`
+		single
+			? `The walker took ${format(",")(steps)} steps.`
+			: outcome === "meet"
+				? `They met after ${format(",")(steps)} steps each.`
+				: `They never met in ${format(",")(steps)} steps each.`
 	);
 </script>
 
@@ -197,26 +208,30 @@
 			</button>
 			<button onclick={restart}>Restart</button>
 		</div>
-		<div class="speed" role="radiogroup" aria-labelledby="speed-label-{uid}">
-			<span class="label" id="speed-label-{uid}">Speed:</span>
-			{#each Object.keys(FPS_OPTS) as opt}
-				<label>
-					<input
-						type="radio"
-						name="speed-{uid}"
-						value={opt}
-						bind:group={speed}
-					/>
-					{opt}
-				</label>
-			{/each}
-		</div>
+		{#if !single}
+			<div class="speed" role="radiogroup" aria-labelledby="speed-label-{uid}">
+				<span class="label" id="speed-label-{uid}">Speed:</span>
+				{#each Object.keys(FPS_OPTS) as opt}
+					<label>
+						<input
+							type="radio"
+							name="speed-{uid}"
+							value={opt}
+							bind:group={speed}
+						/>
+						{opt}
+					</label>
+				{/each}
+			</div>
+		{/if}
 	</div>
 
 	<div
 		class="canvas"
 		role="img"
-		aria-label="Two walkers start in opposite corners and each take random steps on a grid until their paths cross."
+		aria-label={single
+			? "A walker starts in the center and takes random steps on a grid."
+			: "Two walkers start in opposite corners and each take random steps on a grid until their paths cross."}
 	>
 		<canvas bind:this={canvasEl}></canvas>
 
@@ -234,14 +249,22 @@
 
 	<details class="text-alt">
 		<summary>Text description</summary>
-		<p>
-			Two walkers start in opposite corners of a grid. Each step, both walkers
-			move one square up, down, left or right at random. The red line and couple
-			figure are one walker, and the blue line and single figure are the other.
-			The walk ends when both are on the same square at the same time, or after {format(
-				","
-			)(MAX_STEPS)} steps each.
-		</p>
+		{#if single}
+			<p>
+				A walker starts in the center of a grid. Each step, it moves one square
+				up, down, left or right at random. The walk ends after {format(",")(
+					MAX_STEPS
+				)} steps.
+			</p>
+		{:else}
+			<p>
+				Two walkers start in opposite corners of a grid. Each step, both walkers
+				move one square up, down, left or right at random. The red line and
+				couple figure are one walker, and the blue line and single figure are
+				the other. The walk ends when both are on the same square at the same
+				time, or after {format(",")(MAX_STEPS)} steps each.
+			</p>
+		{/if}
 	</details>
 </div>
 
