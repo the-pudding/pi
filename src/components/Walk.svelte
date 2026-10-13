@@ -32,8 +32,8 @@
 	const TICKER_HALF = 100;
 	const CHUNK = 512;
 	const MAX_DIGITS = 50000;
-	const FIT = 0.9;
-	// walker image: half the size of WalkCouple's
+	const FIT = 0.85;
+
 	const IMG = 64;
 	const IMG_MIN = IMG * 0.5;
 	const IMG_UNITS = 3;

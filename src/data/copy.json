@@ -942,7 +942,7 @@
         },
         {
           "type": "text",
-          "value": "But they didn’t keep track of the number of times it returned to its origin, so I measured it myself to one million digits. Drumroll, please…"
+          "value": "But they didn’t keep track of the number of times it returned to its origin, so I measured it myself to one billion digits of pi. Drumroll, please…"
         },
         {
           "type": "Walk",
@@ -955,11 +955,11 @@
         },
         {
           "type": "text",
-          "value": "At the 21,344th decimal place, our walker comes home, and again several digits later. Then it wanders off and doesn’t return for the rest of the first million."
+          "value": "At the 21,344th decimal place, our walker comes home, and again several digits later. Then it wanders off and doesn’t return for the rest of the first billion digits. It took 399,980,598 steps in total, and ended up 18,891 steps away from the origin! So it could be a while before it returns again…"
         },
         {
           "type": "text",
-          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya huddled around an iPad watching pi digits being calculated in real time guiding a random walk. Their eyes staring unblinking at the screen, like a toddler watching <emBluey</em> in the cart in the grocery store. Pearson passes around a carafe of unknown contents."
+          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya tuned into my livestream of pi digits being calculated in real time guiding a random walk. Their eyes staring unblinking at the screen, like a toddler watching <cite>Bluey</cite> in the cart in the grocery store."
         },
         {
           "type": "Chat",
@@ -967,47 +967,51 @@
             "values": [
               {
                 "name": "De Morgan",
-                "text": "Hey chat! Count the sevens."
+                "text": "hey chat! anyone notice the six 7s?"
+              },
+              {
+                "name": "Shanks",
+                "text": "10%!"
+              },
+              {
+                "name": "Shanks",
+                "text": "*100%!"
               },
               {
                 "name": "Venn",
-                "text": "I do say, that wandering pen looks random! I said as much in 1888."
+                "text": "i do say, that wandering pen looks random! told ya so (in 1888)."
               },
               {
                 "name": "Pearson",
-                "text": "It’s called a random walk now, gents. You’re welcome."
+                "text": "@venn its random walk now, you’re welcome."
               },
               {
                 "name": "Pólya",
-                "text": "It came home. Digit 21,344. I’d like that noted. Definitely not snooping."
+                "text": "it came home. digit 21,344. i’d like that noted. definitely not snooping."
               },
               {
                 "name": "Pearson",
-                "text": "And then never again…"
+                "text": "and then never again…"
               },
               {
                 "name": "Pólya",
-                "text": "Never again, so far."
+                "text": "never again, so far."
               },
               {
                 "name": "Shanks",
-                "text": "A million digits. How long did that take?"
+                "text": "a billion digits. how long did that take?"
               },
               {
                 "name": "Me",
-                "text": "4.168 seconds, but my computer is a few years old."
+                "text": "4.2 seconds, but my computer is a few years old."
               },
               {
                 "name": "Shanks",
-                "text": "And they’re all correct?"
+                "text": "and they’re all correct?"
               },
               {
                 "name": "Me",
-                "text": "AI said so. Must be true. 😜"
-              },
-              {
-                "name": "Pólya",
-                "text": "🙏"
+                "text": "AI said so. must be true. 😜"
               },
               {
                 "name": "Pearson",
@@ -1016,10 +1020,6 @@
               {
                 "name": "Venn",
                 "text": "⭕⭕"
-              },
-              {
-                "name": "De Morgan",
-                "text": "💀"
               },
               {
                 "name": "Shanks",
