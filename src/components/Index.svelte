@@ -17,6 +17,7 @@
 	import Term from "$components/Term.svelte";
 	import Records from "$components/Records.svelte";
 	import Chat from "$components/Chat.svelte";
+	import Tooltip from "$components/Tooltip.svelte";
 	import { modes } from "$runes/misc.svelte.js";
 
 	const copy = getContext("copy");
@@ -67,6 +68,8 @@
 
 <Boss chat={copy.boss.chat}></Boss>
 <Friend></Friend>
+
+<Tooltip></Tooltip>
 
 <svelte:boundary onerror={(e) => console.error(e)}>
 	<!-- <Footer recirc={true} /> -->

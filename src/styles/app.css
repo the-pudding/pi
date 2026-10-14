@@ -124,12 +124,6 @@ span.relative {
 	display: inline-block;
 }
 
-span.dotted {
-	text-decoration: underline dotted;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.15em;
-}
-
 img.headshot {
 	position: absolute;
 	top: 0.85rem;
@@ -139,7 +133,7 @@ img.headshot {
 	border: 2px dotted currentColor;
 }
 
-button {
+button:not(.person) {
 	text-transform: uppercase;
 }
 

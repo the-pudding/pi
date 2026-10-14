@@ -83,7 +83,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>It was the spring of 1853. You might remember it as the time when <span class=dotted>Gail Borden</span> <img class=headshot src=assets/images/borden.jpg alt='Gail Borden portrait'> applied to patent his process for condensed milk in the US (his name is on the tin).</span>"
+          "value": "<span class=relative>It was the spring of 1853. You might remember it as the time when Gail Borden <img class=headshot src=assets/images/borden.jpg alt='Gail Borden portrait'> applied to patent his process for condensed milk in the US (his name is on the tin).</span>"
         },
         {
           "type": "Figure",
@@ -120,7 +120,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>The schoolmaster’s name was <span class=dotted>William Shanks</span><img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
+          "value": "<span class=relative>The schoolmaster’s name was William Shanks</span><img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
         },
         {
           "type": "Figure",
@@ -235,7 +235,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>The first mathematician to closely interrogate pi’s digits was <span class=dotted>Augustus De Morgan</span>. <img class=headshot src=assets/images/demorgan.jpg alt='Augustus De Morgan portrait'> In a posthumous publication, he made a passing observation about the lack of 7s represented in Shanks’ original 607 computation.</span>"
+          "value": "<span class=relative>The first mathematician to closely interrogate pi’s digits was Augustus De Morgan. <img class=headshot src=assets/images/demorgan.jpg alt='Augustus De Morgan portrait'> In a posthumous publication, he made a passing observation about the lack of 7s represented in Shanks’ original 607 computation.</span>"
         },
         {
           "type": "Distribution",
@@ -260,7 +260,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, <span class=dotted>John Venn</span>. <img class=headshot src=assets/images/venn.jpg alt='John Venn portrait'> Yes, that Venn. I can hear your fawning from the future.</span>"
+          "value": "<span class=relative>Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, John Venn. <img class=headshot src=assets/images/venn.jpg alt='John Venn portrait'> Yes, that Venn. I can hear your fawning from the future.</span>"
         },
         {
           "type": "VennDiagram",
@@ -272,7 +272,7 @@
         },
         {
           "type": "text",
-          "value": "After his 1880 smash hit, the Venn Diagram, John was (possibly) searching to recreate his earlier success. He was trying to determine whether a sequence can be called random when you know exactly how it was made."
+          "value": "After his 1880 smash hit, the Venn Diagram, he was (possibly) searching to recreate his earlier success. He was trying to determine whether a sequence can be called random when you know exactly how it was made."
         },
         {
           "type": "text",
@@ -351,7 +351,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Speaking of legs, a drunken man has two (this will make sense soon). We will briefly wander away from pi and continue Venn’s thread. In 1905, <span class=dotted>Karl Pearson</span> <img class=headshot src=assets/images/pearson.jpg alt='Karl Pearson portrait'> threw down a challenge he dubbed “the problem of the random walk.”</span>"
+          "value": "<span class=relative>Speaking of legs, a drunken man has two (this will make sense soon). We will briefly wander away from pi and continue Venn’s thread. In 1905, Karl Pearson <img class=headshot src=assets/images/pearson.jpg alt='Karl Pearson portrait'> threw down a challenge he dubbed “the problem of the random walk.”</span>"
         },
         {
           "type": "Figure",
@@ -371,7 +371,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually”&mdash;he solved this problem 25 years prior with sound waves. It was about the square root of n, or after 100 steps, only about 10 yards away.</span>"
+          "value": "<span class=relative>Lord Rayleigh <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually”&mdash;he solved this problem 25 years prior with sound waves. It was about the square root of n, or after 100 steps, only about 10 yards away.</span>"
         },
         {
           "type": "text",
@@ -400,7 +400,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Hungarian mathematician <span class=dotted>George Pólya</span><img class=headshot src=assets/images/polya.jpg alt='George Pólya portrait'> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancée. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
+          "value": "<span class=relative>Hungarian mathematician George Pólya <img class=headshot src=assets/images/polya.jpg alt='George Pólya portrait'> enjoyed his leisurely walks in the woods, finding them a fine place to think about his work. One day he ran into one of his students out on a stroll with his fiancée. Nothing unusual. But then they crossed paths again. And again. Things were getting awkward and Pólya was embarrassed.</span>"
         },
         {
           "type": "text",
@@ -445,7 +445,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>He also found that in a three-dimensional space, the probability of a return drops to 34%. This gave rise to the saying by <span class=dotted>Shizuo Kakutani</span><img class=headshot src=assets/images/kakutani.jpg alt='Shizuo Kakutani portrait'>:</span>"
+          "value": "<span class=relative>He also found that in a three-dimensional space, the probability of a return drops to 34%. This gave rise to the saying by Shizuo Kakutani <img class=headshot src=assets/images/kakutani.jpg alt='Shizuo Kakutani portrait'>:</span>"
         },
         {
           "type": "blockquote",
@@ -838,7 +838,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Back to pi. The same year the museum fixed the digits, Professor <span class=dotted>John von Neumann</span>, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, wanted to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
+          "value": "<span class=relative>Back to pi. The same year the museum fixed the digits, Professor John von Neumann, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, wanted to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
         },
         {
           "type": "blockquote",
@@ -876,7 +876,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> <img class=headshot src=assets/images/dshanks.jpg alt='Daniel Shanks portrait'>, that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>.</span>"
+          "value": "<span class=relative>In 1961, Shanks was back. Daniel Shanks <img class=headshot src=assets/images/dshanks.jpg alt='Daniel Shanks portrait'>, that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>.</span>"
         },
         {
           "type": "text",
@@ -1114,5 +1114,91 @@
     "shanks707updated": "14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912983367336244065664308602139501609244807723094362855309662027556939798695022247499620607497030412366886199511008920238377021314169411902988582544681639799904659700081700296312377381342084130791451183980570985",
     "term248": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000082328737623142401157273382716991930387742506188205854866279963986321272545389199066480636124896985843835178172222335789970252931234542078806049486654325955734406438631790744466800804828973843058350100603621730382293762575452716297786720321931589537223340040241448692152917505030181086519114688128772635814889336016096579476861167002012072434607645875251509",
     "term72": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000307596485496974112297044389967563606979040220689655172413793103448275862068965517241379310344827586206896551724137931034482758620689655172413793103448275862068965517241379310344827586206896551724137931034482758620689655172413793103448275862068965517241379310344827586206896551724137931034482758620689655172413793103448275862068965517241379310344827586206896551724137931034482758620689655172413793103448275862068965517241379310344827586206896551724137931034482758620689655172413793103448275862068965517241379310344827586206896551724137931034482758620689655172413793103448275862068965517241379310344827586"
-  }
+  },
+  "tooltipData": [
+    {
+      "name": "Gail Borden",
+      "description": "The 19th-century inventor of condensed milk and the less successful meat biscuit, who had no known interest in pi."
+    },
+    {
+      "name": "William Shanks",
+      "description": "A British schoolmaster and elite human Computer who spent years calculating digits of pi by hand, just to have something to do."
+    },
+    {
+      "name": "Augustus De Morgan",
+      "description": "A prominent British mathematician and the original pi digit skeptic, who noticed that Shanks’ numbers were light on 7s."
+    },
+    {
+      "name": "John Venn",
+      "description": "A British mathematician who, when not drawing overlapping circles, drew a path with pi’s digits to see what randomness looked like."
+    },
+    {
+      "name": "Karl Pearson",
+      "description": "An influential statistician who gave the “random walk” its name and invented the chi-square test."
+    },
+    {
+      "name": "Lord Rayleigh",
+      "description": "A Nobel Prize-winning physicist who politely \"well, actually’d\" Pearson by pointing out he had already solved Pearson’s random walk problem 25 years earlier using sound waves."
+    },
+    {
+      "name": "George Pólya",
+      "description": "A Hungarian mathematician who turned an awkward, repeated run-in with a student in the woods into a proof about walkers returning home."
+    },
+    {
+      "name": "Shizuo Kakutani",
+      "description": "A Japanese-American mathematician who famously distilled Pólya’s complex 3D math into a catchy proverb."
+    },
+    {
+      "name": "John von Neumann",
+      "description": "A legendary polymath and computing pioneer who used the ENIAC to obliterate the pi record to see if the digits still appeared random."
+    },
+    {
+      "name": "Daniel Shanks",
+      "description": "An American mathematician (no relation to William) who used an IBM computer in 1961 to speed-run pi to 100,000 digits in under nine hours."
+    },
+    {
+      "name": "Erwin Engert",
+      "description": "A modern-day number enthusiast and Shanks superfan who calculated 100 digits of pi by hand just to see what the poor guy went through."
+    },
+    {
+      "name": "D. F. Ferguson",
+      "description": "The British mathematician who upended William Shanks’ work in 1946 by discovering that his last 180 digits of pi were completely wrong."
+    },
+    {
+      "name": "Dr. Rutherford",
+      "description": "A mathematician and the previous pi record-holder (at 440 digits), whose work Shanks built upon."
+    },
+    {
+      "name": "Brian Hayes",
+      "description": "A science writer turned mathematical Cold Case detective who reverse-engineered Shanks’ scratch work to find the exact spots where he made errors."
+    },
+    {
+      "name": "Kay McNulty",
+      "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
+    },
+    {
+      "name": "Betty Jennings",
+      "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
+    },
+    {
+      "name": "Betty Snyder",
+      "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
+    },
+    {
+      "name": "Marlyn Wescoff",
+      "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
+    },
+    {
+      "name": "Fran Bilas",
+      "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
+    },
+    {
+      "name": "Ruth Lichterman",
+      "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
+    },
+    {
+      "name": "John Wrench",
+      "description": "An American mathematician who partnered with Daniel Shanks in 1961 to speed-run pi to 100,000 digits in under nine hours."
+    }
+  ]
 }
