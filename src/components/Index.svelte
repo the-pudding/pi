@@ -18,6 +18,7 @@
 	import Records from "$components/Records.svelte";
 	import Chat from "$components/Chat.svelte";
 	import Tooltip from "$components/Tooltip.svelte";
+	import TOC from "$components/TOC.svelte";
 	import { modes } from "$runes/misc.svelte.js";
 
 	const copy = getContext("copy");
@@ -60,6 +61,7 @@
 <!-- inert while an overlay is open: keeps the background out of the tab order -->
 <div class="page" inert={overlay}>
 	<Menu />
+	<TOC />
 
 	<article>
 		<CMS {body} {components}></CMS>

@@ -3,12 +3,6 @@
 </script>
 
 <div class="menu">
-	<!-- <div class="menu-item">
-		<button onclick={() => (modes.motion = !modes.motion)}
-			>MOTION ({modes.motion ? "ON" : "OFF"})</button
-		>
-	</div> -->
-
 	<div class="menu-item">
 		<button aria-haspopup="dialog" onclick={() => (modes.boss = !modes.boss)}
 			>BOSS BUTTON</button

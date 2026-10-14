@@ -71,7 +71,7 @@
 	</table>
 
 	<figcaption id="dist-caption-{uid}">
-		{caption}
+		{@html caption}
 	</figcaption>
 </figure>
 

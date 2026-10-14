@@ -135,6 +135,7 @@ img.headshot {
 
 button:not(.person) {
 	text-transform: uppercase;
+	font-size: var(--14px);
 }
 
 html.no-scroll {

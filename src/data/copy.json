@@ -5,7 +5,7 @@
   "keywords": "math, pi, random",
   "body": [
     {
-      "section": "prelude",
+      "section": "introduction",
       "content": [
         {
           "type": "text",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "section": "hero",
+      "section": "title",
       "content": [
         {
           "type": "Hero",
@@ -568,7 +568,7 @@
       "content": [
         {
           "type": "h2",
-          "value": "The Error"
+          "value": "Investigation"
         },
         {
           "type": "text",
@@ -780,7 +780,7 @@
       ]
     },
     {
-      "section": "part9",
+      "section": "Records",
       "content": [
         {
           "type": "h2",
@@ -902,7 +902,7 @@
         },
         {
           "type": "text",
-          "value": "Today, the the record for the most calculated digits of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <cite>Harry Potter and the Deathly Hallows</cite> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a questionable British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
+          "value": "Today, the record for the most calculated digits of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <cite>Harry Potter and the Deathly Hallows</cite> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a questionable British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
         },
         {
           "type": "Records",

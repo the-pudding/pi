@@ -5,6 +5,7 @@
 	import { AnimationFrames, IsDocumentVisible } from "runed";
 	import variables from "$data/variables.json";
 	import computePi from "$utils/computePi.js";
+	import { modes } from "$runes/misc.svelte.js";
 	const DPR = 2;
 	const LINE_WIDTH = 3;
 
@@ -58,6 +59,7 @@
 	const LINE = variables.color["fg-a3"];
 	const ACCENT = variables.color.red;
 	const GHOST = variables.color["fg-a2"];
+	const DIVERGE = variables.color.black;
 
 	let rawDigits = [];
 	let walkIndices = [];
@@ -90,8 +92,12 @@
 
 	// $inspect(piDigits.length)
 
-	let speedOpts = $derived(initialSpeed === "hyper" ? HYPER_OPTS : FPS_OPTS);
-	let fps = $derived(speedOpts[speed] ?? speedOpts.slow);
+	// hyper walks keep their own speed; the rest share the global fps in `modes.speed`
+	let isHyper = $derived(initialSpeed === "hyper");
+	let speedOpts = $derived(isHyper ? HYPER_OPTS : FPS_OPTS);
+	let fps = $derived(
+		isHyper ? (speedOpts[speed] ?? speedOpts.slow) : modes.speed
+	);
 	let degrees = $derived(DEGREE_OPTS[version]);
 	let startDigit = $derived(
 		start === undefined || start === null || start === "" || isNaN(+start)
@@ -134,6 +140,26 @@
 			path.push([ux, uy]);
 		}
 		return path;
+	});
+
+	// last point the walk and its ghost share before their digits differ
+	let divergePoint = $derived.by(() => {
+		if (ghostPath.length < 2 || isRandom) return null;
+		const digits = piDigits || pi[source]?.split("").map(Number);
+		if (!digits) return null;
+		let ux = 0;
+		let uy = 0;
+		let i = 0;
+		for (const d of digits) {
+			if (d >= degrees.length) continue;
+			const nx = ux + deltas[d][0];
+			const ny = uy + deltas[d][1];
+			const g = ghostPath[++i];
+			if (!g || g[0] !== nx || g[1] !== ny) return [ux, uy];
+			ux = nx;
+			uy = ny;
+		}
+		return null;
 	});
 
 	let maxFrame = $derived(walkLength - 1);
@@ -268,12 +294,17 @@
 		}
 	}
 
-	function drawOrigin() {
-		if (!showOrigin || !ctx) return;
-		ctx.fillStyle = ACCENT;
+	function drawDot(ux, uy, color) {
+		ctx.fillStyle = color;
 		ctx.beginPath();
-		ctx.arc(screenX(0), screenY(0), 5, 0, Math.PI * 2);
+		ctx.arc(screenX(ux), screenY(uy), 5, 0, Math.PI * 2);
 		ctx.fill();
+	}
+
+	function drawMarkers() {
+		if (!ctx) return;
+		if (divergePoint) drawDot(...divergePoint, DIVERGE);
+		if (showOrigin) drawDot(0, 0, ACCENT);
 	}
 
 	function drawWalker() {
@@ -344,7 +375,7 @@
 
 		returns = count;
 		originReturnCount = count;
-		drawOrigin();
+		drawMarkers();
 
 		prevPen = { ux: fromX, uy: fromY };
 		pen = { ux, uy };
@@ -384,7 +415,7 @@
 		pen = { ux, uy };
 		grow(ux, uy);
 		if (ux === 0 && uy === 0) originReturnCount = ++returns;
-		drawOrigin();
+		drawMarkers();
 		drawWalker();
 		drawnFrame = toFrame;
 	}
@@ -416,7 +447,7 @@
 		if (frame >= 0) render(frame);
 		else {
 			fitView();
-			drawOrigin();
+			drawMarkers();
 			drawWalker();
 		}
 	}
@@ -447,7 +478,7 @@
 		if (ctx && canvasEl) {
 			const { w, h } = size();
 			ctx.clearRect(0, 0, w, h);
-			drawOrigin();
+			drawMarkers();
 		}
 		drawWalker();
 	}
@@ -597,7 +628,9 @@
 						type="radio"
 						name="speed-{uid}"
 						value={opt}
-						bind:group={speed}
+						checked={isHyper ? speed === opt : modes.speed === speedOpts[opt]}
+						onchange={() =>
+							isHyper ? (speed = opt) : (modes.speed = speedOpts[opt])}
 					/>
 					{SPEED_LABELS[opt] ?? opt}
 				</label>
@@ -624,45 +657,58 @@
 			</div>
 		{/if}
 	</div>
-	<div class="pi" aria-hidden="true">
-		<span class="inner" style:transform="translateX({tickerOffset})">
-			{#each ticker as digit, i (windowStart + i)}
-				{@const index = windowStart + i}
-				<span
-					class="decimal"
-					class:unused={digit >= degrees.length}
-					class:active={index === activeIndex}>{digit}</span
-				>
-			{/each}
-		</span>
-	</div>
+	<figure>
+		<div class="pi" aria-hidden="true">
+			<span class="inner" style:transform="translateX({tickerOffset})">
+				{#each ticker as digit, i (windowStart + i)}
+					{@const index = windowStart + i}
+					<span
+						class="decimal"
+						class:unused={digit >= degrees.length}
+						class:active={index === activeIndex}>{digit}</span
+					>
+				{/each}
+			</span>
+		</div>
 
-	<div
-		class="canvas"
-		role="img"
-		aria-label={description ||
-			`A line drawn by a walk on a lattice, one step per ${source === "random" ? "random number" : "digit of pi"}.`}
-	>
-		<canvas bind:this={ghostEl} class="ghost"></canvas>
-		<canvas bind:this={canvasEl}></canvas>
-		<canvas bind:this={walkerEl} class="walker"></canvas>
-	</div>
+		<div
+			class="canvas"
+			role="img"
+			aria-label={description ||
+				`A line drawn by a walk on a lattice, one step per ${source === "random" ? "random number" : "digit of pi"}.`}
+		>
+			<canvas bind:this={ghostEl} class="ghost"></canvas>
+			<canvas bind:this={canvasEl}></canvas>
+			<canvas bind:this={walkerEl} class="walker"></canvas>
+		</div>
+
+		<figcaption class="text-alt">
+			<p class="key">
+				The red segment is the latest step and the gray line is the path so
+				far.{#if showOrigin}
+					The red dot is the starting point.{/if}{#if divergePoint}
+					The faint gray line is the comparison walk, and the black dot is where the
+					two split.{/if}
+			</p>
+			<details>
+				<summary>Text description</summary>
+				<p>
+					Each {isRandom ? "random digit" : "digit of pi"} sets a direction ({degrees.length}
+					directions: digits 0 to {degrees.length - 1}). Faded digits in the strip
+					above the drawing are skipped and don't move the line.
+				</p>
+				{#if description}<p>{description}</p>{/if}
+				<p>
+					{status ||
+						(isRandom
+							? "Press play to start the walk."
+							: "Press play or move the step slider to start the walk.")}
+				</p>
+			</details>
+		</figcaption>
+	</figure>
 
 	<div class="sr-only" aria-live="polite">{status}</div>
-
-	<details class="text-alt">
-		<summary>Text description</summary>
-		<p>
-			Key: the red segment is the latest step and the gray line is the path so
-			far.{#if showOrigin}
-				The red dot is the starting point.{/if}
-			Each digit of pi sets a direction ({degrees.length} directions: digits 0 to
-			{degrees.length - 1}). Faded digits in the strip above the drawing are
-			skipped and don't move the line.
-		</p>
-		{#if description}<p>{description}</p>{/if}
-		<p>{status || "Press play or move the step slider to start the walk."}</p>
-	</details>
 </div>
 
 <style>
@@ -750,6 +796,10 @@
 		vertical-align: middle;
 	}
 
+	figure {
+		margin: 0;
+	}
+
 	.text-alt {
 		margin-top: 0.75rem;
 		font-family: var(--font-sans);
@@ -758,6 +808,10 @@
 
 	.text-alt p {
 		margin: 0.5rem 0 0 0;
+	}
+
+	.text-alt .key {
+		margin: 0 0 0.25rem 0;
 	}
 
 	.pi {

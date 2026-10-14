@@ -4,6 +4,7 @@
 	import { format } from "d3";
 	import { AnimationFrames } from "runed";
 	import variables from "$data/variables.json";
+	import { modes } from "$runes/misc.svelte.js";
 
 	let { mode = "couple" } = $props();
 
@@ -55,8 +56,7 @@
 	let ctx = $state(null);
 	let outcome = $state(null);
 	let steps = $state(0);
-	let speed = $state("slow");
-	let fps = $derived(FPS_OPTS[speed]);
+	let fps = $derived(modes.speed);
 
 	const uid = $props.id();
 
@@ -216,8 +216,8 @@
 						<input
 							type="radio"
 							name="speed-{uid}"
-							value={opt}
-							bind:group={speed}
+							value={FPS_OPTS[opt]}
+							bind:group={modes.speed}
 						/>
 						{opt}
 					</label>
@@ -226,46 +226,59 @@
 		{/if}
 	</div>
 
-	<div
-		class="canvas"
-		role="img"
-		aria-label={single
-			? "A walker starts in the center and takes random steps on a grid."
-			: "Two walkers start in opposite corners and each take random steps on a grid until their paths cross."}
-	>
-		<canvas bind:this={canvasEl}></canvas>
-
-		{#if outcome}
-			<div class="overlay">
-				<div class="box">
-					<p>{message}</p>
-					<button bind:this={restartEl} onclick={restart}>Restart</button>
-				</div>
+	<figure>
+		<div class="canvas">
+			<div
+				role="img"
+				aria-label={single
+					? "A walker starts in the center and takes random steps on a grid."
+					: "Two walkers start in opposite corners and each take random steps on a grid until their paths cross."}
+			>
+				<canvas bind:this={canvasEl}></canvas>
 			</div>
-		{/if}
-	</div>
+
+			{#if outcome}
+				<div class="overlay">
+					<div class="box">
+						<p>{message}</p>
+						<button bind:this={restartEl} onclick={restart}>Restart</button>
+					</div>
+				</div>
+			{/if}
+		</div>
+
+		<figcaption class="text-alt">
+			<p class="key">
+				{#if single}
+					The red line is the walker's path so far.
+				{:else}
+					The red line and couple figure are one walker, and the blue line and
+					single figure are the other.
+				{/if}
+			</p>
+			<details>
+				<summary>Text description</summary>
+				{#if single}
+					<p>
+						A walker starts in the center of a grid. Each step, it moves one
+						square up, down, left or right at random. The walk ends after {format(
+							","
+						)(MAX_STEPS)} steps.
+					</p>
+				{:else}
+					<p>
+						Two walkers start in opposite corners of a grid. Each step, both
+						walkers move one square up, down, left or right at random. The walk
+						ends when both are on the same square at the same time, or after {format(
+							","
+						)(MAX_STEPS)} steps each.
+					</p>
+				{/if}
+			</details>
+		</figcaption>
+	</figure>
 
 	<div class="sr-only" aria-live="polite">{outcome ? message : ""}</div>
-
-	<details class="text-alt">
-		<summary>Text description</summary>
-		{#if single}
-			<p>
-				A walker starts in the center of a grid. Each step, it moves one square
-				up, down, left or right at random. The walk ends after {format(",")(
-					MAX_STEPS
-				)} steps.
-			</p>
-		{:else}
-			<p>
-				Two walkers start in opposite corners of a grid. Each step, both walkers
-				move one square up, down, left or right at random. The red line and
-				couple figure are one walker, and the blue line and single figure are
-				the other. The walk ends when both are on the same square at the same
-				time, or after {format(",")(MAX_STEPS)} steps each.
-			</p>
-		{/if}
-	</details>
 </div>
 
 <style>
@@ -363,6 +376,10 @@
 		outline-offset: 2px;
 	}
 
+	figure {
+		margin: 0;
+	}
+
 	.text-alt {
 		margin-top: 0.75rem;
 		font-family: var(--font-sans);
@@ -371,5 +388,9 @@
 
 	.text-alt p {
 		margin: 0.5rem 0 0 0;
+	}
+
+	.text-alt .key {
+		margin: 0 0 0.25rem 0;
 	}
 </style>
