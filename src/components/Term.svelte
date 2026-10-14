@@ -22,7 +22,7 @@
 </script>
 
 <div class="c">
-	<code role="img" aria-label={label}>
+	<code role="img" aria-label={label} alt="Correct digits of the term">
 		<span>Correct:</span>
 		...{#each digitsCorrect as digit, i}
 			{@const correct = i < o - 1}
@@ -30,7 +30,7 @@
 			<span class:correct class:cross>{digit}</span>
 		{/each}...
 	</code>
-	<code role="img" aria-label={label}>
+	<code role="img" aria-label={label} alt="Shanks digits of the term">
 		<span>Shanks:&nbsp;</span>
 		...{#each digitsWrong as digit, i}
 			{@const correct = i < o - 1}
