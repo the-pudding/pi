@@ -1,13 +1,13 @@
 <script>
-	import { AxisX, AxisY, Plot, Line, Dot, Text } from "svelteplot";
-	import { format } from "d3";
+	import { AxisX, AxisY, GridY, Plot, Line, Dot, Text } from "svelteplot";
+	import { format, extent } from "d3";
 	import records from "$data/records.csv";
 
 	let { caption } = $props();
 
 	const uid = $props.id();
 	const start = new Date(1700, 0, 1);
-	const end = new Date();
+	const end = new Date(2014, 0, 1);
 	const minYear = start.getFullYear();
 	const comma = format(",.0f");
 
@@ -56,12 +56,17 @@
 	<div class="chart" aria-hidden="true">
 		<Plot
 			x={{ type: "time", domain: [start, end], label: "Year" }}
-			y={{ type: "log", label: "Digits of pi (log scale)", grid: true }}
+			y={{
+				type: "log",
+				domain: extent(data, (d) => d.digits),
+				label: "Digits of pi (log scale)"
+			}}
 			marginRight={20}
 			axes={false}
 		>
 			<AxisX tickFontSize={14} titleFontSize={14} />
 			<AxisY tickFontSize={14} titleFontSize={14} />
+			<GridY x1={() => start} x2={() => end} />
 
 			<Line {data} x="date" y="digits" stroke="currentColor" />
 			<Dot {data} x="date" y="digits" r={3} fill="currentColor" />
@@ -137,6 +142,10 @@
 
 	.wrap :global(svg text) {
 		font-family: var(--font-mono);
+	}
+
+	.chart {
+		min-height: 320px;
 	}
 
 	.cue,

@@ -241,7 +241,7 @@
           "type": "Distribution",
           "value": {
             "source": "shanks607",
-            "caption": "How often each digit 0&n;9 appears in Shanks’ original 607 pi decimal places.",
+            "caption": "How often each digit 0&ndash;9 appears in Shanks’ original 607 pi decimal places.",
             "highlight": "7"
           }
         },
@@ -290,7 +290,7 @@
         },
         {
           "type": "text",
-          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes. He assigned the digits 0&n;7 to the directions of an eight-point compass and walked through pi digit by digit. 8s and 9s had to sit this one out."
+          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes. He assigned the digits 0&ndash;7 to the directions of an eight-point compass and walked through pi digit by digit. 8s and 9s had to sit this one out."
         },
         {
           "type": "Figure",
@@ -708,7 +708,7 @@
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0&n;9 appears in the first 607 correct pi decimal places.",
+            "caption": "How often each digit 0&ndash;9 appears in the first 607 correct pi decimal places.",
             "highlight": "7",
             "values": [
               "57",
@@ -855,7 +855,7 @@
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0&n;9 appears in ENIAC’s 2,037 pi decimal places.",
+            "caption": "How often each digit 0&ndash;9 appears in ENIAC’s 2,037 pi decimal places.",
             "values": [
               "184",
               "213",
@@ -885,7 +885,7 @@
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0&n;9 appears in 100,000 pi decimal places.",
+            "caption": "How often each digit 0&ndash;9 appears in 100,000 pi decimal places.",
             "values": [
               "9999",
               "10137",
