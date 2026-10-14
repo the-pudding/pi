@@ -7,7 +7,7 @@
 
 	const uid = $props.id();
 	const start = new Date(1700, 0, 1);
-	const end = new Date(2014, 0, 1);
+	const end = new Date(2026, 0, 1);
 	const minYear = start.getFullYear();
 	const comma = format(",.0f");
 
@@ -138,6 +138,7 @@
 <style>
 	.wrap {
 		margin: 4rem auto;
+		max-width: 25em;
 	}
 
 	.wrap :global(svg text) {
