@@ -7,7 +7,7 @@
 /* colors defined in variables.css */
 :root {
 	/* font */
-	--font-sans: Helvetica, Arial, sans-serif;
+	--font-sans: Arial, sans-serif;
 	--font-serif: Times New Roman, Times, serif;
 	--font-mono: Menlo, Consolas, Monaco, monospace;
 
