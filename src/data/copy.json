@@ -150,7 +150,7 @@
         },
         {
           "type": "text",
-          "value": "<strong><span aria-label=pi>π</span> = 16arctan1/5 - 4arctan1/239</strong>"
+          "value": "<strong><span aria-label=pi>π</span> = 16 arctan(1/5) - 4 arctan(1/239)</strong>"
         },
         {
           "type": "text",
@@ -227,7 +227,7 @@
       "content": [
         {
           "type": "h2",
-          "value": "1860s"
+          "value": "1872"
         },
         {
           "type": "text",
@@ -241,13 +241,13 @@
           "type": "Distribution",
           "value": {
             "source": "shanks607",
-            "caption": "How often each digit 0&en;9 appears in Shanks’ original 607 pi decimal places.",
+            "caption": "How often each digit 0&n;9 appears in Shanks’ original 607 pi decimal places.",
             "highlight": "7"
           }
         },
         {
           "type": "text",
-          "value": "He wasn’t so much as troubled by it as curious. After all, random sequences have uneven counts too. But it raised a question: Was a low count of 7s a property of pi, or just ordinary fluctuation in a random pattern?"
+          "value": "He wasn’t so much troubled by it as curious. After all, random sequences have uneven counts too. But it raised a question: Was a low count of 7s a property of pi, or just ordinary fluctuation in a random pattern?"
         }
       ]
     },
@@ -290,7 +290,7 @@
         },
         {
           "type": "text",
-          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes. He walked through each digit (0&en;7) and assigned its number to an eight-point compass. 8s and 9s had to sit this one out."
+          "value": "To illustrate this last point, Venn drew a path that used pi’s digits to choose the direction of the pen strokes. He assigned the digits 0&n;7 to the directions of an eight-point compass and walked through pi digit by digit. 8s and 9s had to sit this one out."
         },
         {
           "type": "Figure",
@@ -371,7 +371,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually”&mdash;he solved this problem 25 years prior with sound waves. It was the square root of n, or after 100 steps, only about 10 yards away.</span>"
+          "value": "<span class=relative><span class=dotted>Lord Rayleigh</span> <img class=headshot src=assets/images/rayleigh.jpg alt='Lord Rayleigh portrait'> responded with a “well actually”&mdash;he solved this problem 25 years prior with sound waves. It was about the square root of n, or after 100 steps, only about 10 yards away.</span>"
         },
         {
           "type": "text",
@@ -432,7 +432,7 @@
         },
         {
           "type": "text",
-          "value": "He published a proof in the German journal Mathematische Annalen, which I don’t understand, but which looks thorough and compelling."
+          "value": "He published a proof in the German journal <cite>Mathematische Annalen</cite>, which I don’t understand, but which looks thorough and compelling."
         },
         {
           "type": "Figure",
@@ -512,7 +512,7 @@
         },
         {
           "type": "text",
-          "value": "British mathematician D. F. Ferguson took out his mechanical desk calculator. He used a Machin-esque formula and ripped through 620 digits of pi."
+          "value": "British mathematician D. F. Ferguson duplicated Shanks’ by-hand efforts. He used a similar-but-different Machin-esque formula and computed 620 digits of pi."
         },
         {
           "type": "text",
@@ -551,7 +551,7 @@
         },
         {
           "type": "text",
-          "value": "The second fact was his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 441 decimal places. Shanks wrote:"
+          "value": "The second fact was his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 440 decimal places. Shanks wrote:"
         },
         {
           "type": "blockquote",
@@ -592,7 +592,7 @@
         },
         {
           "type": "text",
-          "value": "<strong><span aria-label=pi>π</span> = 16arctan1/5 - 4arctan1/239</strong>"
+          "value": "<strong><span aria-label=pi>π</span> = 16 arctan(1/5) - 4 arctan(1/239)</strong>"
         },
         {
           "type": "text",
@@ -624,8 +624,7 @@
             "term": "term248",
             "spot": "531",
             "offset": "11",
-            "count": "1",
-            "label": "Tk"
+            "count": "1"
           }
         },
         {
@@ -642,7 +641,7 @@
         },
         {
           "type": "text",
-          "value": "Ferguson&mdash;the man who calculated pi using the desk calculator&mdash;actually flagged an anomaly in term 72 back in 1946. Hayes found that if you dropped five digits at that point and slid everything over, you could reproduce Shanks’ value."
+          "value": "Ferguson&mdash;the man who was also passionate enough to calculate pi by hand&mdash;actually flagged this anomaly back in 1946. Hayes found that if you dropped five digits at that point and slid everything over, you could reproduce Shanks’ value."
         },
         {
           "type": "Term",
@@ -650,8 +649,7 @@
             "term": "term72",
             "spot": "569",
             "offset": "11",
-            "count": "5",
-            "label": "Tk"
+            "count": "5"
           }
         },
         {
@@ -684,7 +682,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“At all events, from some strange cause or accident (perhaps from being overworked) the addition of 128 was very soon afterwards made…Hence arose the double error, which remained, strange to say, undetected for upwards of twenty years! This mistake, however, <em>from its nature, in no wise affects the accuracy of the other figures</em>.”"
+          "value": "“At all events, from some strange cause or accident (perhaps from being overworked) the addition of 128 was very soon afterwards made… Hence arose the double error, which remained, strange to say, undetected for upwards of twenty years! This mistake, however, <em>from its nature, in no wise affects the accuracy of the other figures</em>.”"
         },
         {
           "type": "text",
@@ -710,7 +708,7 @@
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0&en;9 appears in the first 607 correct pi decimal places.",
+            "caption": "How often each digit 0&n;9 appears in the first 607 correct pi decimal places.",
             "highlight": "7",
             "values": [
               "57",
@@ -740,15 +738,15 @@
         },
         {
           "type": "text",
-          "value": "But he never used his test on Shanks’ digits, so I did, on both versions. The test produces a p-value which answers one question: if the digits were truly random, how often would they come out this uneven, or more A small number (e.g., under 0.05) raises a flag. Anything bigger means chance could easily explain it."
+          "value": "But he never used his test on Shanks’ digits, so I did, on both versions. The test produces a p-value which answers one question: if the digits were truly random, how often would they come out this uneven, or more? A small number (e.g., under 0.05) raises a flag. Anything bigger means chance could easily explain it."
         },
         {
           "type": "text",
-          "value": "Shanks’ 607 digits have a p-value of 0.61. The correct 607 score 0.92. Neither are suspicious. (Because although the 7s are short in both versions, the test weighs all ten digits at once, and the other nine are close enough to even that the 7s get drowned out.)"
+          "value": "Shanks’ 607 digits have a p-value of 0.61. The correct 607 score 0.92. Neither is suspicious. (Because although the 7s are short in both versions, the test weighs all ten digits at once, and the other nine are close enough to even that the 7s get drowned out.)"
         },
         {
           "type": "text",
-          "value": "Next up, John Venn. Let’s fix his walk with the true value of pi through the same number of digits as his original. A walk made from Shanks’ digits and one made from the corrected digits would initially follow the same instructions and then diverge."
+          "value": "Next up, John Venn. Let’s fix his walk using the true value of pi through for the same number of digits as his original. A walk made from Shanks’ digits and one made from the corrected digits would initially follow the same instructions and then diverge."
         },
         {
           "type": "Walk",
@@ -777,7 +775,7 @@
         },
         {
           "type": "text",
-          "value": "Unsurprisingly, the walker still hasn't returned to origin. But 707 digits isn’t a very long walk."
+          "value": "Unsurprisingly, the walker still hasn’t returned to the origin. But 707 digits isn’t a very long walk."
         }
       ]
     },
@@ -857,7 +855,7 @@
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0&en;9 appears in ENIAC’s 2,037 pi decimal places.",
+            "caption": "How often each digit 0&n;9 appears in ENIAC’s 2,037 pi decimal places.",
             "values": [
               "184",
               "213",
@@ -878,7 +876,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> <img class=headshot src=assets/images/dshanks.jpg alt='Daniel Shanks portrait'>, that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>."
+          "value": "<span class=relative>In 1961, Shanks was back. <span class=dotted>Daniel Shanks</span> <img class=headshot src=assets/images/dshanks.jpg alt='Daniel Shanks portrait'>, that is. No known relationship to William, but you have to wonder if it wasn’t some sort of namesake destiny. Daniel Shanks and John Wrench calculated pi to a whopping 100,000 decimal places, all in less than <em>nine hours</em>.</span>"
         },
         {
           "type": "text",
@@ -887,7 +885,7 @@
         {
           "type": "Distribution",
           "value": {
-            "caption": "How often each digit 0&en;9 appears in 100,000 pi decimal places.",
+            "caption": "How often each digit 0&n;9 appears in 100,000 pi decimal places.",
             "values": [
               "9999",
               "10137",
@@ -904,7 +902,7 @@
         },
         {
           "type": "text",
-          "value": "Today, the most digits calculated of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <cite>Harry Potter and the Deathly Hallows</cite> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a wanting British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
+          "value": "Today, the the record for the most calculated digits of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <cite>Harry Potter and the Deathly Hallows</cite> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a questionable British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
         },
         {
           "type": "Records",
@@ -959,7 +957,7 @@
         },
         {
           "type": "text",
-          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya tuned into my livestream of pi digits being calculated in real time guiding a random walk. Their eyes staring unblinking at the screen, like a toddler watching <cite>Bluey</cite> in the cart in the grocery store."
+          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya tuned into my livestream of pi digits being calculated in real time to guide a random walk. Their eyes staring unblinking at the screen, like a toddler watching <cite>Bluey</cite> in a grocery store cart."
         },
         {
           "type": "Chat",
@@ -983,7 +981,7 @@
               },
               {
                 "name": "Pearson",
-                "text": "@venn its random walk now, you’re welcome."
+                "text": "@venn it’s random walk now, you’re welcome."
               },
               {
                 "name": "Pólya",
@@ -1038,7 +1036,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’s computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’s work, but he also spoke admiringly of ‘the power to calculate, and...the courage to face the labour.’”"
+          "value": "“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’ computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’ work, but he also spoke admiringly of ‘the power to calculate, and… the courage to face the labour.’”"
         },
         {
           "type": "text",
