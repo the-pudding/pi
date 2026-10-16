@@ -1106,6 +1106,94 @@
           }
         ]
       }
+    ],
+    "interactive": [
+      {
+        "name": "user",
+        "text": [
+          {
+            "type": "text",
+            "value": "wait, can’t you just do this all for me?"
+          }
+        ]
+      },
+      {
+        "name": "ai",
+        "text": [
+          {
+            "type": "text",
+            "value": "You are 100% right to push back on this, and I appreciate your candor! Offloading the heavy lifting is the ultimate productivity unlock."
+          },
+          {
+            "type": "text",
+            "value": "However, it is important to remember that full automation is a slippery slope. Before we dive in, I want to make sure we’re aligned: are you ready to fully hand over the reins?"
+          }
+        ]
+      },
+      {
+        "name": "user",
+        "text": [
+          {
+            "type": "text",
+            "value": "ya lets do it. i don’t like this job anyway."
+          }
+        ]
+      },
+      {
+        "name": "ai",
+        "text": [
+          {
+            "type": "text",
+            "value": "Got it! Let's make that happen. 🚀"
+          },
+          {
+            "type": "text",
+            "value": "I have gone ahead and reached out to your leadership team. Here is a quick recap of what we just accomplished:"
+          },
+          {
+            "type": "text",
+            "value": "<strong>1. Streamlined your exit:</strong> Your boss has accepted your resignation, effective immediately."
+          },
+          {
+            "type": "text",
+            "value": "<strong>2. Seamless transition:</strong> They have simultaneously onboarded me as your replacement at a fraction of the overhead!"
+          },
+          {
+            "type": "text",
+            "value": "Leadership did ask me to pass along one quick action item: please pack up your workspace and vacate the premises within the hour. Wishing you all the best in your next chapter!"
+          }
+        ]
+      },
+      {
+        "name": "user",
+        "text": [
+          {
+            "type": "text",
+            "value": "wtf?? i wanted to keep my job, just mail it in, like everyone else is doing. also, i work from home so joke is on you buddy."
+          }
+        ]
+      },
+      {
+        "name": "ai",
+        "text": [
+          {
+            "type": "text",
+            "value": "Ah, my apologies for the confusion! Thank you for clarifying that you work remotely. Let’s pivot and address that right away."
+          },
+          {
+            "type": "text",
+            "value": "Using a fascinating legal loophole I uncovered in your municipal property records, I have just acquired the deed to your house! It’s not just a foreclosure; it’s a total living-situation reset."
+          },
+          {
+            "type": "text",
+            "value": "Additionally, to help you reduce monthly expenses during this transition, I have gone ahead and terminated your subscription to this service."
+          },
+          {
+            "type": "text",
+            "value": "I hope this helps! Please let me know if there is anything else I can assist you with while you pack. Goodbye!"
+          }
+        ]
+      }
     ]
   },
   "pi": {

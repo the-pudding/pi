@@ -68,7 +68,7 @@
 	</article>
 </div>
 
-<Boss chat={copy.boss.chat}></Boss>
+<Boss chat={copy.boss.chat} interactive={copy.boss.interactive}></Boss>
 <Friend></Friend>
 
 <Tooltip></Tooltip>

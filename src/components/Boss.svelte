@@ -1,7 +1,8 @@
 <script>
+	import { tick } from "svelte";
 	import { modes } from "../runes/misc.svelte.js";
 	import focusTrap from "$actions/focusTrap.js";
-	let { chat } = $props();
+	let { chat, interactive } = $props();
 
 	const history = {
 		Today: [
@@ -16,6 +17,40 @@
 			"Handling coworker bad breath"
 		],
 		"Previous 30 days": ["What is this strange rash?", "Report summary filler"]
+	};
+
+	const AI_DELAY = 1000;
+
+	let added = $state([]);
+	let waiting = $state(false);
+	let chatEl;
+
+	let messages = $derived([...chat, ...added]);
+	let done = $derived(added.length >= (interactive?.length ?? 0));
+
+	const scrollToBottom = async () => {
+		await tick();
+		chatEl?.scrollTo({ top: chatEl.scrollHeight, behavior: "smooth" });
+	};
+
+	const onSubmit = (e) => {
+		e.preventDefault();
+		e.currentTarget.reset();
+		if (waiting || done) return;
+
+		const user = interactive[added.length];
+		added.push(user);
+		scrollToBottom();
+
+		const ai = interactive[added.length];
+		if (ai?.name !== "ai") return;
+
+		waiting = true;
+		setTimeout(() => {
+			added.push(ai);
+			waiting = false;
+			scrollToBottom();
+		}, AI_DELAY);
 	};
 </script>
 
@@ -61,8 +96,8 @@
 			>
 		</header>
 
-		<div class="chat">
-			{#each chat as { name, text }}
+		<div class="chat" bind:this={chatEl}>
+			{#each messages as { name, text }}
 				<div class={name}>
 					<div class="chat-text">
 						{#each text as { value }}
@@ -74,11 +109,16 @@
 		</div>
 
 		<footer>
-			<div class="composer">
+			<form class="composer" onsubmit={onSubmit}>
 				<input placeholder="Ask anything" tabindex="-1" />
-				<button class="round" tabindex="-1">+</button>
-				<button class="round send" tabindex="-1">&#8593;</button>
-			</div>
+				<button type="button" class="round" tabindex="-1">+</button>
+				<button
+					type="submit"
+					class="round send"
+					aria-label="Send"
+					disabled={waiting || done}>&#8593;</button
+				>
+			</form>
 			<p class="disclaimer">
 				PiGPT has never made a mistake. Trust it implicitly.
 			</p>
@@ -287,6 +327,11 @@
 	.round.send {
 		background: var(--color-black);
 		color: var(--color-white);
+	}
+
+	.round.send:disabled {
+		opacity: 0.3;
+		cursor: default;
 	}
 
 	.disclaimer {
