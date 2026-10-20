@@ -19,21 +19,20 @@
 
 <style>
 	.menu {
+		display: none;
 		position: fixed;
 		top: 0.5rem;
 		right: 0;
-		display: flex;
 		z-index: var(--z-overlay);
-	}
-
-	/* small viewports and high zoom: let the menu scroll away instead of covering text */
-	@media (max-width: 40rem), (max-height: 30rem) {
-		.menu {
-			position: absolute;
-		}
 	}
 
 	.menu-item {
 		margin-right: 0.5rem;
+	}
+
+	@media (min-width: 40rem) {
+		.menu {
+			display: flex;
+		}
 	}
 </style>

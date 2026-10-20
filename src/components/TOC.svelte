@@ -80,7 +80,7 @@
 	ol {
 		margin: 0.25rem 0 0 0;
 		padding: 0.75rem 1rem 0.75rem 2.5rem;
-		max-height: calc(100vh - 4rem);
+		max-height: calc(100vh - var(--spacing));
 		overflow-y: auto;
 		background: var(--color-bg);
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);

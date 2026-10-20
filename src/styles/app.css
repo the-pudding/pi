@@ -38,7 +38,9 @@
 
 	--color-mark: var(--color-yellow);
 
-	--fs-small: var(--18px);
+	--fs-small: var(--16px);
+
+	--spacing: 2rem;
 
 	/* "1" second duration */
 	--1s: 1ms;
@@ -125,6 +127,7 @@ span.relative {
 }
 
 img.headshot {
+	display: none;
 	position: absolute;
 	top: 0.85rem;
 	left: -2rem;	
@@ -160,4 +163,15 @@ blockquote img.headshot {
 	border-radius: 50%;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 	vertical-align: text-bottom;
+}
+
+@media (min-width: 40rem) {
+	body {
+		--spacing: 4rem;
+		--fs-small: var(--18px);
+	}
+
+	img.headshot {
+		display: block;
+	}
 }

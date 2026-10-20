@@ -80,13 +80,13 @@
 <style>
 	article {
 		padding: 0 1rem;
-		margin-top: 4rem;
+		margin-top: var(--spacing);
 	}
 
 	article :global(section .chunk) {
 		font-size: clamp(var(--20px), 3vw, var(--32px));
 		max-width: 25em;
-		margin: 2rem auto;
+		margin: 1rem auto;
 	}
 
 	article :global(section .chunk--figure) {
@@ -98,7 +98,17 @@
 	}
 
 	article :global(h2) {
-		font-size: clamp(var(--32px), 8vw, var(--128px));
-		margin: 8rem auto 0 auto;
+		font-size: clamp(var(--48px), 8vw, var(--128px));
+		margin: 4rem auto 0 auto;
+	}
+
+	@media (min-width: 40rem) {
+		article :global(section .chunk) {
+			margin: 2rem auto;
+		}
+
+		article :global(h2) {
+			margin: 8rem auto 0 auto;
+		}
 	}
 </style>

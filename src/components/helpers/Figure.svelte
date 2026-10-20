@@ -52,7 +52,7 @@
 
 <style>
 	figure {
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 		/* max-width: calc(25em * 1.67); */
 		max-width: 25em;
 	}

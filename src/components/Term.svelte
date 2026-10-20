@@ -42,7 +42,7 @@
 
 <style>
 	.c {
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 		position: relative;
 		overflow: hidden;
 	}
@@ -50,11 +50,10 @@
 	code {
 		display: block;
 		position: relative;
-		font-size: var(--20px);
+		font-size: var(--14px);
 		line-height: 1;
 		white-space: nowrap;
 		margin-bottom: 0.5rem;
-		text-align: center;
 	}
 
 	.correct {
@@ -65,5 +64,19 @@
 	}
 	.cross {
 		text-decoration: line-through;
+	}
+
+	@media (min-width: 30rem) {
+		code {
+			font-size: var(--16px);
+			text-align: center;
+		}
+	}
+
+	@media (min-width: 40rem) {
+		code {
+			font-size: var(--20px);
+			text-align: center;
+		}
 	}
 </style>

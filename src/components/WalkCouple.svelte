@@ -284,7 +284,7 @@
 <style>
 	.c {
 		width: 100%;
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 	}
 
 	.ui {

@@ -88,7 +88,7 @@
 
 <style>
 	div {
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 	}
 
 	.c {
@@ -113,7 +113,7 @@
 	code {
 		display: block;
 		position: relative;
-		font-size: var(--20px);
+		font-size: var(--16px);
 		line-height: 1;
 	}
 
@@ -141,6 +141,18 @@
 	@media (prefers-reduced-motion: reduce) {
 		.fallen .incorrect {
 			transition: none;
+		}
+	}
+
+	@media (min-width: 30rem) {
+		code {
+			font-size: var(--16px);
+		}
+	}
+
+	@media (min-width: 40rem) {
+		code {
+			font-size: var(--20px);
 		}
 	}
 </style>

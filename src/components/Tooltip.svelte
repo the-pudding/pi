@@ -130,13 +130,13 @@
 	.tip {
 		/* undo the UA popover centering so anchor positioning takes over */
 		inset: auto;
-		margin: 0.5rem 0;
+		margin: 0.5rem 1rem;
 		position-area: bottom;
 		position-try-fallbacks: flip-block, flip-inline;
 
 		width: max-content;
 		max-width: min(20rem, calc(100vw - 2rem));
-		padding: 0.75rem 1rem;
+		padding: 0.5rem 1rem;
 		border: 1px solid var(--color-fg);
 		background: var(--color-bg);
 		color: var(--color-fg);

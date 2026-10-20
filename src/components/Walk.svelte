@@ -684,18 +684,17 @@
 
 		<figcaption class="text-alt">
 			<p class="key">
-				The red segment is the latest step and the gray line is the path so
-				far.{#if showOrigin}
+				The red segment is the latest step and the gray line is the path so far.{#if showOrigin}
 					The red dot is the starting point.{/if}{#if divergePoint}
-					The faint gray line is the comparison walk, and the black dot is where the
-					two split.{/if}
+					The faint gray line is the comparison walk, and the black dot is where
+					the two split.{/if}
 			</p>
 			<details>
 				<summary>Text description</summary>
 				<p>
 					Each {isRandom ? "random digit" : "digit of pi"} sets a direction ({degrees.length}
-					directions: digits 0 to {degrees.length - 1}). Faded digits in the strip
-					above the drawing are skipped and don't move the line.
+					directions: digits 0 to {degrees.length - 1}). Faded digits in the
+					strip above the drawing are skipped and don't move the line.
 				</p>
 				{#if description}<p>{description}</p>{/if}
 				<p>
@@ -716,7 +715,7 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 	}
 
 	.canvas {

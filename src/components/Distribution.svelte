@@ -101,13 +101,12 @@
 
 <style>
 	.wrap {
-		margin: 5rem auto 4rem auto;
+		margin: calc(var(--spacing) + 1rem) auto var(--spacing) auto;
 	}
 
 	figcaption {
 		font-size: var(--14px);
 		padding: 8px 0;
-		text-align: center;
 	}
 
 	.c {
@@ -167,6 +166,7 @@
 		border-top: 3px dotted currentColor;
 		z-index: 2;
 		pointer-events: none;
+		display: none;
 	}
 
 	.ghost-value {
@@ -186,5 +186,11 @@
 
 	.high .bar {
 		background: var(--color-primary);
+	}
+
+	@media (min-width: 30rem) {
+		.ghost {
+			display: block;
+		}
 	}
 </style>

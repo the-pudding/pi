@@ -120,7 +120,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>The schoolmaster’s name was William Shanks</span><img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'>. He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
+          "value": "<span class=relative>The schoolmaster’s name was William Shanks. <img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'> He was 41. The book was about the most mouth-watering mathematical constant&mdash;the sweetened condensed milk of math&mdash;pi, calculated and written out to 607 decimal places. Further than anyone had written it before.</span>"
         },
         {
           "type": "Figure",

@@ -12,7 +12,7 @@
 
 <style>
 	.c {
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 	}
 
 	.diagram {

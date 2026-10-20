@@ -23,13 +23,13 @@
 		font-family: var(--font-mono);
 		background: var(--color-gray-100);
 		padding: 1rem;
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 	}
 
 	.message {
 		display: flex;
 		align-items: flex-start;
-		font-size: 0.75em;
+		font-size: var(--14px);
 		margin-bottom: 1.5rem;
 		line-height: 1.5;
 	}
@@ -61,5 +61,11 @@
 	.name {
 		line-height: 1;
 		margin-bottom: 0.5rem;
+	}
+
+	@media (min-width: 40rem) {
+		.message {
+			font-size: var(--16px);
+		}
 	}
 </style>

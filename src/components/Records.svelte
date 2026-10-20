@@ -137,7 +137,7 @@
 
 <style>
 	.wrap {
-		margin: 4rem auto;
+		margin: var(--spacing) auto;
 		max-width: 25em;
 	}
 
@@ -158,12 +158,13 @@
 
 	.cue {
 		margin: 0 0 0.5rem 0;
+		line-height: 1.25;
 	}
 
 	figcaption {
 		padding: 0 0 0.5rem 0;
 		font-weight: bold;
-		font-size: var(--24px);
+		font-size: var(--20px);
 	}
 
 	.control {
@@ -239,8 +240,7 @@
 		text-align: right;
 	}
 
-	/* thead th:last-of-type,
-	tbody td:last-of-type {
-		text-align: right;
-	} */
+	@media (min-width: 40rem) {
+		font-size: var(--24px);
+	}
 </style>
