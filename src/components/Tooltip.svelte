@@ -95,7 +95,7 @@
 	});
 </script>
 
-{#each people as { id, name, description } (id)}
+{#each people as { id, name, short, description } (id)}
 	<div {id} class="tip" popover>
 		<button
 			class="close"
@@ -103,7 +103,8 @@
 			popovertargetaction="hide"
 			aria-label="Close">×</button
 		>
-		<strong>{name}</strong>
+		<p><mark>{name}</mark></p>
+		<strong>{short}</strong>
 		<p>{description}</p>
 	</div>
 {/each}

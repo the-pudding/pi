@@ -1206,86 +1206,107 @@
   "tooltipData": [
     {
       "name": "Gail Borden",
+      "short": "Condensed milk inventor",
       "description": "The 19th-century inventor of condensed milk and the less successful meat biscuit, who had no known interest in pi."
     },
     {
       "name": "William Shanks",
+      "short": "Calculated pi by hand",
       "description": "A British schoolmaster and elite human Computer who spent years calculating digits of pi by hand, just to have something to do."
     },
     {
       "name": "Augustus De Morgan",
+      "short": "Noticed lack of 7s",
       "description": "A prominent British mathematician and the original pi digit skeptic, who noticed that Shanks’ numbers were light on 7s."
     },
     {
       "name": "John Venn",
+      "short": "Drew pi as a path",
       "description": "A British mathematician who, when not drawing overlapping circles, drew a path with pi’s digits to see what randomness looked like."
     },
     {
       "name": "Karl Pearson",
+      "short": "Named the random walk",
       "description": "An influential statistician who gave the “random walk” its name and invented the chi-square test."
     },
     {
       "name": "Lord Rayleigh",
+      "short": "Solved Pearson’s question",
       "description": "A Nobel Prize-winning physicist who politely \"well, actually’d\" Pearson by pointing out he had already solved Pearson’s random walk problem 25 years earlier using sound waves."
     },
     {
       "name": "George Pólya",
+      "short": "Proved walkers return home",
       "description": "A Hungarian mathematician who turned an awkward, repeated run-in with a student in the woods into a proof about walkers returning home."
     },
     {
       "name": "Shizuo Kakutani",
+      "short": "Drunk bird quote",
       "description": "A Japanese-American mathematician who famously distilled Pólya’s complex 3D math into a catchy proverb."
     },
     {
       "name": "John von Neumann",
+      "short": "Put pi on the ENIAC",
       "description": "A legendary polymath and computing pioneer who used the ENIAC to obliterate the pi record to see if the digits still appeared random."
     },
     {
       "name": "Daniel Shanks",
+      "short": "The other Shanks",
       "description": "An American mathematician (no relation to William) who used an IBM computer in 1961 to speed-run pi to 100,000 digits in under nine hours."
     },
     {
       "name": "Erwin Engert",
+      "short": "Modern-day hand calculator",
       "description": "A modern-day number enthusiast and Shanks superfan who calculated 100 digits of pi by hand just to see what the poor guy went through."
     },
     {
       "name": "D. F. Ferguson",
+      "short": "Found Shanks’ error",
       "description": "The British mathematician who upended William Shanks’ work in 1946 by discovering that his last 180 digits of pi were completely wrong."
     },
     {
       "name": "Dr. Rutherford",
+      "short": "Pre-Shanks record holder",
       "description": "A mathematician and the previous pi record-holder (at 440 digits), whose work Shanks built upon."
     },
     {
       "name": "Brian Hayes",
+      "short": "Traced Shanks’ error",
       "description": "A science writer turned mathematical Cold Case detective who reverse-engineered Shanks’ scratch work to find the exact spots where he made errors."
     },
     {
       "name": "Kay McNulty",
+      "short": "ENIAC programmer",
       "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
     },
     {
       "name": "Betty Jennings",
+      "short": "ENIAC programmer",
       "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
     },
     {
       "name": "Betty Snyder",
+      "short": "ENIAC programmer",
       "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
     },
     {
       "name": "Marlyn Wescoff",
+      "short": "ENIAC programmer",
       "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
     },
     {
       "name": "Fran Bilas",
+      "short": "ENIAC programmer",
       "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
     },
     {
       "name": "Ruth Lichterman",
+      "short": "ENIAC programmer",
       "description": "One of the six pioneering programmers who figured out how to operate the classified ENIAC without even being allowed in the same room as it."
     },
     {
       "name": "John Wrench",
+      "short": "Daniel Shanks’ partner",
       "description": "An American mathematician who partnered with Daniel Shanks in 1961 to speed-run pi to 100,000 digits in under nine hours."
     }
   ]
