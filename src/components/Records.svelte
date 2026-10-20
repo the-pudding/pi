@@ -241,6 +241,8 @@
 	}
 
 	@media (min-width: 40rem) {
-		font-size: var(--24px);
+		figcaption {
+			font-size: var(--24px);
+		}
 	}
 </style>
