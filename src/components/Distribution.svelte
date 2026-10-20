@@ -4,7 +4,7 @@
 	import computePi from "$utils/computePi.js";
 
 	const pi = getContext("pi");
-	let { source, caption, highlight, values } = $props();
+	let { source, caption, highlight, ghost, values } = $props();
 
 	let piDigits = $derived(source ? pi[source].split("").map(Number) : null);
 
@@ -26,6 +26,15 @@
 
 	let fontSize = $derived(0.75 - (`${maxCount}`.length - 2) * 0.1);
 
+	let ghostCount = $derived(
+		ghost === undefined || ghost === null || ghost === "" || isNaN(+ghost)
+			? null
+			: +ghost
+	);
+	let ghostHeight = $derived(
+		ghostCount === null ? null : `${Math.min(100, scaleCount(ghostCount))}%`
+	);
+
 	const uid = $props.id();
 </script>
 
@@ -41,6 +50,11 @@
 							>{format(",")(count)}</span
 						>
 					</span>
+					{#if number === 7 && ghostHeight}
+						<span class="ghost" style:bottom={ghostHeight} aria-hidden="true">
+							<span class="ghost-value">{format(",")(ghostCount)}</span>
+						</span>
+					{/if}
 				</div>
 				<span class="label">
 					{number}
@@ -62,7 +76,12 @@
 				<tr>
 					<th scope="row"
 						>{number}{#if number === 7}
-							<span class="sr-only"> (highlighted in the chart)</span>{/if}</th
+							<span class="sr-only">
+								(highlighted in the chart)</span
+							>{/if}{#if number === 7 && ghostCount !== null}
+							<span class="sr-only">
+								(the dotted line marks {format(",")(ghostCount)})</span
+							>{/if}</th
 					>
 					<td>{count}</td>
 				</tr>
@@ -72,6 +91,11 @@
 
 	<figcaption id="dist-caption-{uid}">
 		{@html caption}
+		{#if ghostCount !== null}
+			<span class="ghost-key"
+				>Dotted line marks the comparison count of {format(",")(ghostCount)} for 7.</span
+			>
+		{/if}
 	</figcaption>
 </figure>
 
@@ -110,6 +134,7 @@
 		flex: 1;
 		min-height: 0;
 		width: 100%;
+		position: relative;
 	}
 
 	.bar {
@@ -133,6 +158,30 @@
 
 	.label {
 		margin-top: 8px;
+	}
+
+	.ghost {
+		position: absolute;
+		left: 0;
+		right: 0;
+		border-top: 3px dotted currentColor;
+		z-index: 2;
+		pointer-events: none;
+	}
+
+	.ghost-value {
+		position: absolute;
+		right: 0.5rem;
+		top: 0.25rem;
+		font-size: var(--12px);
+		line-height: 1;
+		background: var(--color-bg);
+		color: var(--color-fg);
+		padding: 0.25em;
+	}
+
+	.ghost-key {
+		display: block;
 	}
 
 	.high .bar {

@@ -177,7 +177,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“be productive of anything in the shape of pecuniary recompense at all adequate to the labour of such lengthy computations.”"
+          "value": "<img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'> “be productive of anything in the shape of pecuniary recompense at all adequate to the labour of such lengthy computations.”"
         },
         {
           "type": "text",
@@ -189,7 +189,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“should not subject him either to great tension of thought, or to consult books.”"
+          "value": "<img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'> “should not subject him either to great tension of thought, or to consult books.”"
         },
         {
           "type": "text",
@@ -307,7 +307,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“The result seems to me to furnish a very fair graphical indication of randomness.”"
+          "value": "<img class=headshot src=assets/images/venn.jpg alt='John Venn portrait'> “The result seems to me to furnish a very fair graphical indication of randomness.”"
         },
         {
           "type": "text",
@@ -379,7 +379,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“The lesson of Lord Rayleigh’s solution is that in open country the most probable place to find a drunken man who is at all capable of keeping on his feet is somewhere near his starting point!”"
+          "value": "<img class=headshot src=assets/images/pearson.jpg alt='Karl Pearson portrait'> “The lesson of Lord Rayleigh’s solution is that in open country the most probable place to find a drunken man who is at all capable of keeping on his feet is somewhere near his starting point!”"
         },
         {
           "type": "text",
@@ -449,7 +449,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“A drunk man will find his way home, but a drunk bird may get lost forever.”"
+          "value": "<img class=headshot src=assets/images/kakutani.jpg alt='Shizuo Kakutani portrait'> “A drunk man will find his way home, but a drunk bird may get lost forever.”"
         },
         {
           "type": "text",
@@ -543,7 +543,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“In the following pages, the ratio of the circumference of a circle to its diameter, is determined to the great extent of 527 places of decimals.”"
+          "value": "<img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'> “In the following pages, the ratio of the circumference of a circle to its diameter, is determined to the great extent of 527 places of decimals.”"
         },
         {
           "type": "text",
@@ -555,7 +555,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“so the accuracy is ensured at least to that extent; and it is confidently hoped no error has crept into the remaining 86 places.”"
+          "value": "<img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'> “so the accuracy is ensured at least to that extent; and it is confidently hoped no error has crept into the remaining 86 places.”"
         },
         {
           "type": "text",
@@ -682,7 +682,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“At all events, from some strange cause or accident (perhaps from being overworked) the addition of 128 was very soon afterwards made… Hence arose the double error, which remained, strange to say, undetected for upwards of twenty years! This mistake, however, <em>from its nature, in no wise affects the accuracy of the other figures</em>.”"
+          "value": "<img class=headshot src=assets/images/shanks.jpg alt='William Shanks portrait'> “At all events, from some strange cause or accident (perhaps from being overworked) the addition of 128 was very soon afterwards made… Hence arose the double error, which remained, strange to say, undetected for upwards of twenty years! This mistake, however, <em>from its nature, in no wise affects the accuracy of the other figures</em>.”"
         },
         {
           "type": "text",
@@ -710,6 +710,7 @@
           "value": {
             "caption": "How often each digit 0&ndash;9 appears in the first 607 correct pi decimal places.",
             "highlight": "7",
+            "ghost": "44",
             "values": [
               "57",
               "68",
@@ -830,7 +831,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“ENIAC calculated the trajectory faster than it took the bullet to travel.”"
+          "value": "<img class=headshot src=assets/images/jennings.jpg alt='Betty Jennings portrait'> “ENIAC calculated the trajectory faster than it took the bullet to travel.”"
         },
         {
           "type": "text",
@@ -842,7 +843,7 @@
         },
         {
           "type": "blockquote",
-          "value": "“obtaining a statistical measure of the randomness of the distribution of the digits.”"
+          "value": "<img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> “obtaining a statistical measure of the randomness of the distribution of the digits.”"
         },
         {
           "type": "text",

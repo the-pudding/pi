@@ -142,3 +142,22 @@ html.no-scroll {
 	overflow: hidden;
 	height: 100vh;
 }
+
+blockquote {
+	position: relative;
+}
+
+blockquote img.headshot {
+	display: inline-block;
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: none;
+	width: 4rem;
+	aspect-ratio: 1;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 50%;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+	vertical-align: text-bottom;
+}

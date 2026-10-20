@@ -48,7 +48,7 @@
 		// if you find it, wrap it in a button.person (every mention)
 		const buttons = [];
 
-		document.querySelectorAll(".chunk p").forEach((el) => {
+		document.querySelectorAll(".chunk p, .chunk--chat .name").forEach((el) => {
 			const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
 				acceptNode: (n) =>
 					n.parentElement.closest("a, button")
