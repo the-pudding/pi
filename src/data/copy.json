@@ -408,7 +408,7 @@
         },
         {
           "type": "text",
-          "value": "Instead of confronting the problem head-on, Pólya retreated to an abstract and hypothetical world, as one does. He reduced the problem to a two-dimensional lattice to find an answer to his <em>definitely-not-snooping</em> incident."
+          "value": "Instead of confronting the problem head-on, Pólya retreated to an abstract and hypothetical world, as one does. He reduced the problem to a two-dimensional grid and used a simplified four-point compass to find an answer to his <em>definitely-not-snooping</em> incident."
         },
         {
           "type": "text",
@@ -633,7 +633,7 @@
         },
         {
           "type": "text",
-          "value": "For those of you still paying attention, you may have noticed that the typo happened at the 531st decimal place, but Shanks’ final value broke at the 528th. Because Machin’s formula multiplied the arctan series by 16, it magnified the error, corrupting the final value of pi a few places earlier."
+          "value": "If you are still paying attention, you may have noticed that the typo happened at the 531st decimal place, but Shanks’ final value of pi broke earlier, at the 528th. Because Machin’s formula multiplied the erroneous series by 16, it magnified the error and caused a chain reaction of carried digits that move caused the mistake to appear three places earlier."
         },
         {
           "type": "text",
