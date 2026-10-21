@@ -19,6 +19,7 @@
 	import Chat from "$components/Chat.svelte";
 	import Tooltip from "$components/Tooltip.svelte";
 	import TOC from "$components/TOC.svelte";
+	import References from "$components/References.svelte";
 	import { modes } from "$runes/misc.svelte.js";
 
 	const copy = getContext("copy");
@@ -65,6 +66,7 @@
 
 	<article>
 		<CMS {body} {components}></CMS>
+		<References references={copy.references}></References>
 	</article>
 </div>
 
@@ -99,6 +101,11 @@
 
 	article :global(h2) {
 		font-size: clamp(var(--48px), 8vw, var(--128px));
+		margin: 4rem auto 0 auto;
+	}
+
+	article :global(h3) {
+		font-size: clamp(var(--32px), 8vw, var(--64px));
 		margin: 4rem auto 0 auto;
 	}
 

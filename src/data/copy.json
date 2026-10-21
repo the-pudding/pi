@@ -1310,5 +1310,76 @@
       "short": "Daniel Shanks’ partner",
       "description": "An American mathematician who partnered with Daniel Shanks in 1961 to speed-run pi to 100,000 digits in under nine hours."
     }
+  ],
+  "references": [
+    {
+      "title": "Contributions to mathematics, comprising chiefly the rectification of the circle to 607 places of decimals",
+      "link": "https://www.americanscientist.org/article/pencil-paper-and-pi",
+      "tite": "Pencil, Paper, and Pi"
+    },
+    {
+      "title": "Calculating pi by hand for 100 digits",
+      "link": "https://engert.us/erwin/miscellaneous/Calculating%20pi%20by%20hand%20for%20100%20digits.pdf"
+    },
+    {
+      "title": "William Shanks 707 digits",
+      "link": "https://engert.us/erwin/miscellaneous/William%20Shanks%20707%20digits.pdf"
+    },
+    {
+      "title": "William Shanks term by term work",
+      "link": "https://engert.us/erwin/miscellaneous/PI.pdf"
+    },
+    {
+      "title": "An ENIAC Determination of π and e to more than 2000 Decimal Places",
+      "link": "https://www.ams.org/journals/mcom/1950-04-029/S0025-5718-1950-0037597-6/S0025-5718-1950-0037597-6.pdf"
+    },
+    {
+      "title": "The Logic of Chance: An Essay on the Foundations and Province of the Theory of Probability, with Especial Reference to its Logical Bearings and its Application to Moral and Social Science and to Statistics",
+      "link": "https://archive.org/details/logicofchance029416mbp/page/n4/mode/1up"
+    },
+    {
+      "title": "Nature, 157",
+      "link": "https://www.mindat.org/reference.php?id=2291418"
+    },
+    {
+      "title": "Pi Day is upon us again and we still do not know if Pi is normal",
+      "link": "https://www.davidhbailey.com/dhbpapers/pi-monthly.pdf"
+    },
+    {
+      "title": "Walking on real numbers",
+      "link": "https://www.davidhbailey.com/dhbpapers/tools-walk.pdf"
+    },
+    {
+      "title": "Mathematische Annalen",
+      "link": "https://gdz.sub.uni-goettingen.de/id/PPN235181684_0084?tify=%7B%22pages%22%3A%5B152%2C153%5D%2C%22view%22%3A%22export%22%7D"
+    },
+    {
+      "title": "The First Random Walk: A Note on John Venn’s Graph",
+      "link": "https://link.springer.com/article/10.1007/s00283-020-09984-y"
+    },
+    {
+      "title": "On Certain Discrepancies in the Published Numerical Value of π",
+      "link": "https://www.jstor.org/stable/112803"
+    },
+    {
+      "title": "Chronology of computation of pi",
+      "link": "https://en.wikipedia.org/wiki/Chronology_of_computation_of_pi"
+    },
+    {
+      "title": "ENIAC",
+      "link": "https://en.wikipedia.org/wiki/ENIAC"
+    },
+    {
+      "title": "The Programming Pioneers of ENIAC",
+      "link": "https://drive.google.com/file/d/11_csuKxT-rprQO1CvlGEP0pBl1-1TcRT/view"
+    },
+    {
+      "title": "William Shanks",
+      "link": "https://mathshistory.st-andrews.ac.uk/Biographies/Shanks/"
+    },
+    {
+      "title": "A Budget of Paradoxes, Volume II",
+      "link": "https://www.gutenberg.org/cache/epub/26408/pg26408-images.html"
+    }
   ]
 }
