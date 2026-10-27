@@ -110,7 +110,8 @@
 	}
 
 	@media (min-width: 40rem) {
-		article :global(section .chunk) {
+		article :global(section .chunk),
+		:global(details p) {
 			margin: 2rem auto;
 		}
 

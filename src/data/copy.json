@@ -9,7 +9,7 @@
       "content": [
         {
           "type": "text",
-          "value": "This story has two main characters. The first is pi (a.k.a. π)."
+          "value": "This story has two main characters. The first is pi."
         },
         {
           "type": "Unroll",
@@ -60,13 +60,6 @@
           "value": {
             "title": "The Afterlife of Pi"
           }
-        },
-        {
-          "type": "Warning",
-          "value": {
-            "text": "The following is a 4,000-word essay* on math and history. You are already 2% of the way there! It contains material that may educate and entertain. Reader discretion advised.",
-            "note": "Don’t worry, there are pictures and graphics too."
-          }
         }
       ]
     },
@@ -105,11 +98,11 @@
         },
         {
           "type": "text",
-          "value": "The same man who, three years prior, introduced the world to the meat biscuit, an invention that proved to be ahead of its time. I digress&mdash;Gail Borden is not our pi-obsessed man."
+          "value": "But I digress&mdash;Gail Borden is not our pi-obsessed man."
         },
         {
           "type": "text",
-          "value": "But at the <em>exact same time</em> over in England, in the small coal-mining town of Houghton-le-Spring, a schoolmaster sent a book to the printer. Back then photos were rare, but I found this impressive ox from the town."
+          "value": "At the <em>exact same time</em> over in England, in the small coal-mining town of Houghton-le-Spring, a schoolmaster sent a book to the printer. Back then photos were rare, but I found this impressive ox from the town."
         },
         {
           "type": "Figure",
@@ -136,7 +129,7 @@
         },
         {
           "type": "text",
-          "value": "He spent nearly <em>two and a half years</em> producing a number that resulted in 607 characters, just five times longer than the letters in this sentence."
+          "value": "He spent nearly <em>two and a half years</em> producing a number that resulted in 607 characters."
         },
         {
           "type": "Specimen",
@@ -146,7 +139,7 @@
         },
         {
           "type": "text",
-          "value": "Like me, you might be wondering what that felt like, to spend a day, or more, resulting in a measly single new digit. So I sharpened my pencil. I opened up Machin’s formula, the gold standard to calculate pi accurately during Shanks’ day. It looked simple enough:"
+          "value": "Like me, you might be wondering what that felt like, to spend a day, or more, resulting in a single new digit. So I sharpened my pencil. I opened up Machin’s formula, the gold standard to calculate pi accurately during Shanks’ day. It looked simple enough:"
         },
         {
           "type": "text",
@@ -181,10 +174,6 @@
         },
         {
           "type": "text",
-          "value": "A fancy way of saying it wasn’t about the Benjamins. They didn’t exist yet, and this was England after all."
-        },
-        {
-          "type": "text",
           "value": "If it wasn’t for the money or the fame, why do it at all? He had no need for that precise a value of pi. No one did. His motivation was simple and relatable: he wanted to make something original and fill his free time. That something:"
         },
         {
@@ -193,7 +182,7 @@
         },
         {
           "type": "text",
-          "value": "We have TikTok. Shanks had the manual computation of the digits of pi."
+          "value": "What do you do at the end of a long day? Shanks manually computed the digits of pi."
         },
         {
           "type": "text",
@@ -260,7 +249,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Counting the digits was one way to look for a pattern. Someone else thought to draw them. You know him well. The man, the myth, the legend, John Venn. <img class=headshot src=assets/images/venn.jpg alt='John Venn portrait'> Yes, that Venn. I can hear your fawning from the future.</span>"
+          "value": "<span class=relative>Counting the digits was one way to look for a pattern. Someone else thought to draw them. The man, the myth, the legend, John Venn. <img class=headshot src=assets/images/venn.jpg alt='John Venn portrait'> I can hear your fawning from the future.</span>"
         },
         {
           "type": "VennDiagram",
@@ -338,7 +327,7 @@
         },
         {
           "type": "text",
-          "value": "While the result is quite a bit different, they both look random to me. This wandering pen thing had legs."
+          "value": "While the result is quite a bit different, they both look random to me."
         }
       ]
     },
@@ -351,7 +340,7 @@
         },
         {
           "type": "text",
-          "value": "<span class=relative>Speaking of legs, a drunken man has two (this will make sense soon). We will briefly wander away from pi and continue Venn’s thread. In 1905, Karl Pearson <img class=headshot src=assets/images/pearson.jpg alt='Karl Pearson portrait'> threw down a challenge he dubbed “the problem of the random walk.”</span>"
+          "value": "<span class=relative>We will briefly wander away from pi and continue Venn’s thread. In 1905, Karl Pearson <img class=headshot src=assets/images/pearson.jpg alt='Karl Pearson portrait'> threw down a challenge he dubbed “the problem of the random walk.”</span>"
         },
         {
           "type": "Figure",
@@ -478,7 +467,7 @@
         },
         {
           "type": "text",
-          "value": "Back to pi, for real (math pun). Shanks’ calculation had become authoritative through reuse and time. No one dared match his Herculean effort to go further."
+          "value": "Back to pi, for <em>real</em>. Shanks’ calculation had become authoritative through reuse and time. No one dared match his Herculean effort to go further."
         },
         {
           "type": "text",
@@ -531,7 +520,7 @@
         },
         {
           "type": "text",
-          "value": "When I first read that I felt for the guy. But who doesn’t make mistakes? The other day, I put the milk back in the cupboard instead of the fridge. Like Shanks’ pi, the last quarter was spoiled. But Shanks never knew. Maybe that was better."
+          "value": "When I first read that I felt for the guy. But Shanks never knew of his mistake. Maybe that was better."
         },
         {
           "type": "text",
@@ -551,7 +540,7 @@
         },
         {
           "type": "text",
-          "value": "The second fact was his misplaced spidey-sense. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 440 decimal places. Shanks wrote:"
+          "value": "The second fact was his misplaced intuition. Dr. Rutherford, the previous record holder, separately calculated and confirmed pi up to 440 decimal places. Shanks wrote:"
         },
         {
           "type": "blockquote",
@@ -576,7 +565,7 @@
         },
         {
           "type": "text",
-          "value": "<strong>The short version:</strong> Shanks forgot to write a zero. Whoopsie! <a href=#part8>Skip ahead</a>."
+          "value": "<strong>The short version:</strong> Shanks forgot to write a zero. Oops! <a href=#part8>Skip ahead</a>."
         },
         {
           "type": "text",
@@ -633,7 +622,7 @@
         },
         {
           "type": "text",
-          "value": "If you are still paying attention, you may have noticed that the typo happened at the 531st decimal place, but Shanks’ final value of pi broke earlier, at the 528th. Because Machin’s formula multiplied the erroneous series by 16, it magnified the error and caused a chain reaction of carried digits that move caused the mistake to appear three places earlier."
+          "value": "If you are still paying attention, you may have noticed that the typo happened at the 531st decimal place, but Shanks’ final value of pi broke earlier, at the 528th. Because Machin’s formula multiplied the erroneous series by 16, it magnified the error and caused a chain reaction of carried digits that caused the mistake to appear three places earlier."
         },
         {
           "type": "text",
@@ -699,11 +688,11 @@
         },
         {
           "type": "text",
-          "value": "Before we speed into the future, let’s do some revisionist history."
+          "value": "Before we speed into the future, let’s quickly revisit the past."
         },
         {
           "type": "text",
-          "value": "Starting with the OG skeptic, De Morgan. He counted 44 sevens in the original 607 decimal places. The true version has 50 sevens. Part of the shortfall De Morgan noticed was not a property of pi at all; it was the error."
+          "value": "The OG skeptic, De Morgan, counted 44 sevens in the original 607 decimal places. The true version has 50 sevens. Part of the shortfall De Morgan noticed was not a property of pi at all; it was the error."
         },
         {
           "type": "Distribution",
@@ -727,23 +716,36 @@
         },
         {
           "type": "text",
-          "value": "Remember Pearson? Recap: he coined the term “random walk.” He and De Morgan coincidentally both taught at University College London&mdash;different generations. They both were looking to answer the same question: how do you test probability without a machine?"
+          "value": "Statistically speaking, the quantity of 7s is nothing out of the ordinary."
         },
         {
-          "type": "text",
-          "value": "While De Morgan simply counted the distribution, Pearson made the now-famous chi-square test to statistically critique distributions."
-        },
-        {
-          "type": "text",
-          "value": "So Pearson curiously gave us the term <em>and</em> a way to determine if pi’s digits were distributed in a true random fashion."
-        },
-        {
-          "type": "text",
-          "value": "But he never used his test on Shanks’ digits, so I did, on both versions. The test produces a p-value which answers one question: if the digits were truly random, how often would they come out this uneven, or more? A small number (e.g., under 0.05) raises a flag. Anything bigger means chance could easily explain it."
-        },
-        {
-          "type": "text",
-          "value": "Shanks’ 607 digits have a p-value of 0.61. The correct 607 score 0.92. Neither is suspicious. (Because although the 7s are short in both versions, the test weighs all ten digits at once, and the other nine are close enough to even that the 7s get drowned out.)"
+          "type": "details",
+          "value": {
+            "summary": "Why the 7s count was normal, even with the error.",
+            "name": "sevens-count",
+            "content": [
+              {
+                "type": "text",
+                "value": "Remember Pearson? Recap: he coined the term “random walk.” He and De Morgan coincidentally both taught at University College London&mdash;different generations. They both were looking to answer the same question: how do you test probability without a machine?"
+              },
+              {
+                "type": "text",
+                "value": "While De Morgan simply counted the distribution, Pearson made the now-famous chi-square test to statistically critique distributions."
+              },
+              {
+                "type": "text",
+                "value": "So Pearson curiously gave us the term <em>and</em> a way to determine if pi’s digits were distributed in a true random fashion."
+              },
+              {
+                "type": "text",
+                "value": "But he never used his test on Shanks’ digits, so I did, on both versions. The test produces a p-value which answers one question: if the digits were truly random, how often would they come out this uneven, or more? A small number (e.g., under 0.05) raises a flag. Anything bigger means chance could easily explain it."
+              },
+              {
+                "type": "text",
+                "value": "Shanks’ 607 digits have a p-value of 0.61. The correct 607 score 0.92. Neither is suspicious. (Because although the 7s are short in both versions, the test weighs all ten digits at once, and the other nine are close enough to even that the 7s get drowned out.)"
+              }
+            ]
+          }
         },
         {
           "type": "text",
@@ -835,11 +837,11 @@
         },
         {
           "type": "text",
-          "value": "The six women weren’t invited to the celebration dinner, and none were named in the press coverage."
+          "value": "The six pioneering programmers weren’t invited to the celebration dinner, and none were named in the press coverage."
         },
         {
           "type": "text",
-          "value": "<span class=relative>Back to pi. The same year the museum fixed the digits, Professor John von Neumann, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, wanted to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
+          "value": "<span class=relative>The same year the museum fixed the digits, Professor John von Neumann, <img class=headshot src=assets/images/neumann.jpg alt='John von Neumann portrait'> like his mathematical forefathers, wanted to see if ENIAC could crank out more decimal places of pi, for the purpose of:</span>"
         },
         {
           "type": "blockquote",
@@ -903,7 +905,7 @@
         },
         {
           "type": "text",
-          "value": "Today, the record for the most calculated digits of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <cite>Harry Potter and the Deathly Hallows</cite> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm and a questionable British accent. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
+          "value": "Today, the record for the most calculated digits of pi is 314,000,000,000,000, set in 2025, though the attempt took a Shanks-esque 110 days. Imagine for a moment you are holding <cite>Harry Potter and the Deathly Hallows</cite> (759 pages). <em>“Deletrius Aparecium!”</em> you shout with enthusiasm. Every single letter in that book vanishes, then turns into a digit of pi. Now imagine that every single person in the US&mdash;babies included&mdash;is holding their own copy, with their own unique digits. That is 314 trillion, give or take a few."
         },
         {
           "type": "Records",
@@ -911,11 +913,7 @@
         },
         {
           "type": "text",
-          "value": "The amount of compute has exploded so much that I had to chart this with a y-axis on a log scale just to make it readable. Even after my meticulously calculated (and magically accurate) Harry Potter comparison, the magnitude is hard to comprehend."
-        },
-        {
-          "type": "text",
-          "value": "So here is another comparison: If I were to render the chart with a linear scale&mdash;that is, a 1:1 scale of digits to pixels&mdash;it would take you about <em>9,950 years of non-stop scrolling on your phone</em> to get from Shanks’ 1853 digits to 2025. You could probably cut it to ~500 years if you used a desktop mouse wheel though."
+          "value": "The amount of compute has exploded so much that I had to chart this with a y-axis on a log scale just to make it readable. Here is another comparison: If I were to render the chart with a linear scale&mdash;that is, a 1:1 scale of digits to pixels&mdash;it would take you about <em>9,950 years of non-stop scrolling on your phone</em> to get from Shanks’ 1853 digits to 2025."
         }
       ]
     },
@@ -958,7 +956,15 @@
         },
         {
           "type": "text",
-          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya tuned into my livestream of pi digits being calculated in real time to guide a random walk. Their eyes staring unblinking at the screen, like a toddler watching <cite>Bluey</cite> in a grocery store cart."
+          "value": "Shanks died in 1882, unaware of Venn’s path, the museum’s celebration, and the error and its correction. But as our forensic investigator Hayes aptly put it:"
+        },
+        {
+          "type": "blockquote",
+          "value": "“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’ computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’ work, but he also spoke admiringly of ‘the power to calculate, and… the courage to face the labour.’”"
+        },
+        {
+          "type": "text",
+          "value": "I can only imagine Shanks, De Morgan, Venn, Pearson, and Pólya tuned into my livestream of pi digits being calculated in real time to guide a random walk."
         },
         {
           "type": "Chat",
@@ -1026,26 +1032,6 @@
               }
             ]
           }
-        },
-        {
-          "type": "text",
-          "value": "Shanks died in 1882, unaware of Venn’s path, the museum’s celebration, and the error and its correction."
-        },
-        {
-          "type": "text",
-          "value": "But as our forensic investigator Hayes aptly put it:"
-        },
-        {
-          "type": "blockquote",
-          "value": "“Stories about Shanks tend to focus on the mistakes. We look back with pity and horror on all those pages of meticulous arithmetic rendered worthless by a slip of the pencil. But I would argue that even with the errors, Shanks’ computation of pi was an impressive endeavor. His 527 correct digits were not bettered for almost a century. Augustus De Morgan, one of the leading mathematicians of the era, had his doubts about Shanks’ work, but he also spoke admiringly of ‘the power to calculate, and… the courage to face the labour.’”"
-        },
-        {
-          "type": "text",
-          "value": "Shanks directly and indirectly created paths for others to explore and build upon in spite of his errors, simply because he wanted something to do."
-        },
-        {
-          "type": "text",
-          "value": "Thanks to Shanks. To power and courage."
         }
       ]
     }
