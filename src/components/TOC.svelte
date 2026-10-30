@@ -75,10 +75,6 @@
 		}
 	}
 
-	button {
-		min-height: 24px;
-	}
-
 	ol {
 		margin: 0.25rem 0 0 0;
 		padding: 0.75rem 1rem 0.75rem 2.5rem;
