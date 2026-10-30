@@ -165,6 +165,10 @@ blockquote img.headshot {
 	vertical-align: text-bottom;
 }
 
+details {
+	cursor: pointer;
+}
+
 @media (min-width: 40rem) {
 	body {
 		--spacing: 4rem;

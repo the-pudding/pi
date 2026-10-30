@@ -477,18 +477,20 @@
         {
           "type": "Figure",
           "value": {
-            "src": "assets/images/placeholder1.jpg",
+            "src": "assets/images/room1.jpg",
             "alt": "Tk",
-            "figcaption": "Lo-res placeholder 1",
+            "figcaption": "Salle pi du palais de la découverte, 1937 ©Universcience",
+            "detailcaption": "Overview of the pi room, formerly the round room (room 32) of the Palais de la Découverte, in 1937. This room is surmounted by a hemispherical vault. On the walls, a blackboard reproduces a mathematics lesson, a short history of science, surmounted by a banner inscribed with the names of some famous mathematicians. Above is a large frieze formed of the first known decimal places of pi, as calculated by the Englishman William Shanks in 1873. (These decimal places would be modified in 1948). In the center, a lighting system illuminates the spherical vault and produces rotating light displays. (Auto-translated caption from French).",
             "className": "small"
           }
         },
         {
           "type": "Figure",
           "value": {
-            "src": "assets/images/placeholder2.jpg",
+            "src": "assets/images/room2.jpg",
             "alt": "Tk",
-            "figcaption": "Lo-res placeholder 2",
+            "figcaption": "Démonstration en salle pi, 1937 ©Universcience / Pytlik",
+            "detailcaption": "A demonstrator from the mathematics section presents and explains the number Pi using the frieze displayed in the round room (room 32) at the Palais de la Découverte in 1937. An excerpt from the 1937 visitor's catalog reads: “The frieze, which runs across four rows, shows the 707 known decimal places of Pi, as calculated by the Englishman William Shanks in 1873. Since these calculations were not fully verified by other mathematicians, it is naturally not possible to guarantee their accuracy. One mathematician noted that the digit 7 appears only 52 times in these decimal places, while each of the others appears at least 65 times.” These decimal places would be modified in 1948. (Auto-translated caption from French).",
             "className": "small"
           }
         },
@@ -792,14 +794,15 @@
         },
         {
           "type": "text",
-          "value": "Let’s keep moving forward. In 1949, the museum’s ceiling was corrected with the true value of pi."
+          "value": "Let’s keep moving forward. In 1948, the museum’s ceiling was corrected with the true value of pi."
         },
         {
           "type": "Figure",
           "value": {
-            "src": "assets/images/placeholder3.jpg",
+            "src": "assets/images/room3.jpg",
             "alt": "Tk",
-            "figcaption": "Lo-res placeholder",
+            "figcaption": "Salle pi, ©Universcience",
+            "detailcaption": "View of the pi room at the Palais de la Découverte. The erroneous decimal places, calculated by Shanks in 1874, have been corrected here since 1949. (Auto-translated caption from French).",
             "className": "small"
           }
         },

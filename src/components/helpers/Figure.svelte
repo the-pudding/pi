@@ -1,7 +1,14 @@
 <script>
 	import inView from "$actions/inView.js";
 	// description: optional longer text alternative (e.g. for video)
-	let { src, alt, figcaption, className = "", description = "" } = $props();
+	let {
+		src,
+		alt,
+		figcaption,
+		detailcaption,
+		className = "",
+		description = ""
+	} = $props();
 
 	let isVideo = $derived(src.endsWith(".mp4"));
 	let videoElement = $state(null);
@@ -48,6 +55,13 @@
 			{@html figcaption}
 		</figcaption>
 	{/if}
+
+	{#if detailcaption}
+		<details class="description">
+			<summary>More details</summary>
+			<p>{@html detailcaption}</p>
+		</details>
+	{/if}
 </figure>
 
 <style>
@@ -63,6 +77,7 @@
 
 	figcaption {
 		font-size: var(--14px);
+		font-family: var(--font-sans);
 		padding: 8px 0;
 	}
 
@@ -75,8 +90,12 @@
 	}
 
 	.description {
+		font-family: var(--font-sans);
 		font-size: var(--14px);
-		padding-top: 8px;
+	}
+
+	.description p {
+		margin: 0.5rem 0 0 0;
 	}
 
 	.controls {

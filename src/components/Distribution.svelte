@@ -106,6 +106,7 @@
 
 	figcaption {
 		font-size: var(--14px);
+		font-family: var(--font-sans);
 		padding: 8px 0;
 	}
 
