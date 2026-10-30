@@ -1033,6 +1033,10 @@
               }
             ]
           }
+        },
+        {
+          "type": "text",
+          "value": "Want more pi? Tune into our <a href=https://pudding.cool/projects/lopi target=_blank rel='noreferrer noopener'>lo-pi radio</a> station. Streaming live, forever."
         }
       ]
     }
