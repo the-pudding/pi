@@ -1,5 +1,6 @@
 <script>
 	import { getContext } from "svelte";
+	import { onClickOutside } from "runed";
 
 	const copy = getContext("copy");
 
@@ -19,6 +20,8 @@
 	);
 
 	let open = $state(false);
+	let navEl = $state(null);
+	let buttonEl = $state(null);
 
 	function go(id) {
 		open = false;
@@ -29,21 +32,31 @@
 	}
 
 	function onkeydown(e) {
-		if (open && e.key === "Escape") open = false;
+		if (!open || e.key !== "Escape") return;
+		open = false;
+		// don't strand focus inside the now-hidden list
+		if (navEl.contains(document.activeElement)) buttonEl.focus();
 	}
 </script>
 
 <svelte:window {onkeydown} />
 
-<nav aria-label="Table of contents">
-	<details bind:open>
-		<summary>Contents</summary>
-		<ol>
-			{#each sections as { id, title }}
-				<li><a href="#{id}" onclick={() => go(id)}>{title}</a></li>
-			{/each}
-		</ol>
-	</details>
+<nav
+	aria-label="Table of contents"
+	bind:this={navEl}
+	use:onClickOutside={() => (open = false)}
+>
+	<button
+		bind:this={buttonEl}
+		aria-expanded={open}
+		aria-controls="toc-list"
+		onclick={() => (open = !open)}>Contents</button
+	>
+	<ol id="toc-list" hidden={!open}>
+		{#each sections as { id, title }}
+			<li><a href="#{id}" onclick={() => go(id)}>{title}</a></li>
+		{/each}
+	</ol>
 </nav>
 
 <style>
@@ -62,19 +75,8 @@
 		}
 	}
 
-	summary {
-		display: inline-block;
+	button {
 		min-height: 24px;
-		padding: 0.25rem 0.5rem;
-		border: 1px solid currentColor;
-		background: var(--color-bg);
-		text-transform: uppercase;
-		cursor: pointer;
-	}
-
-	summary:focus-visible {
-		outline: 2px solid currentColor;
-		outline-offset: 2px;
 	}
 
 	ol {
