@@ -153,7 +153,8 @@
           "type": "Figure",
           "value": {
             "src": "assets/videos/byhand720.mp4",
-            "alt": "A timelapse of calculating pi to the first decimal place by hand"
+            "alt": "A timelapse of calculating pi to the first decimal place by hand",
+            "figcaption": "Pairs nicely with our <a href=https://pudding.cool/projects/lopi target=_blank rel='noreferrer noopener'>lo-pi radio</a> stream in the background."
           }
         },
         {
